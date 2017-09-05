@@ -60,7 +60,7 @@ public class Violao implements Instrumento {
 		this.quantidade = qtd;
 	}
 
-	@override
+	@Override
 	public String toString() {
 		return "marca: " + this.marca + ", numero de série: " + this.numeroSerie + ", valor: " + this.valor
 				+ ", quantidade disponível: " + this.quantidade;

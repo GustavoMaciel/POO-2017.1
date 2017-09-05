@@ -30,11 +30,11 @@ public class Funcionario {
 		return this.email;
 	}
 
-	public double getId() {
+	public String getId() {
 		return this.id;
 	}
 
-	public int getPagamento() {
+	public double getPagamento() {
 		return this.pagamento;
 	}
 
@@ -46,7 +46,7 @@ public class Funcionario {
 		this.email = email;
 	}
 
-	public void setID(double id) {
+	public void setID(String id) {
 		this.id = id;
 	}
 
@@ -54,7 +54,7 @@ public class Funcionario {
 		this.pagamento = pagamento;
 	}
 
-	@override
+	@Override
 	public String toString() {
 		return "Nome: " + this.nome + ", Email: " + this.email + ", Id: " + this.id
 				+ ", pagamento: " + this.pagamento;
