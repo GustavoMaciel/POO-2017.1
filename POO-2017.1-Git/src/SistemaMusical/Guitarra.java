@@ -1,7 +1,11 @@
 package SistemaMusical;
 
 public class Guitarra implements Instrumento{
-
+	private String marca;
+	private String numeroSerie;
+	private double valor;
+	private int quantidade;
+	
     @Override
     public String getMarca() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
