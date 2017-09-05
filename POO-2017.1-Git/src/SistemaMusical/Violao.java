@@ -1,49 +1,69 @@
 package SistemaMusical;
 
-public class Violao implements Instrumento{
+public class Violao implements Instrumento {
 	private String marca;
 	private String numeroSerie;
 	private double valor;
 	private int quantidade;
-	
-    @Override
-    public String getMarca() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
-    @Override
-    public String getNumeroSerie() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	public Violao() {
+		this.marca = "";
+		this.numeroSerie = "";
+		this.valor = 0;
+		this.quantidade = 0;
+	}
 
-    @Override
-    public double getValor() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	public Violao(String marca, String serie, double valor, int qtd) {
+		this.marca = marca;
+		this.numeroSerie = serie;
+		this.valor = valor;
+		this.quantidade = qtd;
+	}
 
-    @Override
-    public int getQtd() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public String getMarca() {
+		return this.marca;
+	}
 
-    @Override
-    public void setMarca(String marca) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public String getNumeroSerie() {
+		return this.numeroSerie;
+	}
 
-    @Override
-    public void setNumeroSerie(String numero) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public double getValor() {
+		return this.valor;
+	}
 
-    @Override
-    public void setValor(double valor) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public int getQtd() {
+		return this.quantidade;
+	}
 
-    @Override
-    public void setQtd(int qtd) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+	@Override
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	@Override
+	public void setNumeroSerie(String numero) {
+		this.numeroSerie = numero;
+	}
+
+	@Override
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
+
+	@Override
+	public void setQtd(int qtd) {
+		this.quantidade = qtd;
+	}
+
+	@override
+	public String toString() {
+		return "marca: " + this.marca + ", numero de série: " + this.numeroSerie + ", valor: " + this.valor
+				+ ", quantidade disponível: " + this.quantidade;
+	}
+
 }
