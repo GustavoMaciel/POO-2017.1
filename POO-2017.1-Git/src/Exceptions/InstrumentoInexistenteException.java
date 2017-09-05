@@ -9,6 +9,8 @@ package Exceptions;
  *
  * @author gmnun
  */
-public class InstrumentoInexistenteException {
-    
+public class InstrumentoInexistenteException extends Exception{
+ public InstrumentoInexistenteException(String m){
+     super(m);
+ }       
 }

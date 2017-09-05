@@ -9,6 +9,8 @@ package Exceptions;
  *
  * @author gmnun
  */
-public class FuncionarioJaExisteException {
-    
+public class FuncionarioJaExisteException extends Exception{
+    public FuncionarioJaExisteException(String m){
+        super(m);
+    }
 }
