@@ -10,4 +10,6 @@ public interface Instrumento {
     public void setNumeroSerie(String numero);
     public void setValor(double valor);
     public void setQtd(int qtd);
+
+    
 }

@@ -1,5 +1,6 @@
 package SistemaMusical;
 
+import Exceptions.QuantidadeInsuficienteException;
 import Exceptions.FuncionarioJaExisteException;
 import Exceptions.InstrumentoJaExisteException;
 import java.util.HashMap;
@@ -41,27 +42,53 @@ public class SistemaMusical {
     }
     
     public void cadastrarInstrumento(Instrumento ins) throws InstrumentoJaExisteException{
-        
+        if(this.instrumentos.get(ins.getNumeroSerie()) == null){
+            this.instrumentos.put(ins.getNumeroSerie(), ins);
+        }else{
+            throw new InstrumentoJaExisteException("Já existe o instrumento: " + ins.getNumeroSerie());
+        }
     }
+    
     public void cadastrarFuncionario(Funcionario fun) throws FuncionarioJaExisteException{
-        
+        if(this.funcionarios.get(fun.getId()) == null){
+            this.funcionarios.put(fun.getId(), fun);
+        }else{
+            throw new FuncionarioJaExisteException("Já existe o funcionário: " + fun.getId());
+        }
     }
     
     public Instrumento removerInstrumento(Instrumento ins)throws InstrumentoInexistenteException{
-        return null;
+        Instrumento x = this.buscarInstrumento(ins.getNumeroSerie());
+        this.instrumentos.remove(x.getNumeroSerie());
+        return x;
     }
     public Funcionario removerFuncionario(Funcionario fun) throws FuncionarioInexistenteException{
-        return null;
+        Funcionario x = this.buscarFuncionario(fun.getId());
+        this.funcionarios.remove(x.getId());
+        return x;
     }
     
     public Funcionario buscarFuncionario(String id) throws FuncionarioInexistenteException{
-        return null;
+        Funcionario x = this.funcionarios.get(id);
+        if(x == null){
+            throw new FuncionarioInexistenteException("Não há funcionário com ID: " + id);
+        }
+        return x;
     }
     public Instrumento buscarInstrumento(String serial) throws InstrumentoInexistenteException{
-        return null;
+        Instrumento x = this.instrumentos.get(serial);
+        if(x == null){
+            throw new InstrumentoInexistenteException("Não há instrumento com número de série: " + serial);
+        }
+        return x;
     }
     
-    public void comprarInstrumento(String serial) throws InstrumentoInexistenteException {
-        
+    public void comprarInstrumento(String serial, int qtd) throws InstrumentoInexistenteException, QuantidadeInsuficienteException{
+        Instrumento x = this.buscarInstrumento(serial);
+        if(x.getQtd()<=0 || x.getQtd() < qtd){
+            throw new QuantidadeInsuficienteException("Não há instrumentos suficientes.");
+        }
+        x.setQtd(x.getQtd()-qtd);
+        this.caixa += x.getValor();
     }
 }
