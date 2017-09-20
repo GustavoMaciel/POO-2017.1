@@ -23,7 +23,4 @@ public class Instrumento {
     public void setValor(double valor){
         this.valor = valor;
     }
-    
-
-    
 }
