@@ -8,7 +8,7 @@ Nosso sistema possui as seguintes características:
     Criação de orçamentos e ordens de serviços
     Registro para controle do caixa da empresa
     Registro de pagamentos de clientes
-    Registro de pagamentos a fornecedores
+    //Registro de pagamentos a fornecedores
     Registro de pagamento de comissões e salários aos funcionários
     Controle de estoque
     Registro de compra e venda de produtos.
@@ -17,12 +17,12 @@ Nosso sistema possui as seguintes características:
         custos;
         estoque;
         caderneta do cliente;
-        compra e pagamento para fornecedores e funcionários entre outros
+        compra e pagamento para /*fornecedores e*/ funcionários entre outros
     Listas de:
         clientes;
         produtos;
         serviços;
-        fornecedores e funcionários cadastrados.
+        /*fornecedores e*/ funcionários cadastrados.
 
 Responsáveis: Gustavo Maciel Nunes; Waldemar Junior Dias Coimbra
 
