@@ -16,5 +16,21 @@ public class Cliente extends Pessoa{
         this.tipo = tipo;
         this.statusDevedor = statusDevedor;
     }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public boolean isStatusDevedor() {
+        return statusDevedor;
+    }
+
+    public void setStatusDevedor(boolean statusDevedor) {
+        this.statusDevedor = statusDevedor;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
     
 }

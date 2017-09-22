@@ -29,6 +29,70 @@ public class Pessoa {
         this.endereco = endereco;
         this.dataNascimento = dataNascimento;
     }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public Data getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getRg() {
+        return rg;
+    }
+
+    public Telefone getTelefone() {
+        return telefone;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public void setDataNascimento(Data dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setRg(String rg) {
+        this.rg = rg;
+    }
+
+    public void setTelefone(Telefone telefone) {
+        this.telefone = telefone;
+    }
     
     
 }
