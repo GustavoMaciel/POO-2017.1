@@ -1,0 +1,3 @@
+Começamos com um sistema muito simples de Loja musical, percebemos que aquilo não era bem implementado.
+Migramos então um sistema para gerenciar lógicas genéricas, só que percebemos que isso funcionaria melhor como uma interface geral.
+Voltamos ao nosso sistema de loja musical, porém de forma melhor elaborada.
