@@ -27,7 +27,7 @@ public class GerenciadorDeEstoque {
         }
         return x;
     }
-    
+
     public void cadastrarInstrumento(Instrumento i) throws InstrumentoJaExisteException{
         try{
             this.buscarInstrumento(i.getNumeroSerie());
@@ -36,10 +36,10 @@ public class GerenciadorDeEstoque {
             this.instrumentos.put(i.getNumeroSerie(), i);
         }
     }
-    
+
     public void removerInstrumento(String numSerie) throws InstrumentoInexistenteException{
         this.buscarInstrumento(numSerie);
         this.instrumentos.remove(numSerie);
     }
-     
+
 }

@@ -10,13 +10,21 @@ public class Funcionario extends Pessoa{
     double pagamento;
 
     public Funcionario() {
-        this("", "", 0);
+        this("", "", 0, "", "", "", "", "", new Telefone(), new Endereco(), new Data());
     }
     public Funcionario(String tipo, String id, double pagamento) {
         this.tipo = tipo;
         this.id = id;
         this.pagamento = pagamento;
     }
+
+    public Funcionario(String tipo, String id, double pagamento, String nome, String cpf, String rg, String genero, String email, Telefone telefone, Endereco endereco, Data dataNascimento) {
+        super(nome, cpf, rg, genero, email, telefone, endereco, dataNascimento);
+        this.tipo = tipo;
+        this.id = id;
+        this.pagamento = pagamento;
+    }
+    
 
     public String getId() {
         return id;
@@ -41,6 +49,17 @@ public class Funcionario extends Pessoa{
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        return super.equals(o); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode(); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     
     
 }

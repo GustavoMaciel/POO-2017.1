@@ -1,10 +1,13 @@
 package Classes;
 
+import Exceptions.*;
+
 /**
  *
  * @author gmnun
  */
 public class GerenciadorDeFinancas {
+
     private double dinheiroEmCaixa;
 
     public GerenciadorDeFinancas() {
@@ -22,11 +25,19 @@ public class GerenciadorDeFinancas {
     public void setDinheiroEmCaixa(double dinheiroEmCaixa) {
         this.dinheiroEmCaixa = dinheiroEmCaixa;
     }
- 
-    public void efetuarCompra(double quantia){
-        
+
+    public void efetuarCompra(double quantia) throws QuantiaInvalidaException {
+        if (quantia < 0) {
+            throw new QuantiaInvalidaException("É inválida a quantia de: " + quantia);
+        }
+        this.dinheiroEmCaixa += quantia;
     }
-    public void efetuarPagamento(double quantia){
-        
+
+    public void efetuarPagamento(double quantia) throws QuantiaInvalidaException {
+        if (quantia < 0) {
+            throw new QuantiaInvalidaException("É inválida a quantia de: " + quantia);
+        }
+        this.dinheiroEmCaixa -= quantia;
     }
+    
 }

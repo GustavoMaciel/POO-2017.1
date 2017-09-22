@@ -54,17 +54,29 @@ public class GerenciadorDePessoas {
     }
     
     public void cadastrarCliente(Cliente i) throws ClienteJaExistenteException{
-        
+        try{
+            this.buscarCliente(i.getEmail());
+            throw new ClienteJaExistenteException("Já existe cliente com o e-mail: " + i.getEmail());
+        }catch (ClienteInexistenteException e){
+            this.clientes.put(i.getEmail(), i);
+        }
     }
     
     public void cadastrarFuncionario(Funcionario i) throws FuncionarioJaExisteException{
-        
+        try{
+            this.buscarFuncionario(i.getId());
+            throw new FuncionarioJaExisteException("Já existe funcionário com o ID: " + i.getId());
+        }catch (FuncionarioInexistenteException e){
+            this.funcionarios.put(i.getId(), i);
+        }
     }
     
     public void removerCliente(String email) throws ClienteInexistenteException{
-        
+        this.buscarCliente(email);
+        this.clientes.remove(email);
     }
     public void removerFuncionario(String id) throws FuncionarioInexistenteException{
-        
+        this.buscarFuncionario(id);
+        this.funcionarios.remove(id);
     }
 }
