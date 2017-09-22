@@ -29,18 +29,17 @@ public class GerenciadorDeEstoque {
     }
     
     public void cadastrarInstrumento(Instrumento i) throws InstrumentoJaExisteException{
-        if(this.instrumentos.get(i.getNumeroSerie()) != null){
-            throw new InstrumentoJaExisteException("Já cadastrado instrumento com Nº de série: " + i.getNumeroSerie());
+        try{
+            this.buscarInstrumento(i.getNumeroSerie());
+            throw new InstrumentoJaExisteException("Já existe instrumento com Nº de série: " + i.getNumeroSerie());
+        }catch(InstrumentoInexistenteException e){
+            this.instrumentos.put(i.getNumeroSerie(), i);
         }
-        this.instrumentos.put(i.getNumeroSerie(), i);
     }
     
-    public void removerInstrumento(Instrumento i) throws InstrumentoInexistenteException{
-        if(this.instrumentos.get(i.getNumeroSerie()) == null){
-            throw new InstrumentoInexistenteException("Não existe instrumento com Nº de série: " + i.getNumeroSerie());
-        }
-        this.instrumentos.remove(i.getNumeroSerie());
+    public void removerInstrumento(String numSerie) throws InstrumentoInexistenteException{
+        this.buscarInstrumento(numSerie);
+        this.instrumentos.remove(numSerie);
     }
-    
-    
+     
 }
