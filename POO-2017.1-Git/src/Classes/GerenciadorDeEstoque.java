@@ -1,7 +1,6 @@
 package Classes;
 
-import Exceptions.InstrumentoInexistenteException;
-import Exceptions.InstrumentoJaExisteException;
+import Exceptions.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,6 +39,12 @@ public class GerenciadorDeEstoque {
     public void removerInstrumento(String numSerie) throws InstrumentoInexistenteException{
         this.buscarInstrumento(numSerie);
         this.instrumentos.remove(numSerie);
+    }
+    
+    public void realizarVenda(SistemaLojaMusical sys, String num) throws InstrumentoInexistenteException, QuantiaInvalidaException{
+        Instrumento x = this.buscarInstrumento(num);
+        sys.gerenciadorDeFinancas.efetuarRecebimento(0);
+        this.removerInstrumento(num);
     }
 
 }

@@ -26,7 +26,7 @@ public class GerenciadorDeFinancas {
         this.dinheiroEmCaixa = dinheiroEmCaixa;
     }
 
-    public void efetuarCompra(double quantia) throws QuantiaInvalidaException {
+    public void efetuarRecebimento(double quantia) throws QuantiaInvalidaException {
         if (quantia < 0) {
             throw new QuantiaInvalidaException("É inválida a quantia de: " + quantia);
         }
