@@ -75,7 +75,7 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jMenu1.setText("Loja");
 
-        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, 0));
         jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/shop-cart-icon.png"))); // NOI18N
         jMenuItem2.setText("Comprar");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -92,6 +92,7 @@ public class TelaInicial extends javax.swing.JFrame {
         jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Clients-icon.png"))); // NOI18N
         jMenu6.setText("Clientes");
 
+        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add-icon.png"))); // NOI18N
         jMenuItem3.setText("Cadastrar Cliente");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
@@ -101,10 +102,12 @@ public class TelaInicial extends javax.swing.JFrame {
         });
         jMenu6.add(jMenuItem3);
 
+        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/math-minus-icon.png"))); // NOI18N
         jMenuItem4.setText("Remover Cliente");
         jMenu6.add(jMenuItem4);
 
+        jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/checklist-icon.png"))); // NOI18N
         jMenuItem8.setText("Lista de Clientes");
         jMenu6.add(jMenuItem8);
@@ -114,14 +117,17 @@ public class TelaInicial extends javax.swing.JFrame {
         jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/worker-brown-icon.png"))); // NOI18N
         jMenu7.setText("Funcionario");
 
+        jMenuItem9.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK));
         jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add-icon.png"))); // NOI18N
         jMenuItem9.setText("Cadastrar Funcionario");
         jMenu7.add(jMenuItem9);
 
+        jMenuItem10.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.ALT_MASK));
         jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/math-minus-icon.png"))); // NOI18N
         jMenuItem10.setText("Remover Funcionario");
         jMenu7.add(jMenuItem10);
 
+        jMenuItem11.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.ALT_MASK));
         jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/checklist-icon.png"))); // NOI18N
         jMenuItem11.setText("Lista de Funcionarios");
         jMenu7.add(jMenuItem11);
@@ -132,14 +138,17 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jMenu3.setText("Estoque");
 
+        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, 0));
         jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Zoom-icon.png"))); // NOI18N
         jMenuItem5.setText("Buscar Instrumento");
         jMenu3.add(jMenuItem5);
 
+        jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_MASK));
         jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add-icon.png"))); // NOI18N
         jMenuItem6.setText("Cadastrar Instrumento");
         jMenu3.add(jMenuItem6);
 
+        jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.SHIFT_MASK));
         jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/math-minus-icon.png"))); // NOI18N
         jMenuItem7.setText("Remover Instrumento");
         jMenu3.add(jMenuItem7);
@@ -148,6 +157,7 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jMenu4.setText("Administrativo");
 
+        jMenuItem12.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, 0));
         jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Cash-register-icon.png"))); // NOI18N
         jMenuItem12.setText("Caixa Disponivel");
         jMenu4.add(jMenuItem12);
