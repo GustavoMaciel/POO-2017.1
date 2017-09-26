@@ -79,4 +79,13 @@ public class GerenciadorDePessoas {
         this.buscarFuncionario(id);
         this.funcionarios.remove(id);
     }
+    
+    public String[] emailClientesToStringArray(){
+        String[] nomes = new String[this.clientes.size()];
+        int x = 0;
+        for(Cliente i: this.clientes.values()){
+            nomes[x] = i.getEmail();
+        }
+        return nomes;
+    }
 }

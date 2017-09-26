@@ -49,6 +49,4 @@ public class Cliente extends Pessoa{
     public int hashCode() {
         return super.hashCode(); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
 }

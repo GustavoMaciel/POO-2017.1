@@ -41,6 +41,7 @@ package Views;
 
 import Classes.*;
 import Exceptions.*;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
 /**
@@ -48,14 +49,15 @@ import javax.swing.JOptionPane;
  * @author junior
  */
 public class ListaClientes extends javax.swing.JInternalFrame {
-    SistemaLojaMusical sys;
+    public SistemaLojaMusical sys;
 
     /**
      * Creates new form ListaClientes
      */
     public ListaClientes(SistemaLojaMusical sys) {
-        initComponents();
         this.sys = sys;
+        initComponents();
+       
     }
 
     /**
@@ -79,14 +81,21 @@ public class ListaClientes extends javax.swing.JInternalFrame {
         setTitle("Listar Clientes");
 
         clientesList.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            //String[] strings = {"email1@email.com", "email2@email.com", "email3@email.com"};
+            String[] strings = sys.gerenciadorDePessoas.emailClientesToStringArray();
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
+
         });
         jScrollPane1.setViewportView(clientesList);
 
         emailTxt.setForeground(new java.awt.Color(153, 153, 153));
         emailTxt.setText("insra o email");
+        emailTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                emailTxtKeyPressed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setText("Lista de clientes");
@@ -149,9 +158,15 @@ public class ListaClientes extends javax.swing.JInternalFrame {
             Cliente atual = sys.gerenciadorDePessoas.buscarCliente(this.emailTxt.getText());
             this.nomeClienteTxt.setText(atual.getNome());
         }catch(ClienteInexistenteException e){
+            this.nomeClienteTxt.setText("");
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }//GEN-LAST:event_buscarButtonActionPerformed
+
+    private void emailTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailTxtKeyPressed
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+        this.buscarButton.doClick();}
+    }//GEN-LAST:event_emailTxtKeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
