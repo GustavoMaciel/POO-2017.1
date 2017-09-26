@@ -82,7 +82,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
 
         clientesList.setModel(new javax.swing.AbstractListModel<String>() {
             //String[] strings = {"email1@email.com", "email2@email.com", "email3@email.com"};
-            String[] strings = sys.gerenciadorDePessoas.emailClientesToStringArray();
+            String[] strings = sys.nomesClientesToStringArray();
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
 
@@ -155,7 +155,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
 
     private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
         try{
-            Cliente atual = sys.gerenciadorDePessoas.buscarCliente(this.emailTxt.getText());
+            Cliente atual = sys.buscarCliente(this.emailTxt.getText());
             this.nomeClienteTxt.setText(atual.getNome());
         }catch(ClienteInexistenteException e){
             this.nomeClienteTxt.setText("");

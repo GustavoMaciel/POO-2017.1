@@ -42,10 +42,10 @@ public class GerenciadorDeEstoque implements Serializable{
         this.instrumentos.remove(numSerie);
     }
     
-    public void realizarVenda(SistemaLojaMusical sys, String num) throws InstrumentoInexistenteException, QuantiaInvalidaException{
-        Instrumento x = this.buscarInstrumento(num);
-        sys.gerenciadorDeFinancas.efetuarRecebimento(x.getValor());
-        this.removerInstrumento(num);
+    public void realizarVenda(GerenciadorDeFinancas financas, String numSerie) throws InstrumentoInexistenteException, QuantiaInvalidaException{
+        Instrumento x = this.buscarInstrumento(numSerie);
+        financas.efetuarRecebimento(x.getValor());
+        this.removerInstrumento(numSerie);
     }
 
 }

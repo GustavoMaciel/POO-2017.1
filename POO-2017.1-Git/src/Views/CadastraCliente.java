@@ -518,7 +518,7 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
 
         try {
             if (podeCadastrar) {
-                sys.gerenciadorDePessoas.cadastrarCliente(cliente);
+                sys.cadastrarCliente(cliente);
                 JOptionPane.showMessageDialog(this, "Cliente cadastrado com sucesso!");
                 this.dispose();
             } else {
