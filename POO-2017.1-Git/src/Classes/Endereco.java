@@ -8,14 +8,15 @@ public class Endereco {
     private String logradouro, bairro, numero, cep, estado, cidade;
 
     public Endereco(){
-        this("","","","","");
+        this("","","","","", "");
     }
-    public Endereco(String logradouro, String bairro, String numero, String cep, String estado) {
+    public Endereco(String logradouro, String bairro, String numero, String cep, String estado, String cidade) {
         this.logradouro = logradouro;
         this.bairro = bairro;
         this.numero = numero;
         this.cep = cep;
         this.estado = estado;
+        this.cidade = cidade;
     }
 
     public String getCidade() {

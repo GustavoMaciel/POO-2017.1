@@ -5,13 +5,12 @@ package Classes;
  * @author gmnun
  */
 public class Telefone {
-    private String operadora, ddd, numero;
+    private String  ddd, numero;
     
     public Telefone(){
-        this("","","");
+        this("","");
     }
-    public Telefone(String operadora, String ddd, String numero){
-        this.operadora = operadora;
+    public Telefone(String ddd, String numero){
         this.ddd = ddd;
         this.numero = numero;
     }
@@ -22,18 +21,12 @@ public class Telefone {
     public String getNumero() {
         return numero;
     }
-    public String getOperadora() {
-        return operadora;
-    }
 
     public void setDdd(String ddd) {
         this.ddd = ddd;
     }
     public void setNumero(String numero) {
         this.numero = numero;
-    }
-    public void setOperadora(String operadora) {
-        this.operadora = operadora;
     }
 
     @Override

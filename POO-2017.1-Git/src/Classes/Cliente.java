@@ -10,14 +10,14 @@ public class Cliente extends Pessoa{
     boolean statusDevedor;
 
     public Cliente() {
-        this("", false, "","","","","", new Telefone(), new Endereco(), new Data());
+        this("", false, "","","","","", new Telefone(), new Endereco(), "");
     }
     public Cliente(String tipo, boolean statusDevedor) {
         this.tipo = tipo;
         this.statusDevedor = statusDevedor;
     }
 
-    public Cliente(String tipo, boolean statusDevedor, String nome, String cpf, String rg, String genero, String email, Telefone telefone, Endereco endereco, Data dataNascimento) {
+    public Cliente(String tipo, boolean statusDevedor, String nome, String cpf, String rg, String genero, String email, Telefone telefone, Endereco endereco, String dataNascimento) {
         super(nome, cpf, rg, genero, email, telefone, endereco, dataNascimento);
         this.tipo = tipo;
         this.statusDevedor = statusDevedor;

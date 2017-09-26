@@ -13,13 +13,13 @@ public class Pessoa {
     private String email;
     private Telefone telefone;
     private Endereco endereco;
-    private Data dataNascimento;
+    private String dataNascimento;
 
     public Pessoa() {
-        this("","","","","",new Telefone(), new Endereco(), new Data());
+        this("","","","","",new Telefone(), new Endereco(), "");
     }
 
-    public Pessoa(String nome, String cpf, String rg, String genero, String email, Telefone telefone, Endereco endereco, Data dataNascimento) {
+    public Pessoa(String nome, String cpf, String rg, String genero, String email, Telefone telefone, Endereco endereco, String dataNascimento) {
         this.nome = nome;
         this.cpf = cpf;
         this.rg = rg;
@@ -34,7 +34,7 @@ public class Pessoa {
         return cpf;
     }
 
-    public Data getDataNascimento() {
+    public String getDataNascimento() {
         return dataNascimento;
     }
 
@@ -66,7 +66,7 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
-    public void setDataNascimento(Data dataNascimento) {
+    public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 

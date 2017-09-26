@@ -8,11 +8,13 @@ import Exceptions.InstrumentoJaExisteException;
  * @author gustavo
  */
 public class TelaInicial extends javax.swing.JFrame {
+    public SistemaLojaMusical sys;
 
     /**
      * Creates new form TelaInicial
      */
-    public TelaInicial() {
+    public TelaInicial(SistemaLojaMusical sys) {
+        this.sys = sys;
         initComponents();
     }
 
@@ -249,7 +251,7 @@ public class TelaInicial extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        CadastraCliente obj = new CadastraCliente();
+        CadastraCliente obj = new CadastraCliente(sys);
         jDesktopPanePrincipal.add(obj);
         obj.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem3ActionPerformed
@@ -352,10 +354,12 @@ public class TelaInicial extends javax.swing.JFrame {
         }
         //</editor-fold>
 
+        SistemaLojaMusical sys = new SistemaLojaMusical();
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaInicial().setVisible(true);
+                new TelaInicial(sys).setVisible(true);
             }
         });
     }

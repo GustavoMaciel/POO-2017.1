@@ -10,7 +10,7 @@ public class Funcionario extends Pessoa{
     double pagamento;
 
     public Funcionario() {
-        this("", "", 0, "", "", "", "", "", new Telefone(), new Endereco(), new Data());
+        this("", "", 0, "", "", "", "", "", new Telefone(), new Endereco(), "");
     }
     public Funcionario(String tipo, String id, double pagamento) {
         this.tipo = tipo;
@@ -18,7 +18,7 @@ public class Funcionario extends Pessoa{
         this.pagamento = pagamento;
     }
 
-    public Funcionario(String tipo, String id, double pagamento, String nome, String cpf, String rg, String genero, String email, Telefone telefone, Endereco endereco, Data dataNascimento) {
+    public Funcionario(String tipo, String id, double pagamento, String nome, String cpf, String rg, String genero, String email, Telefone telefone, Endereco endereco, String dataNascimento) {
         super(nome, cpf, rg, genero, email, telefone, endereco, dataNascimento);
         this.tipo = tipo;
         this.id = id;
