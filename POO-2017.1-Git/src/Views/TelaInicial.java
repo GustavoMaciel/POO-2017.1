@@ -263,7 +263,7 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        Comprar obj = new Comprar();
+        Comprar obj = new Comprar(this.sys);
         jDesktopPanePrincipal.add(obj);
         obj.setVisible(true);
         // TODO add your handling code here:

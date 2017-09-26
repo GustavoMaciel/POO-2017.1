@@ -91,6 +91,11 @@ public class ListaClientes extends javax.swing.JInternalFrame {
 
         emailTxt.setForeground(new java.awt.Color(153, 153, 153));
         emailTxt.setText("insra o email");
+        emailTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailTxtActionPerformed(evt);
+            }
+        });
         emailTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 emailTxtKeyPressed(evt);
@@ -167,6 +172,10 @@ public class ListaClientes extends javax.swing.JInternalFrame {
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
         this.buscarButton.doClick();}
     }//GEN-LAST:event_emailTxtKeyPressed
+
+    private void emailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailTxtActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
