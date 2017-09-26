@@ -1,12 +1,13 @@
 package Classes;
 
 import Exceptions.*;
+import java.io.Serializable;
 
 /**
  *
  * @author gmnun
  */
-public class GerenciadorDeFinancas {
+public class GerenciadorDeFinancas implements Serializable{
 
     private double dinheiroEmCaixa;
 

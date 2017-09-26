@@ -1,11 +1,13 @@
 
 package Classes;
 
+import java.io.Serializable;
+
 /**
  *
  * @author gmnun
  */
-public class Funcionario extends Pessoa{
+public class Funcionario extends Pessoa implements Serializable{
     String tipo, id;
     double pagamento;
 

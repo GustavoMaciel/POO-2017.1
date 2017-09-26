@@ -1,6 +1,7 @@
 package Classes;
 
 import Exceptions.*;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,7 +9,7 @@ import java.util.Map;
  *
  * @author gmnun
  */
-public class GerenciadorDePessoas {
+public class GerenciadorDePessoas implements Serializable{
     private Map<String, Funcionario> funcionarios;
     private Map<String, Cliente> clientes;
 

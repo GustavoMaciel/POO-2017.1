@@ -1,10 +1,12 @@
 package Classes;
 
+import java.io.Serializable;
+
 /**
  *
  * @author gmnun
  */
-public class Endereco {
+public class Endereco implements Serializable{
     private String logradouro, bairro, numero, cep, estado, cidade;
 
     public Endereco(){

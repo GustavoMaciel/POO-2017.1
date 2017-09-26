@@ -1,8 +1,24 @@
 package Classes;
 
-public class Instrumento {
-    private String marca, numeroSerie;
+import java.io.Serializable;
+
+public class Instrumento implements Serializable{
+    private String marca, numeroSerie, tipo;
     private double valor;
+
+    public Instrumento() {
+        this("","","", 0);
+    }
+
+    
+    public Instrumento(String marca, String numeroSerie, String tipo, double valor) {
+        this.marca = marca;
+        this.numeroSerie = numeroSerie;
+        this.tipo = tipo;
+        this.valor = valor;
+    }
+    
+    
     
     public String getMarca(){
         return marca;

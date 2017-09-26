@@ -1,10 +1,13 @@
 package Classes;
 
+import java.io.Serializable;
+
 /**
  *
  * @author gmnun
  */
-public class SistemaLojaMusical {
+public class SistemaLojaMusical implements Serializable{
+    
     public GerenciadorDeEstoque gerenciadorDeEstoque;
     public GerenciadorDeFinancas gerenciadorDeFinancas;
     public GerenciadorDePessoas gerenciadorDePessoas;

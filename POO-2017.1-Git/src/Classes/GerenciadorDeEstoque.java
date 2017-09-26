@@ -1,6 +1,7 @@
 package Classes;
 
 import Exceptions.*;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,7 +9,7 @@ import java.util.Map;
  *
  * @author gmnun
  */
-public class GerenciadorDeEstoque {
+public class GerenciadorDeEstoque implements Serializable{
     Map<String, Instrumento> instrumentos;
 
     public GerenciadorDeEstoque() {
