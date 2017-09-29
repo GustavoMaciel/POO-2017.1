@@ -1,6 +1,7 @@
 package Classes;
 
 import Exceptions.*;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,7 +9,7 @@ import java.util.Map;
  *
  * @author gmnun
  */
-public class GerenciadorDeEstoque {
+public class GerenciadorDeEstoque implements Serializable{
     Map<String, Instrumento> instrumentos;
 
     public GerenciadorDeEstoque() {
@@ -41,10 +42,10 @@ public class GerenciadorDeEstoque {
         this.instrumentos.remove(numSerie);
     }
     
-    public void realizarVenda(SistemaLojaMusical sys, String num) throws InstrumentoInexistenteException, QuantiaInvalidaException{
-        Instrumento x = this.buscarInstrumento(num);
-        sys.gerenciadorDeFinancas.efetuarRecebimento(x.getValor());
-        this.removerInstrumento(num);
+    public void realizarVenda(GerenciadorDeFinancas financas, String numSerie) throws InstrumentoInexistenteException, QuantiaInvalidaException{
+        Instrumento x = this.buscarInstrumento(numSerie);
+        financas.efetuarRecebimento(x.getValor());
+        this.removerInstrumento(numSerie);
     }
 
 }

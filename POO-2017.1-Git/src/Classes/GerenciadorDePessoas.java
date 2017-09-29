@@ -1,6 +1,7 @@
 package Classes;
 
 import Exceptions.*;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,7 +9,7 @@ import java.util.Map;
  *
  * @author gmnun
  */
-public class GerenciadorDePessoas {
+public class GerenciadorDePessoas implements Serializable{
     private Map<String, Funcionario> funcionarios;
     private Map<String, Cliente> clientes;
 
@@ -80,11 +81,20 @@ public class GerenciadorDePessoas {
         this.funcionarios.remove(id);
     }
     
-    public String[] emailClientesToStringArray(){
+    public String[] nomeClientesToStringArray(){
         String[] nomes = new String[this.clientes.size()];
         int x = 0;
         for(Cliente i: this.clientes.values()){
-            nomes[x] = i.getEmail();
+            nomes[x] = i.getNome();
+        }
+        return nomes;
+    }
+    
+    public String[] nomeFuncionariosToStringArray(){
+        String[] nomes = new String[this.funcionarios.size()];
+        int x = 0;
+        for(Funcionario i: this.funcionarios.values()){
+            nomes[x] = i.getNome();
         }
         return nomes;
     }

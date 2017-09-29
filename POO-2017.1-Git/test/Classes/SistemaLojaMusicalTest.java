@@ -2,8 +2,6 @@ package Classes;
 
 import Exceptions.InstrumentoInexistenteException;
 import Exceptions.InstrumentoJaExisteException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -30,26 +28,26 @@ public class SistemaLojaMusicalTest {
         aug.setEmail("@");
         
         try{
-            sys.gerenciadorDeEstoque.cadastrarInstrumento(x);
-            sys.gerenciadorDePessoas.cadastrarCliente(aug);
-            sys.gerenciadorDePessoas.cadastrarFuncionario(ana);
+            sys.cadastrarInstrumento(x);
+            sys.cadastrarCliente(aug);
+            sys.cadastrarFuncionario(ana);
         }catch(Exception e){
             fail(e.getMessage());
         }
         
         try{
-            sys.gerenciadorDeEstoque.cadastrarInstrumento(x);
-            sys.gerenciadorDePessoas.cadastrarCliente(aug);
-            sys.gerenciadorDePessoas.cadastrarFuncionario(ana);
+            sys.cadastrarInstrumento(x);
+            sys.cadastrarCliente(aug);
+            sys.cadastrarFuncionario(ana);
             fail("Erro");
         }catch(Exception e){
             
         }
         
         try{
-            sys.gerenciadorDeEstoque.realizarVenda(sys, x.getNumeroSerie());
-            assertEquals(sys.gerenciadorDeFinancas.getDinheiroEmCaixa(), x.getValor(), 0.001);
-            sys.gerenciadorDeEstoque.cadastrarInstrumento(x);
+            sys.realizarVenda(x.getNumeroSerie());
+            assertEquals(sys.getGerenciadorDeFinancas().getDinheiroEmCaixa(), x.getValor(), 0.001);
+            sys.cadastrarInstrumento(x);
         }catch (InstrumentoInexistenteException e){
             fail(e.getMessage());
         } catch (InstrumentoJaExisteException e) {
@@ -57,9 +55,9 @@ public class SistemaLojaMusicalTest {
         }
         
         try{
-            sys.gerenciadorDePessoas.removerCliente(aug.getEmail());
-            sys.gerenciadorDePessoas.removerFuncionario(ana.getId());
-            sys.gerenciadorDeEstoque.removerInstrumento(x.getNumeroSerie());
+            sys.removerCliente(aug.getEmail());
+            sys.removerFuncionario(ana.getId());
+            sys.removerInstrumento(x.getNumeroSerie());
         }catch(Exception e){
             fail(e.getMessage());
         }

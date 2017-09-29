@@ -1,10 +1,12 @@
 package Classes;
 
+import java.io.Serializable;
+
 /**
  *
  * @author gmnun
  */
-public class Telefone {
+public class Telefone implements Serializable{
     private String  ddd, numero;
     
     public Telefone(){

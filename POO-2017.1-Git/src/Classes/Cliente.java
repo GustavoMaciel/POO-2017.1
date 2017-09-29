@@ -1,11 +1,13 @@
 
 package Classes;
 
+import java.io.Serializable;
+
 /**
  *
  * @author gmnun
  */
-public class Cliente extends Pessoa{
+public class Cliente extends Pessoa implements Serializable{
     String tipo;
     boolean statusDevedor;
 

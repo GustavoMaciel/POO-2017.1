@@ -82,7 +82,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
 
         clientesList.setModel(new javax.swing.AbstractListModel<String>() {
             //String[] strings = {"email1@email.com", "email2@email.com", "email3@email.com"};
-            String[] strings = sys.gerenciadorDePessoas.emailClientesToStringArray();
+            String[] strings = sys.nomesClientesToStringArray();
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
 
@@ -91,6 +91,11 @@ public class ListaClientes extends javax.swing.JInternalFrame {
 
         emailTxt.setForeground(new java.awt.Color(153, 153, 153));
         emailTxt.setText("insra o email");
+        emailTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailTxtActionPerformed(evt);
+            }
+        });
         emailTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 emailTxtKeyPressed(evt);
@@ -155,7 +160,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
 
     private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
         try{
-            Cliente atual = sys.gerenciadorDePessoas.buscarCliente(this.emailTxt.getText());
+            Cliente atual = sys.buscarCliente(this.emailTxt.getText());
             this.nomeClienteTxt.setText(atual.getNome());
         }catch(ClienteInexistenteException e){
             this.nomeClienteTxt.setText("");
@@ -167,6 +172,10 @@ public class ListaClientes extends javax.swing.JInternalFrame {
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
         this.buscarButton.doClick();}
     }//GEN-LAST:event_emailTxtKeyPressed
+
+    private void emailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailTxtActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

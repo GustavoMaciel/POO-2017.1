@@ -39,16 +39,24 @@
  */
 package Views;
 
+import Classes.*;
+import Exceptions.InstrumentoInexistenteException;
+import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author junior
  */
 public class Comprar extends javax.swing.JInternalFrame {
+    
+    SistemaLojaMusical sys;
 
     /**
      * Creates new form Comprar
      */
-    public Comprar() {
+    public Comprar(SistemaLojaMusical sys) {
+        this.sys = sys;
         initComponents();
     }
 
@@ -71,7 +79,7 @@ public class Comprar extends javax.swing.JInternalFrame {
         jLabel4 = new javax.swing.JLabel();
         dispTxt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        iconLabel = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
@@ -84,6 +92,11 @@ public class Comprar extends javax.swing.JInternalFrame {
         numSerieTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numSerieTxtActionPerformed(evt);
+            }
+        });
+        numSerieTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                numSerieTxtKeyPressed(evt);
             }
         });
 
@@ -164,7 +177,7 @@ public class Comprar extends javax.swing.JInternalFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(marcaTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel3)))
-                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(iconLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(26, 26, 26))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel4)
@@ -194,7 +207,7 @@ public class Comprar extends javax.swing.JInternalFrame {
                     .addComponent(valorTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(dispTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(iconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(76, Short.MAX_VALUE))
         );
 
@@ -221,15 +234,30 @@ public class Comprar extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_dispTxtActionPerformed
 
+    private void numSerieTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numSerieTxtKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            try {
+                Instrumento atual = sys.buscarInstrumento(this.numSerieTxt.getText());
+                this.nomeInsTxt.setText(atual.getNome());
+                this.marcaTxt.setText(atual.getMarca());
+                this.valorTxt.setText("R$ " + String.valueOf(atual.getValor()));
+            }
+            
+            catch(InstrumentoInexistenteException e){
+                JOptionPane.showMessageDialog(this, e.getMessage());
+            }
+        }
+    }//GEN-LAST:event_numSerieTxtKeyPressed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField dispTxt;
+    private javax.swing.JLabel iconLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField marcaTxt;
     private javax.swing.JTextField nomeInsTxt;
     private javax.swing.JTextField numSerieTxt;
