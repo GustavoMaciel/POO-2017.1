@@ -41,11 +41,4 @@ public class GerenciadorDeEstoque implements Serializable{
         this.buscarInstrumento(numSerie);
         this.instrumentos.remove(numSerie);
     }
-    
-    public void realizarVenda(GerenciadorDeFinancas financas, String numSerie) throws InstrumentoInexistenteException, QuantiaInvalidaException{
-        Instrumento x = this.buscarInstrumento(numSerie);
-        financas.efetuarRecebimento(x.getValor());
-        this.removerInstrumento(numSerie);
-    }
-
 }

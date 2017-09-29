@@ -34,9 +34,12 @@ public class GerenciadorDeFinancas implements Serializable{
         this.dinheiroEmCaixa += quantia;
     }
 
-    public void efetuarPagamento(double quantia) throws QuantiaInvalidaException {
+    public void efetuarPagamento(double quantia) throws QuantiaInvalidaException, PagamentoNaoAutorizadoException{
         if (quantia < 0) {
             throw new QuantiaInvalidaException("É inválida a quantia de: " + quantia);
+        }
+        if(quantia > this.dinheiroEmCaixa){
+            throw new PagamentoNaoAutorizadoException("Pagamento não autorizado por falta de dinheiro em caixa.");
         }
         this.dinheiroEmCaixa -= quantia;
     }

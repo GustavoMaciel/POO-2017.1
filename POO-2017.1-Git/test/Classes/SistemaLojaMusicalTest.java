@@ -2,6 +2,7 @@ package Classes;
 
 import Exceptions.InstrumentoInexistenteException;
 import Exceptions.InstrumentoJaExisteException;
+import Exceptions.QuantiaInvalidaException;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -35,6 +36,8 @@ public class SistemaLojaMusicalTest {
             fail(e.getMessage());
         }
         
+        
+        
         try{
             sys.cadastrarInstrumento(x);
             sys.cadastrarCliente(aug);
@@ -52,6 +55,18 @@ public class SistemaLojaMusicalTest {
             fail(e.getMessage());
         } catch (InstrumentoJaExisteException e) {
             fail(e.getMessage());
+        }
+        
+        try{
+            sys.efetuarPagamento(200);
+        }catch(QuantiaInvalidaException e){
+            fail(e.getMessage());
+        }
+        try{
+            sys.efetuarPagamento(-200);
+            fail("Pagamento de número inválido");
+        }catch(QuantiaInvalidaException e){
+            
         }
         
         try{
