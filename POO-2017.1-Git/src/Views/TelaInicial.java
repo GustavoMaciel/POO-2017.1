@@ -16,6 +16,7 @@ public class TelaInicial extends javax.swing.JFrame {
     public TelaInicial(SistemaLojaMusical sys) {
         this.sys = sys;
         initComponents();
+        
     }
 
     /**
@@ -30,6 +31,7 @@ public class TelaInicial extends javax.swing.JFrame {
         jInternalFrame1 = new javax.swing.JInternalFrame();
         jMenuItem1 = new javax.swing.JMenuItem();
         jDesktopPanePrincipal = new javax.swing.JDesktopPane();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         lojaMenu = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -72,9 +74,14 @@ public class TelaInicial extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(new java.awt.Dimension(1024, 700));
         setMinimumSize(new java.awt.Dimension(800, 600));
-        setPreferredSize(new java.awt.Dimension(1024, 700));
+        setResizable(false);
 
         jDesktopPanePrincipal.setDesktopManager(null);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background Menor.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jDesktopPanePrincipal.add(jLabel1);
+        jLabel1.setBounds(0, -20, 1030, 710);
 
         lojaMenu.setText("Loja");
 
@@ -379,6 +386,7 @@ public class TelaInicial extends javax.swing.JFrame {
     private javax.swing.JMenu estoqueMenu;
     private javax.swing.JDesktopPane jDesktopPanePrincipal;
     private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
