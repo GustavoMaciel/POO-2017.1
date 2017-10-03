@@ -1,8 +1,8 @@
 package Classes;
 
-import Exceptions.InstrumentoInexistenteException;
-import Exceptions.InstrumentoJaExisteException;
-import Exceptions.QuantiaInvalidaException;
+import Exceptions.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
  * @author gustavo
  */
 public class SistemaLojaMusicalTest {
-    
+
     public SistemaLojaMusicalTest() {
     }
 
@@ -21,62 +21,65 @@ public class SistemaLojaMusicalTest {
         Instrumento x = new Instrumento();
         x.setValor(1200);
         x.setNumeroSerie("0");
-        
+
         Funcionario ana = new Funcionario();
         ana.setId("0");
-        
+
         Cliente aug = new Cliente();
         aug.setEmail("@");
-        
-        try{
+
+        try {
             sys.cadastrarInstrumento(x);
             sys.cadastrarCliente(aug);
             sys.cadastrarFuncionario(ana);
-        }catch(Exception e){
+        } catch (Exception e) {
             fail(e.getMessage());
         }
-        
-        
-        
-        try{
+
+        try {
             sys.cadastrarInstrumento(x);
             sys.cadastrarCliente(aug);
             sys.cadastrarFuncionario(ana);
-            fail("Erro");
-        }catch(Exception e){
-            
+            fail("Repetiu cadastramento");
+        } catch (Exception e) {
+
         }
-        
-        try{
+
+        try {
             sys.realizarVenda(x.getNumeroSerie());
             assertEquals(sys.getGerenciadorDeFinancas().getDinheiroEmCaixa(), x.getValor(), 0.001);
             sys.cadastrarInstrumento(x);
-        }catch (InstrumentoInexistenteException e){
-            fail(e.getMessage());
-        } catch (InstrumentoJaExisteException e) {
+        } catch (InstrumentoInexistenteException | InstrumentoJaExisteException e) {
             fail(e.getMessage());
         }
-        
-        try{
+
+        try {
             sys.efetuarPagamento(200);
-        }catch(QuantiaInvalidaException e){
+        } catch (QuantiaInvalidaException | PagamentoNaoAutorizadoException e) {
             fail(e.getMessage());
         }
-        try{
+        try {
             sys.efetuarPagamento(-200);
             fail("Pagamento de número inválido");
-        }catch(QuantiaInvalidaException e){
-            
+        } catch (QuantiaInvalidaException e) {
+
+        } catch (PagamentoNaoAutorizadoException e) {
+
         }
-        
-        try{
+        try {
+            sys.efetuarPagamento(15000);
+            fail("Pagamento sem ter dinheiro em caixa.");
+        } catch (QuantiaInvalidaException | PagamentoNaoAutorizadoException ex) {
+        }
+
+        try {
             sys.removerCliente(aug.getEmail());
             sys.removerFuncionario(ana.getId());
             sys.removerInstrumento(x.getNumeroSerie());
-        }catch(Exception e){
+        } catch (Exception e) {
             fail(e.getMessage());
         }
-        
+
     }
-    
+
 }
