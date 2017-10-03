@@ -12,6 +12,7 @@ public class SistemaLojaMusical implements Serializable{
     private GerenciadorDeEstoque gerenciadorDeEstoque;
     private GerenciadorDeFinancas gerenciadorDeFinancas;
     private GerenciadorDePessoas gerenciadorDePessoas;
+    private GerenciarArquivos gerenciarArquivos;
 
     public SistemaLojaMusical() {
         this(new GerenciadorDeEstoque(), new GerenciadorDeFinancas(), new GerenciadorDePessoas());
@@ -160,7 +161,8 @@ public class SistemaLojaMusical implements Serializable{
     }
     
     /**
-     *
+     * Irá buscar um instrumento com código passado por parametro, efetuará o recebimento da
+     * quantia do instrumento e então removerá o instrumento.
      * @param numSerie
      * @throws InstrumentoInexistenteException
      * @throws QuantiaInvalidaException

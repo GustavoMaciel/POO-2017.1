@@ -2,6 +2,7 @@ package Views;
 
 import Classes.*;
 import Exceptions.InstrumentoJaExisteException;
+import java.awt.event.WindowListener;
 
 /**
  *
@@ -69,7 +70,7 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jMenuItem1.setText("jMenuItem1");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Folk's WAY");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(new java.awt.Dimension(1024, 700));
