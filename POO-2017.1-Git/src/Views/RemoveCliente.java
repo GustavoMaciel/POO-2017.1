@@ -39,16 +39,23 @@
  */
 package Views;
 
+import Classes.*;
+import Exceptions.*;
+import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author junior
  */
 public class RemoveCliente extends javax.swing.JInternalFrame {
+    
+    boolean liberado = false;
+    Cliente clien;
+    SistemaLojaMusical sys;
 
-    /**
-     * Creates new form RemoveCliente
-     */
-    public RemoveCliente() {
+    public RemoveCliente(SistemaLojaMusical sys) {
+        this.sys = sys;
         initComponents();
     }
 
@@ -62,121 +69,128 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        emailBuscaTxt = new javax.swing.JTextField();
+        removerButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        nomeTxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        cpfTxt = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        emailtxt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        rgTxt = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        dddTxt = new javax.swing.JTextField();
+        telefoneTxt = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        nascimentoTxt = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        generoCombo = new javax.swing.JComboBox<>();
 
         setClosable(true);
         setMaximizable(true);
-        setTitle("Remove Clientes");
+        setTitle("Remover Clientes");
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setText("Insira o email ");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(261, 12, 98, 20);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(149, 44, 317, 21);
 
-        jButton1.setBackground(new java.awt.Color(255, 51, 51));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Remover");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        emailBuscaTxt.setToolTipText("example@example.com");
+        emailBuscaTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                emailBuscaTxtKeyPressed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(264, 83, 87, 27);
+        getContentPane().add(emailBuscaTxt);
+        emailBuscaTxt.setBounds(149, 44, 317, 21);
+
+        removerButton.setBackground(new java.awt.Color(255, 51, 51));
+        removerButton.setForeground(new java.awt.Color(255, 255, 255));
+        removerButton.setText("Remover");
+        removerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removerButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(removerButton);
+        removerButton.setBounds(264, 83, 87, 27);
 
         jLabel2.setText("Nome");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(38, 162, 36, 17);
 
-        jTextField2.setEditable(false);
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        nomeTxt.setEditable(false);
+        nomeTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                nomeTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(38, 185, 345, 21);
+        getContentPane().add(nomeTxt);
+        nomeTxt.setBounds(38, 185, 345, 21);
 
         jLabel3.setText("Cpf");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(395, 162, 21, 17);
 
-        jTextField3.setEditable(false);
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        cpfTxt.setEditable(false);
+        cpfTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                cpfTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(395, 185, 170, 21);
+        getContentPane().add(cpfTxt);
+        cpfTxt.setBounds(395, 185, 170, 21);
 
         jLabel4.setText("Email");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(38, 218, 34, 17);
 
-        jTextField4.setEditable(false);
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        emailtxt.setEditable(false);
+        emailtxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                emailtxtActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(38, 241, 345, 21);
+        getContentPane().add(emailtxt);
+        emailtxt.setBounds(38, 241, 345, 21);
 
         jLabel5.setText("RG");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(396, 218, 17, 17);
 
-        jTextField5.setEditable(false);
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        rgTxt.setEditable(false);
+        rgTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                rgTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField5);
-        jTextField5.setBounds(396, 241, 170, 21);
+        getContentPane().add(rgTxt);
+        rgTxt.setBounds(396, 241, 170, 21);
 
         jLabel6.setText("DDD");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(38, 274, 27, 17);
 
-        jTextField6.setEditable(false);
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        dddTxt.setEditable(false);
+        dddTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                dddTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField6);
-        jTextField6.setBounds(38, 297, 27, 21);
+        getContentPane().add(dddTxt);
+        dddTxt.setBounds(38, 297, 27, 21);
 
-        jTextField7.setEditable(false);
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        telefoneTxt.setEditable(false);
+        telefoneTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                telefoneTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField7);
-        jTextField7.setBounds(77, 297, 125, 21);
+        getContentPane().add(telefoneTxt);
+        telefoneTxt.setBounds(77, 297, 125, 21);
 
         jLabel7.setText("Telefone");
         getContentPane().add(jLabel7);
@@ -186,63 +200,114 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel8);
         jLabel8.setBounds(223, 274, 119, 17);
 
-        jTextField8.setEditable(false);
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        nascimentoTxt.setEditable(false);
+        nascimentoTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                nascimentoTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField8);
-        jTextField8.setBounds(223, 297, 161, 21);
+        getContentPane().add(nascimentoTxt);
+        nascimentoTxt.setBounds(223, 297, 161, 21);
 
         jLabel9.setText("Genero");
         getContentPane().add(jLabel9);
         jLabel9.setBounds(396, 274, 43, 17);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino\t", "Feminino" }));
-        jComboBox1.setEnabled(false);
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(396, 297, 162, 21);
+        generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino\t", "Feminino" }));
+        generoCombo.setEnabled(false);
+        getContentPane().add(generoCombo);
+        generoCombo.setBounds(396, 297, 162, 21);
 
         setBounds(170, 100, 616, 479);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void removerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerButtonActionPerformed
+        
+        if (liberado == true) {
+            try {
+                this.sys.removerCliente(this.clien.getEmail());
+                JOptionPane.showMessageDialog(this, "Cliente removido com sucesso!");
+                
+                //Renovar tudo para zerar campos.
+                
+                this.emailBuscaTxt.setText("");
+                this.nomeTxt.setText("");
+                this.cpfTxt.setText("");
+                this.rgTxt.setText("");
+                this.emailtxt.setText("");
+                this.dddTxt.setText("");
+                this.telefoneTxt.setText("");
+                this.nascimentoTxt.setText("");
+                this.generoCombo.setSelectedIndex(0);                
+                
+            } catch (ClienteInexistenteException e) {
+                JOptionPane.showMessageDialog(this, e.getMessage());
+            }
+        }else{
+            JOptionPane.showMessageDialog(this, "Não foi possível remover.");
+        }
+        
+    }//GEN-LAST:event_removerButtonActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_nomeTxtActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void cpfTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_cpfTxtActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void emailtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailtxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_emailtxtActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void rgTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rgTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_rgTxtActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void dddTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dddTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_dddTxtActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void telefoneTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefoneTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_telefoneTxtActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void nascimentoTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nascimentoTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_nascimentoTxtActionPerformed
+
+    private void emailBuscaTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailBuscaTxtKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            try {
+                this.clien = sys.buscarCliente(this.emailBuscaTxt.getText());
+                this.nomeTxt.setText(clien.getNome());
+                this.cpfTxt.setText(clien.getCpf());
+                this.emailtxt.setText(clien.getEmail());
+                this.rgTxt.setText(clien.getRg());
+                this.dddTxt.setText(clien.getTelefone().getDdd());
+                this.telefoneTxt.setText(clien.getTelefone().getNumero());
+                this.nascimentoTxt.setText(clien.getDataNascimento());
+                if (clien.getGenero().startsWith("M")) {
+                    this.generoCombo.setSelectedIndex(0);
+                } else {
+                    this.generoCombo.setSelectedIndex(1);
+                }
+                liberado = true;
+            } catch (ClienteInexistenteException e) {
+                liberado = false;
+                JOptionPane.showMessageDialog(this, e.getMessage());
+            }
+        }
+    }//GEN-LAST:event_emailBuscaTxtKeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JTextField cpfTxt;
+    private javax.swing.JTextField dddTxt;
+    private javax.swing.JTextField emailBuscaTxt;
+    private javax.swing.JTextField emailtxt;
+    private javax.swing.JComboBox<String> generoCombo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -252,13 +317,10 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField nascimentoTxt;
+    private javax.swing.JTextField nomeTxt;
+    private javax.swing.JButton removerButton;
+    private javax.swing.JTextField rgTxt;
+    private javax.swing.JTextField telefoneTxt;
     // End of variables declaration//GEN-END:variables
 }
