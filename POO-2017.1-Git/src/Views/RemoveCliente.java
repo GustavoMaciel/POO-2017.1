@@ -87,16 +87,17 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
         nascimentoTxt = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         generoCombo = new javax.swing.JComboBox<>();
+        jLabel10 = new javax.swing.JLabel();
 
         setClosable(true);
-        setMaximizable(true);
+        setIconifiable(true);
         setTitle("Remover Clientes");
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setText("Insira o email ");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(261, 12, 98, 20);
+        jLabel1.setBounds(250, 20, 109, 17);
 
         emailBuscaTxt.setToolTipText("example@example.com");
         emailBuscaTxt.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -105,7 +106,7 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(emailBuscaTxt);
-        emailBuscaTxt.setBounds(149, 44, 317, 21);
+        emailBuscaTxt.setBounds(149, 44, 317, 33);
 
         removerButton.setBackground(new java.awt.Color(255, 51, 51));
         removerButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -116,11 +117,11 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(removerButton);
-        removerButton.setBounds(264, 83, 87, 27);
+        removerButton.setBounds(456, 395, 110, 30);
 
         jLabel2.setText("Nome");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(38, 162, 36, 17);
+        jLabel2.setBounds(38, 162, 42, 21);
 
         nomeTxt.setEditable(false);
         nomeTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -129,11 +130,11 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(nomeTxt);
-        nomeTxt.setBounds(38, 185, 345, 21);
+        nomeTxt.setBounds(38, 185, 345, 33);
 
         jLabel3.setText("Cpf");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(395, 162, 21, 17);
+        jLabel3.setBounds(395, 162, 23, 21);
 
         cpfTxt.setEditable(false);
         cpfTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -142,11 +143,11 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(cpfTxt);
-        cpfTxt.setBounds(395, 185, 170, 21);
+        cpfTxt.setBounds(395, 185, 170, 33);
 
         jLabel4.setText("Email");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(38, 218, 34, 17);
+        jLabel4.setBounds(38, 218, 38, 21);
 
         emailtxt.setEditable(false);
         emailtxt.addActionListener(new java.awt.event.ActionListener() {
@@ -155,11 +156,11 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(emailtxt);
-        emailtxt.setBounds(38, 241, 345, 21);
+        emailtxt.setBounds(38, 241, 345, 33);
 
         jLabel5.setText("RG");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(396, 218, 17, 17);
+        jLabel5.setBounds(396, 218, 20, 21);
 
         rgTxt.setEditable(false);
         rgTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -168,11 +169,11 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(rgTxt);
-        rgTxt.setBounds(396, 241, 170, 21);
+        rgTxt.setBounds(396, 241, 170, 33);
 
         jLabel6.setText("DDD");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(38, 274, 27, 17);
+        jLabel6.setBounds(40, 280, 33, 21);
 
         dddTxt.setEditable(false);
         dddTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -181,7 +182,7 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(dddTxt);
-        dddTxt.setBounds(38, 297, 27, 21);
+        dddTxt.setBounds(40, 300, 27, 33);
 
         telefoneTxt.setEditable(false);
         telefoneTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -190,15 +191,15 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(telefoneTxt);
-        telefoneTxt.setBounds(77, 297, 125, 21);
+        telefoneTxt.setBounds(80, 300, 125, 33);
 
         jLabel7.setText("Telefone");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(77, 274, 52, 17);
+        jLabel7.setBounds(80, 280, 59, 21);
 
         jLabel8.setText("Data de nascimento");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(223, 274, 119, 17);
+        jLabel8.setBounds(220, 280, 137, 21);
 
         nascimentoTxt.setEditable(false);
         nascimentoTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -207,16 +208,20 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(nascimentoTxt);
-        nascimentoTxt.setBounds(223, 297, 161, 21);
+        nascimentoTxt.setBounds(220, 300, 161, 33);
 
         jLabel9.setText("Genero");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(396, 274, 43, 17);
+        jLabel9.setBounds(400, 280, 51, 21);
 
         generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino\t", "Feminino" }));
         generoCombo.setEnabled(false);
         getContentPane().add(generoCombo);
-        generoCombo.setBounds(396, 297, 162, 21);
+        generoCombo.setBounds(400, 300, 162, 30);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(0, 0, 610, 450);
 
         setBounds(170, 100, 616, 479);
     }// </editor-fold>//GEN-END:initComponents
@@ -309,6 +314,7 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
     private javax.swing.JTextField emailtxt;
     private javax.swing.JComboBox<String> generoCombo;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

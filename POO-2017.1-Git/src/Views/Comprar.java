@@ -80,11 +80,13 @@ public class Comprar extends javax.swing.JInternalFrame {
         dispTxt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         iconLabel = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
-        setMaximizable(true);
         setTitle("Comprar Instrumento");
+        getContentPane().setLayout(null);
 
         numSerieTxt.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
         numSerieTxt.setForeground(new java.awt.Color(153, 153, 153));
@@ -99,12 +101,18 @@ public class Comprar extends javax.swing.JInternalFrame {
                 numSerieTxtKeyPressed(evt);
             }
         });
+        getContentPane().add(numSerieTxt);
+        numSerieTxt.setBounds(22, 44, 130, 33);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setText("Cod.");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(22, 18, 36, 20);
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setText("Nome");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(177, 18, 45, 20);
 
         nomeInsTxt.setEditable(false);
         nomeInsTxt.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
@@ -114,6 +122,8 @@ public class Comprar extends javax.swing.JInternalFrame {
                 nomeInsTxtActionPerformed(evt);
             }
         });
+        getContentPane().add(nomeInsTxt);
+        nomeInsTxt.setBounds(177, 44, 231, 33);
 
         marcaTxt.setEditable(false);
         marcaTxt.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
@@ -123,9 +133,13 @@ public class Comprar extends javax.swing.JInternalFrame {
                 marcaTxtActionPerformed(evt);
             }
         });
+        getContentPane().add(marcaTxt);
+        marcaTxt.setBounds(443, 44, 219, 33);
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setText("Marca");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(443, 18, 47, 20);
 
         valorTxt.setEditable(false);
         valorTxt.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
@@ -135,9 +149,13 @@ public class Comprar extends javax.swing.JInternalFrame {
                 valorTxtActionPerformed(evt);
             }
         });
+        getContentPane().add(valorTxt);
+        valorTxt.setBounds(177, 115, 231, 33);
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel4.setText("Valor");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(177, 89, 41, 20);
 
         dispTxt.setEditable(false);
         dispTxt.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
@@ -147,69 +165,28 @@ public class Comprar extends javax.swing.JInternalFrame {
                 dispTxtActionPerformed(evt);
             }
         });
+        getContentPane().add(dispTxt);
+        dispTxt.setBounds(445, 115, 217, 33);
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel5.setText("Disponibilidade");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(433, 89, 119, 20);
+        getContentPane().add(iconLabel);
+        iconLabel.setBounds(177, 175, 485, 219);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(numSerieTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(valorTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(dispTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(nomeInsTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(marcaTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3)))
-                            .addComponent(iconLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(26, 26, 26))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel5)
-                        .addGap(136, 136, 136))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(numSerieTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nomeInsTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(marcaTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(valorTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dispTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addComponent(iconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(76, Short.MAX_VALUE))
-        );
+        jButton1.setText("COMPRAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(519, 412, 143, 35);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(0, 0, 690, 480);
 
         setBounds(170, 100, 698, 504);
     }// </editor-fold>//GEN-END:initComponents
@@ -249,15 +226,21 @@ public class Comprar extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_numSerieTxtKeyPressed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField dispTxt;
     private javax.swing.JLabel iconLabel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField marcaTxt;
     private javax.swing.JTextField nomeInsTxt;
     private javax.swing.JTextField numSerieTxt;

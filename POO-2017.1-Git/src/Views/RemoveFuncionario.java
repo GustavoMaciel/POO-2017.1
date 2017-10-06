@@ -61,25 +61,201 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        emailBuscaTxt = new javax.swing.JTextField();
+        removerButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        nomeTxt = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        cpfTxt = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        emailtxt = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        rgTxt = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        dddTxt = new javax.swing.JTextField();
+        telefoneTxt = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        nascimentoTxt = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        generoCombo = new javax.swing.JComboBox<>();
+        jLabel10 = new javax.swing.JLabel();
+
         setClosable(true);
         setIconifiable(true);
         setTitle("Remove Funcionario");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 513, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 367, Short.MAX_VALUE)
-        );
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel1.setText("Insira o email ");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 35, -1, -1));
 
-        setBounds(170, 100, 523, 401);
+        emailBuscaTxt.setToolTipText("example@example.com");
+        emailBuscaTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                emailBuscaTxtKeyPressed(evt);
+            }
+        });
+        getContentPane().add(emailBuscaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 64, 317, -1));
+
+        removerButton.setBackground(new java.awt.Color(255, 51, 51));
+        removerButton.setForeground(new java.awt.Color(255, 255, 255));
+        removerButton.setText("Remover");
+        removerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removerButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(removerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 405, 111, 30));
+
+        jLabel2.setText("Nome");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 180, -1, -1));
+
+        nomeTxt.setEditable(false);
+        nomeTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 203, 345, -1));
+
+        jLabel3.setText("Cpf");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(396, 180, -1, -1));
+
+        cpfTxt.setEditable(false);
+        cpfTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cpfTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cpfTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(396, 203, 170, -1));
+
+        jLabel4.setText("Email");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 236, -1, -1));
+
+        emailtxt.setEditable(false);
+        emailtxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailtxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(emailtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 259, 345, -1));
+
+        jLabel5.setText("RG");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 236, -1, -1));
+
+        rgTxt.setEditable(false);
+        rgTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rgTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(rgTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 259, 170, -1));
+
+        jLabel6.setText("DDD");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 292, -1, -1));
+
+        dddTxt.setEditable(false);
+        dddTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dddTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(dddTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 315, 27, -1));
+
+        telefoneTxt.setEditable(false);
+        telefoneTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                telefoneTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(telefoneTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 315, 125, -1));
+
+        jLabel7.setText("Telefone");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 292, -1, -1));
+
+        jLabel8.setText("Data de nascimento");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 292, -1, -1));
+
+        nascimentoTxt.setEditable(false);
+        nascimentoTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nascimentoTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(nascimentoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 315, 161, -1));
+
+        jLabel9.setText("Genero");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 292, -1, -1));
+
+        generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino\t", "Feminino" }));
+        generoCombo.setEnabled(false);
+        getContentPane().add(generoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 315, 162, -1));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 450));
+
+        setBounds(170, 100, 619, 480);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void emailBuscaTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailBuscaTxtKeyPressed
+        
+    }//GEN-LAST:event_emailBuscaTxtKeyPressed
+
+    private void removerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerButtonActionPerformed
+
+    }//GEN-LAST:event_removerButtonActionPerformed
+
+    private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeTxtActionPerformed
+
+    private void cpfTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cpfTxtActionPerformed
+
+    private void emailtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailtxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailtxtActionPerformed
+
+    private void rgTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rgTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rgTxtActionPerformed
+
+    private void dddTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dddTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dddTxtActionPerformed
+
+    private void telefoneTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefoneTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_telefoneTxtActionPerformed
+
+    private void nascimentoTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nascimentoTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nascimentoTxtActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField cpfTxt;
+    private javax.swing.JTextField dddTxt;
+    private javax.swing.JTextField emailBuscaTxt;
+    private javax.swing.JTextField emailtxt;
+    private javax.swing.JComboBox<String> generoCombo;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField nascimentoTxt;
+    private javax.swing.JTextField nomeTxt;
+    private javax.swing.JButton removerButton;
+    private javax.swing.JTextField rgTxt;
+    private javax.swing.JTextField telefoneTxt;
     // End of variables declaration//GEN-END:variables
 }

@@ -61,25 +61,423 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        emailTxt = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        dataTxt = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        generoCombo = new javax.swing.JComboBox<>();
+        jSeparator1 = new javax.swing.JSeparator();
+        logradouroTxt = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        bairroTxt = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        numeroEnderecoTxt = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        cepTxt = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        estadoCombo = new javax.swing.JComboBox<>();
+        jLabel12 = new javax.swing.JLabel();
+        cidadeTxt = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        numeroTxt = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        dddTxt = new javax.swing.JTextField();
+        nomeTxt = new javax.swing.JTextField();
+        confirmarButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        cpfTxt = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        rgTxt = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        jLabel17 = new javax.swing.JLabel();
+        bairroTxt1 = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        bairroTxt2 = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        bairroTxt3 = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+
         setClosable(true);
         setIconifiable(true);
         setTitle("Cadastra Funcionario");
+        getContentPane().setLayout(null);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 698, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 470, Short.MAX_VALUE)
-        );
+        emailTxt.setForeground(new java.awt.Color(153, 153, 153));
+        emailTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(emailTxt);
+        emailTxt.setBounds(25, 91, 369, 33);
 
-        setBounds(170, 100, 708, 504);
+        jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel5.setText("Email");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(25, 68, 40, 17);
+
+        dataTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dataTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(dataTxt);
+        dataTxt.setBounds(237, 159, 142, 33);
+
+        jLabel15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel15.setText("Data de Nascimento");
+        getContentPane().add(jLabel15);
+        jLabel15.setBounds(237, 136, 157, 17);
+
+        generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino", "All" }));
+        getContentPane().add(generoCombo);
+        generoCombo.setBounds(421, 159, 151, 33);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(25, 238, 682, 11);
+
+        logradouroTxt.setForeground(new java.awt.Color(153, 153, 153));
+        logradouroTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logradouroTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(logradouroTxt);
+        logradouroTxt.setBounds(25, 278, 354, 33);
+
+        jLabel6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel6.setText("Logradouro");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(25, 255, 92, 17);
+
+        jLabel7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel7.setText("Endereço");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(25, 215, 75, 17);
+
+        jLabel8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel8.setText("Bairro");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(425, 255, 47, 17);
+
+        bairroTxt.setForeground(new java.awt.Color(153, 153, 153));
+        bairroTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bairroTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bairroTxt);
+        bairroTxt.setBounds(425, 278, 136, 33);
+
+        jLabel9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel9.setText("Numero");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(425, 329, 62, 17);
+
+        numeroEnderecoTxt.setForeground(new java.awt.Color(153, 153, 153));
+        numeroEnderecoTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numeroEnderecoTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(numeroEnderecoTxt);
+        numeroEnderecoTxt.setBounds(425, 352, 136, 33);
+
+        jLabel10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel10.setText("Cep");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(25, 337, 31, 17);
+
+        cepTxt.setForeground(new java.awt.Color(153, 153, 153));
+        cepTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cepTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cepTxt);
+        cepTxt.setBounds(25, 360, 136, 33);
+
+        jLabel11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel11.setText("Estado");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(243, 337, 53, 17);
+
+        estadoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre \t ", "Alagoas \t ", "Amapá \t ", "Amazonas \t\t ", "Bahia \t ", "Ceará \t ", "Distrito Federal  ", "Espírito Santo  ", "Goiás  ", "Maranhão \t", "Mato Grosso \t ", "Mato Grosso do Sul  ", "Minas Gerais \t ", "Pará \t ", "Paraíba \t ", "Paraná \t ", "Pernambuco ", "Piauí \t ", "Rio de Janeiro \t", "Rio Grande do Norte \t ", "Rio Grande do Sul \t", "Rondônia \t ", "Roraima \t ", "Santa Catarina \t ", "São Paulo \t", "Sergipe \t ", "Tocantins" }));
+        estadoCombo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                estadoComboActionPerformed(evt);
+            }
+        });
+        getContentPane().add(estadoCombo);
+        estadoCombo.setBounds(243, 363, 136, 26);
+
+        jLabel12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel12.setText("Cidade");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(25, 405, 54, 17);
+
+        cidadeTxt.setForeground(new java.awt.Color(153, 153, 153));
+        cidadeTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cidadeTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cidadeTxt);
+        cidadeTxt.setBounds(25, 429, 136, 33);
+
+        jLabel13.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel13.setText("Telefone");
+        getContentPane().add(jLabel13);
+        jLabel13.setBounds(70, 136, 70, 17);
+
+        numeroTxt.setForeground(new java.awt.Color(153, 153, 153));
+        numeroTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numeroTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(numeroTxt);
+        numeroTxt.setBounds(28, 159, 30, 33);
+
+        jLabel14.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel14.setText("DDD");
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(25, 136, 33, 17);
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel1.setText("Nome");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(25, 9, 45, 17);
+
+        dddTxt.setForeground(new java.awt.Color(153, 153, 153));
+        dddTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dddTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(dddTxt);
+        dddTxt.setBounds(70, 159, 155, 33);
+
+        nomeTxt.setForeground(new java.awt.Color(153, 153, 153));
+        nomeTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(nomeTxt);
+        nomeTxt.setBounds(25, 32, 369, 33);
+
+        confirmarButton.setText("CONFIRMAR");
+        confirmarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                confirmarButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(confirmarButton);
+        confirmarButton.setBounds(570, 520, 101, 35);
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel2.setText("CPF");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(421, 9, 30, 17);
+
+        cpfTxt.setForeground(new java.awt.Color(153, 153, 153));
+        cpfTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cpfTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cpfTxt);
+        cpfTxt.setBounds(421, 29, 221, 33);
+
+        jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel3.setText("RG");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(421, 68, 22, 17);
+
+        rgTxt.setForeground(new java.awt.Color(153, 153, 153));
+        rgTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rgTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(rgTxt);
+        rgTxt.setBounds(421, 91, 221, 33);
+
+        jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel4.setText("Genero");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(421, 136, 59, 17);
+        getContentPane().add(jSeparator2);
+        jSeparator2.setBounds(20, 490, 682, 11);
+
+        jLabel17.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel17.setText("Administrativo");
+        getContentPane().add(jLabel17);
+        jLabel17.setBounds(20, 470, 150, 17);
+
+        bairroTxt1.setForeground(new java.awt.Color(153, 153, 153));
+        bairroTxt1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bairroTxt1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bairroTxt1);
+        bairroTxt1.setBounds(20, 520, 136, 33);
+
+        jLabel18.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel18.setText("Tipo");
+        getContentPane().add(jLabel18);
+        jLabel18.setBounds(20, 500, 34, 17);
+
+        jLabel19.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel19.setText("Id");
+        getContentPane().add(jLabel19);
+        jLabel19.setBounds(180, 500, 14, 17);
+
+        bairroTxt2.setForeground(new java.awt.Color(153, 153, 153));
+        bairroTxt2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bairroTxt2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bairroTxt2);
+        bairroTxt2.setBounds(180, 520, 136, 33);
+
+        jLabel20.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel20.setText("Pagamento");
+        getContentPane().add(jLabel20);
+        jLabel20.setBounds(340, 500, 120, 17);
+
+        bairroTxt3.setForeground(new java.awt.Color(153, 153, 153));
+        bairroTxt3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bairroTxt3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bairroTxt3);
+        bairroTxt3.setBounds(340, 520, 136, 33);
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
+        getContentPane().add(jLabel16);
+        jLabel16.setBounds(0, 0, 710, 600);
+
+        setBounds(170, 10, 722, 634);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void emailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailTxtActionPerformed
+
+    private void dataTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dataTxtActionPerformed
+
+    private void logradouroTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logradouroTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_logradouroTxtActionPerformed
+
+    private void bairroTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bairroTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bairroTxtActionPerformed
+
+    private void numeroEnderecoTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numeroEnderecoTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_numeroEnderecoTxtActionPerformed
+
+    private void cepTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cepTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cepTxtActionPerformed
+
+    private void estadoComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estadoComboActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_estadoComboActionPerformed
+
+    private void cidadeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidadeTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cidadeTxtActionPerformed
+
+    private void numeroTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numeroTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_numeroTxtActionPerformed
+
+    private void dddTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dddTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dddTxtActionPerformed
+
+    private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeTxtActionPerformed
+
+    private void confirmarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarButtonActionPerformed
+       // TODO add your handling code here:
+    }//GEN-LAST:event_confirmarButtonActionPerformed
+
+    private void cpfTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cpfTxtActionPerformed
+
+    private void rgTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rgTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rgTxtActionPerformed
+
+    private void bairroTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bairroTxt1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bairroTxt1ActionPerformed
+
+    private void bairroTxt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bairroTxt2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bairroTxt2ActionPerformed
+
+    private void bairroTxt3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bairroTxt3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bairroTxt3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField bairroTxt;
+    private javax.swing.JTextField bairroTxt1;
+    private javax.swing.JTextField bairroTxt2;
+    private javax.swing.JTextField bairroTxt3;
+    private javax.swing.JTextField cepTxt;
+    private javax.swing.JTextField cidadeTxt;
+    private javax.swing.JButton confirmarButton;
+    private javax.swing.JTextField cpfTxt;
+    private javax.swing.JTextField dataTxt;
+    private javax.swing.JTextField dddTxt;
+    private javax.swing.JTextField emailTxt;
+    private javax.swing.JComboBox<String> estadoCombo;
+    private javax.swing.JComboBox<String> generoCombo;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JTextField logradouroTxt;
+    private javax.swing.JTextField nomeTxt;
+    private javax.swing.JTextField numeroEnderecoTxt;
+    private javax.swing.JTextField numeroTxt;
+    private javax.swing.JTextField rgTxt;
     // End of variables declaration//GEN-END:variables
 }
