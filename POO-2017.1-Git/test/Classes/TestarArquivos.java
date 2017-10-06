@@ -19,7 +19,7 @@ public class TestarArquivos {
         SistemaLojaMusical sys = new SistemaLojaMusical();
         Cliente i = new Cliente("norm", false, "Gustavo", "027", "1282", "Masculino", "gus@", new Telefone("69", "9301"), new Endereco("Aristides", "Centro", "1447", "58297000", "PB", "Rio Tinto"), "25/04/1997");
         Funcionario x = new Funcionario("Adm", "0", 1200, "Gustavo", "027", "1282", "Masculino", "gus@", new Telefone("69", "9301"), new Endereco("Aristides", "Centro", "1447", "58297000", "PB", "Rio Tinto"), "25/04/1997");
-        Instrumento ins = new Instrumento("Gibson", "027", "Guitarra", 120, null);
+        Instrumento ins = new Instrumento("Gibson", "027", "Guitarra", 120, null, 1);
 
         try {
             sys.cadastrarCliente(i);

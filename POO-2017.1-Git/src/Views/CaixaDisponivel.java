@@ -85,6 +85,7 @@ public class CaixaDisponivel extends javax.swing.JInternalFrame {
         caixaTxt.setEditable(false);
         getContentPane().add(caixaTxt);
         caixaTxt.setBounds(210, 120, 246, 21);
+        caixaTxt.setText(String.valueOf(sys.getDinheiroEmCaixa()));
 
         atualizarButton.setText("Atualizar");
         atualizarButton.addActionListener(new java.awt.event.ActionListener() {

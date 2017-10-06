@@ -43,8 +43,6 @@ import Classes.*;
 import Exceptions.InstrumentoInexistenteException;
 import Exceptions.QuantiaInvalidaException;
 import java.awt.event.KeyEvent;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -80,7 +78,7 @@ public class Comprar extends javax.swing.JInternalFrame {
         jLabel3 = new javax.swing.JLabel();
         valorTxt = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        dispTxt = new javax.swing.JTextField();
+        qtdTxt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         iconLabel = new javax.swing.JLabel();
         comprarButton = new javax.swing.JButton();
@@ -159,21 +157,21 @@ public class Comprar extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(177, 89, 36, 20);
 
-        dispTxt.setEditable(false);
-        dispTxt.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
-        dispTxt.setForeground(new java.awt.Color(153, 153, 153));
-        dispTxt.addActionListener(new java.awt.event.ActionListener() {
+        qtdTxt.setEditable(false);
+        qtdTxt.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
+        qtdTxt.setForeground(new java.awt.Color(153, 153, 153));
+        qtdTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dispTxtActionPerformed(evt);
+                qtdTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(dispTxt);
-        dispTxt.setBounds(445, 115, 217, 33);
+        getContentPane().add(qtdTxt);
+        qtdTxt.setBounds(445, 115, 217, 33);
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel5.setText("Disponibilidade");
+        jLabel5.setText("Quantidade em Estoque");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(433, 89, 107, 20);
+        jLabel5.setBounds(450, 90, 180, 20);
         getContentPane().add(iconLabel);
         iconLabel.setBounds(177, 175, 485, 219);
 
@@ -209,9 +207,9 @@ public class Comprar extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_valorTxtActionPerformed
 
-    private void dispTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dispTxtActionPerformed
+    private void qtdTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qtdTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dispTxtActionPerformed
+    }//GEN-LAST:event_qtdTxtActionPerformed
 
     private void identificadorTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_identificadorTxtKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
@@ -220,12 +218,14 @@ public class Comprar extends javax.swing.JInternalFrame {
                 this.nomeInsTxt.setText(atual.getNome());
                 this.marcaTxt.setText(atual.getMarca());
                 this.valorTxt.setText(String.valueOf(atual.getValor()));
+                this.qtdTxt.setText(String.valueOf(atual.getQuantidade()));
                 liberado = true;
             }
             catch(InstrumentoInexistenteException e){
                 this.nomeInsTxt.setText("");
                 this.marcaTxt.setText("");
                 this.valorTxt.setText("");
+                this.qtdTxt.setText("");
                 JOptionPane.showMessageDialog(this, e.getMessage());
                 liberado = false;
             }
@@ -235,7 +235,10 @@ public class Comprar extends javax.swing.JInternalFrame {
     private void comprarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarButtonActionPerformed
         if(liberado){
             try {
-                sys.realizarVenda(this.identificadorTxt.getText());
+                Instrumento ins = sys.buscarInstrumento(this.identificadorTxt.getText());
+                sys.realizarVenda(ins.getIdentificador());
+                JOptionPane.showMessageDialog(this, "Instrumento vendido com sucesso!");
+                this.qtdTxt.setText(String.valueOf(ins.getQuantidade()));
             } catch (InstrumentoInexistenteException | QuantiaInvalidaException ex) {
                 JOptionPane.showMessageDialog(this, ex.getMessage());
             }
@@ -247,7 +250,6 @@ public class Comprar extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton comprarButton;
-    private javax.swing.JTextField dispTxt;
     private javax.swing.JLabel iconLabel;
     private javax.swing.JTextField identificadorTxt;
     private javax.swing.JLabel jLabel1;
@@ -258,6 +260,7 @@ public class Comprar extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField marcaTxt;
     private javax.swing.JTextField nomeInsTxt;
+    private javax.swing.JTextField qtdTxt;
     private javax.swing.JTextField valorTxt;
     // End of variables declaration//GEN-END:variables
 }

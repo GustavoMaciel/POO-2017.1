@@ -5,18 +5,20 @@ import javax.swing.Icon;
 
 public class Instrumento implements Serializable{
     private String marca, identificador, nome;
+    private int quantidade;
     private double valor;
     private Icon icon;
 
     public Instrumento() {
-        this("","","", 0, null);
+        this("","","", 0, null, 0);
     }
 
     
-    public Instrumento(String marca, String nome, String identificador, double valor, Icon icon) {
+    public Instrumento(String marca, String nome, String identificador, double valor, Icon icon, int quantidade) {
         this.marca = marca;
         this.nome = nome;
         this.identificador = identificador;
+        this.quantidade = quantidade;
         this.valor = valor;
         this.icon = icon;
     }
@@ -38,8 +40,13 @@ public class Instrumento implements Serializable{
     public String getNome() {
         return nome;
     }
-    
-        
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
     public void setMarca(String marca){
         this.marca = marca;
     }

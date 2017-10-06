@@ -192,7 +192,7 @@ public class SistemaLojaMusical implements Serializable {
     public void realizarVenda(String identificador) throws InstrumentoInexistenteException, QuantiaInvalidaException {
         Instrumento x = this.buscarInstrumento(identificador);
         this.efetuarRecebimento(x.getValor());
-        this.removerInstrumento(identificador);
+        x.setQuantidade(x.getQuantidade()-1);
     }
     
     
