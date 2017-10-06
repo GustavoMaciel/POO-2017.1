@@ -39,18 +39,24 @@
  */
 package Views;
 
+import Classes.Instrumento;
+import Classes.SistemaLojaMusical;
+import Exceptions.InstrumentoInexistenteException;
 import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author junior
  */
 public class RemoveInstrumento extends javax.swing.JInternalFrame {
-
+    boolean podeIr = false;
+    SistemaLojaMusical sys;
     /**
      * Creates new form ListaInstrumento
      */
-    public RemoveInstrumento() {
+    public RemoveInstrumento(SistemaLojaMusical sys) {
+        this.sys = sys;
         initComponents();
     }
 
@@ -195,7 +201,22 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_idMonstrarTxtActionPerformed
 
     private void removerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerButtonActionPerformed
-
+        if(podeIr){
+            try{
+                sys.removerInstrumento(idTxt.getText());
+                JOptionPane.showMessageDialog(this, "Instrumento removido com sucesso!");
+                
+                nomeTxt.setText("");
+                marcaTxt.setText("'");
+                valorTxt.setText("");
+                idMonstrarTxt.setText("");
+                podeIr = false;
+            }catch(InstrumentoInexistenteException e){
+                JOptionPane.showMessageDialog(this, e.getMessage());
+            }
+        }else{
+            JOptionPane.showMessageDialog(this, "Não foi possível remover.");
+        }
     }//GEN-LAST:event_removerButtonActionPerformed
 
     private void idTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idTxtActionPerformed
@@ -204,7 +225,21 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
 
     private void idTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idTxtKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){
-            
+            try{
+                Instrumento ins = sys.buscarInstrumento(idTxt.getText());
+                nomeTxt.setText(ins.getNome());
+                marcaTxt.setText(ins.getMarca());
+                valorTxt.setText(String.valueOf(ins.getValor()));
+                idMonstrarTxt.setText(ins.getIdentificador());
+                podeIr = true;
+            }catch (InstrumentoInexistenteException e){
+                nomeTxt.setText("");
+                marcaTxt.setText("");
+                valorTxt.setText("");
+                idMonstrarTxt.setText("");
+                JOptionPane.showMessageDialog(this, e.getMessage());
+                podeIr = false;
+            }
         }
     }//GEN-LAST:event_idTxtKeyPressed
 

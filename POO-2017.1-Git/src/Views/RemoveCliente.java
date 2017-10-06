@@ -301,6 +301,15 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
                 liberado = true;
             } catch (ClienteInexistenteException e) {
                 liberado = false;
+                this.emailBuscaTxt.setText("");
+                this.nomeTxt.setText("");
+                this.cpfTxt.setText("");
+                this.rgTxt.setText("");
+                this.emailtxt.setText("");
+                this.dddTxt.setText("");
+                this.telefoneTxt.setText("");
+                this.nascimentoTxt.setText("");
+                this.generoCombo.setSelectedIndex(0);     
                 JOptionPane.showMessageDialog(this, e.getMessage());
             }
         }

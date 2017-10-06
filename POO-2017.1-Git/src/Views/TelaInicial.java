@@ -335,7 +335,7 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        RemoveInstrumento obj = new RemoveInstrumento();
+        RemoveInstrumento obj = new RemoveInstrumento(sys);
         jDesktopPanePrincipal.add(obj);
         obj.setVisible(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem7ActionPerformed
