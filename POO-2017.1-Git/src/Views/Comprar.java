@@ -41,7 +41,10 @@ package Views;
 
 import Classes.*;
 import Exceptions.InstrumentoInexistenteException;
+import Exceptions.QuantiaInvalidaException;
 import java.awt.event.KeyEvent;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -49,7 +52,7 @@ import javax.swing.JOptionPane;
  * @author junior
  */
 public class Comprar extends javax.swing.JInternalFrame {
-    
+    boolean liberado = false;
     SistemaLojaMusical sys;
 
     /**
@@ -69,7 +72,7 @@ public class Comprar extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        numSerieTxt = new javax.swing.JTextField();
+        identificadorTxt = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         nomeInsTxt = new javax.swing.JTextField();
@@ -80,7 +83,7 @@ public class Comprar extends javax.swing.JInternalFrame {
         dispTxt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         iconLabel = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        comprarButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -88,31 +91,30 @@ public class Comprar extends javax.swing.JInternalFrame {
         setTitle("Comprar Instrumento");
         getContentPane().setLayout(null);
 
-        numSerieTxt.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
-        numSerieTxt.setForeground(new java.awt.Color(153, 153, 153));
-        numSerieTxt.setText("Insira o código");
-        numSerieTxt.addActionListener(new java.awt.event.ActionListener() {
+        identificadorTxt.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
+        identificadorTxt.setForeground(new java.awt.Color(153, 153, 153));
+        identificadorTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numSerieTxtActionPerformed(evt);
+                identificadorTxtActionPerformed(evt);
             }
         });
-        numSerieTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+        identificadorTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                numSerieTxtKeyPressed(evt);
+                identificadorTxtKeyPressed(evt);
             }
         });
-        getContentPane().add(numSerieTxt);
-        numSerieTxt.setBounds(22, 44, 130, 33);
+        getContentPane().add(identificadorTxt);
+        identificadorTxt.setBounds(22, 44, 130, 33);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setText("Cod.");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(22, 18, 36, 20);
+        jLabel1.setBounds(22, 18, 31, 20);
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setText("Nome");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(177, 18, 45, 20);
+        jLabel2.setBounds(177, 18, 42, 20);
 
         nomeInsTxt.setEditable(false);
         nomeInsTxt.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
@@ -139,7 +141,7 @@ public class Comprar extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setText("Marca");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(443, 18, 47, 20);
+        jLabel3.setBounds(443, 18, 42, 20);
 
         valorTxt.setEditable(false);
         valorTxt.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
@@ -155,7 +157,7 @@ public class Comprar extends javax.swing.JInternalFrame {
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel4.setText("Valor");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(177, 89, 41, 20);
+        jLabel4.setBounds(177, 89, 36, 20);
 
         dispTxt.setEditable(false);
         dispTxt.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
@@ -171,18 +173,18 @@ public class Comprar extends javax.swing.JInternalFrame {
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel5.setText("Disponibilidade");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(433, 89, 119, 20);
+        jLabel5.setBounds(433, 89, 107, 20);
         getContentPane().add(iconLabel);
         iconLabel.setBounds(177, 175, 485, 219);
 
-        jButton1.setText("COMPRAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        comprarButton.setText("COMPRAR");
+        comprarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                comprarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(519, 412, 143, 35);
+        getContentPane().add(comprarButton);
+        comprarButton.setBounds(519, 412, 143, 27);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel6);
@@ -191,9 +193,9 @@ public class Comprar extends javax.swing.JInternalFrame {
         setBounds(170, 100, 698, 504);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void numSerieTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numSerieTxtActionPerformed
+    private void identificadorTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_identificadorTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_numSerieTxtActionPerformed
+    }//GEN-LAST:event_identificadorTxtActionPerformed
 
     private void nomeInsTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeInsTxtActionPerformed
         // TODO add your handling code here:
@@ -211,30 +213,43 @@ public class Comprar extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_dispTxtActionPerformed
 
-    private void numSerieTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numSerieTxtKeyPressed
+    private void identificadorTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_identificadorTxtKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             try {
-                Instrumento atual = sys.buscarInstrumento(this.numSerieTxt.getText());
+                Instrumento atual = sys.buscarInstrumento(this.identificadorTxt.getText());
                 this.nomeInsTxt.setText(atual.getNome());
                 this.marcaTxt.setText(atual.getMarca());
-                this.valorTxt.setText("R$ " + String.valueOf(atual.getValor()));
+                this.valorTxt.setText(String.valueOf(atual.getValor()));
+                liberado = true;
             }
-            
             catch(InstrumentoInexistenteException e){
+                this.nomeInsTxt.setText("");
+                this.marcaTxt.setText("");
+                this.valorTxt.setText("");
                 JOptionPane.showMessageDialog(this, e.getMessage());
+                liberado = false;
             }
         }
-    }//GEN-LAST:event_numSerieTxtKeyPressed
+    }//GEN-LAST:event_identificadorTxtKeyPressed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void comprarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarButtonActionPerformed
+        if(liberado){
+            try {
+                sys.realizarVenda(this.identificadorTxt.getText());
+            } catch (InstrumentoInexistenteException | QuantiaInvalidaException ex) {
+                JOptionPane.showMessageDialog(this, ex.getMessage());
+            }
+        }else{
+            JOptionPane.showMessageDialog(this, "Insira o código e aperte enter.");
+        }
+    }//GEN-LAST:event_comprarButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton comprarButton;
     private javax.swing.JTextField dispTxt;
     private javax.swing.JLabel iconLabel;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JTextField identificadorTxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -243,7 +258,6 @@ public class Comprar extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField marcaTxt;
     private javax.swing.JTextField nomeInsTxt;
-    private javax.swing.JTextField numSerieTxt;
     private javax.swing.JTextField valorTxt;
     // End of variables declaration//GEN-END:variables
 }

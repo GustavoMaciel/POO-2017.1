@@ -39,16 +39,23 @@
  */
 package Views;
 
+import Classes.Instrumento;
+import Classes.SistemaLojaMusical;
+import Exceptions.InstrumentoJaExisteException;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author junior
  */
 public class CadastraInstrumento extends javax.swing.JInternalFrame {
-
+    SistemaLojaMusical sys;
     /**
      * Creates new form CadastraInstrumento
      */
-    public CadastraInstrumento() {
+    public CadastraInstrumento(SistemaLojaMusical sys) {
+        this.sys = sys;
         initComponents();
     }
 
@@ -62,14 +69,14 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        nomeTxt3 = new javax.swing.JTextField();
+        nomeTxt = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        cpfTxt = new javax.swing.JTextField();
+        marcaTxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        rgTxt = new javax.swing.JTextField();
-        emailTxt = new javax.swing.JTextField();
+        valorTxt = new javax.swing.JTextField();
+        identificadorTxt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        confirmarButton = new javax.swing.JButton();
+        cadastrarButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -80,67 +87,67 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setText("Nome");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(40, 70, 45, 17);
+        jLabel1.setBounds(40, 70, 42, 20);
 
-        nomeTxt3.setForeground(new java.awt.Color(153, 153, 153));
-        nomeTxt3.addActionListener(new java.awt.event.ActionListener() {
+        nomeTxt.setForeground(new java.awt.Color(153, 153, 153));
+        nomeTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTxt3ActionPerformed(evt);
+                nomeTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(nomeTxt3);
-        nomeTxt3.setBounds(40, 90, 240, 33);
+        getContentPane().add(nomeTxt);
+        nomeTxt.setBounds(40, 90, 240, 21);
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setText("Marca");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(440, 70, 47, 17);
+        jLabel2.setBounds(440, 70, 42, 20);
 
-        cpfTxt.setForeground(new java.awt.Color(153, 153, 153));
-        cpfTxt.addActionListener(new java.awt.event.ActionListener() {
+        marcaTxt.setForeground(new java.awt.Color(153, 153, 153));
+        marcaTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cpfTxtActionPerformed(evt);
+                marcaTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(cpfTxt);
-        cpfTxt.setBounds(440, 90, 221, 33);
+        getContentPane().add(marcaTxt);
+        marcaTxt.setBounds(440, 90, 221, 21);
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setText("Valor");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(440, 140, 41, 17);
+        jLabel3.setBounds(440, 140, 36, 20);
 
-        rgTxt.setForeground(new java.awt.Color(153, 153, 153));
-        rgTxt.addActionListener(new java.awt.event.ActionListener() {
+        valorTxt.setForeground(new java.awt.Color(153, 153, 153));
+        valorTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rgTxtActionPerformed(evt);
+                valorTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(rgTxt);
-        rgTxt.setBounds(440, 160, 221, 33);
+        getContentPane().add(valorTxt);
+        valorTxt.setBounds(440, 160, 221, 21);
 
-        emailTxt.setForeground(new java.awt.Color(153, 153, 153));
-        emailTxt.addActionListener(new java.awt.event.ActionListener() {
+        identificadorTxt.setForeground(new java.awt.Color(153, 153, 153));
+        identificadorTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailTxtActionPerformed(evt);
+                identificadorTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(emailTxt);
-        emailTxt.setBounds(40, 160, 240, 33);
+        getContentPane().add(identificadorTxt);
+        identificadorTxt.setBounds(40, 160, 240, 21);
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel5.setText("Numero de Série");
+        jLabel5.setText("Identificador");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(40, 140, 133, 17);
+        jLabel5.setBounds(40, 140, 89, 20);
 
-        confirmarButton.setText("CADASTRAR");
-        confirmarButton.addActionListener(new java.awt.event.ActionListener() {
+        cadastrarButton.setText("CADASTRAR");
+        cadastrarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                confirmarButtonActionPerformed(evt);
+                cadastrarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(confirmarButton);
-        confirmarButton.setBounds(528, 440, 150, 35);
+        getContentPane().add(cadastrarButton);
+        cadastrarButton.setBounds(528, 440, 150, 27);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel4);
@@ -149,37 +156,94 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
         setBounds(170, 100, 717, 535);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nomeTxt3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxt3ActionPerformed
+    private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTxt3ActionPerformed
+    }//GEN-LAST:event_nomeTxtActionPerformed
 
-    private void cpfTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfTxtActionPerformed
+    private void marcaTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_marcaTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cpfTxtActionPerformed
+    }//GEN-LAST:event_marcaTxtActionPerformed
 
-    private void rgTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rgTxtActionPerformed
+    private void valorTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_rgTxtActionPerformed
+    }//GEN-LAST:event_valorTxtActionPerformed
 
-    private void emailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxtActionPerformed
+    private void identificadorTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_identificadorTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailTxtActionPerformed
+    }//GEN-LAST:event_identificadorTxtActionPerformed
 
-    private void confirmarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarButtonActionPerformed
-
-    }//GEN-LAST:event_confirmarButtonActionPerformed
+    private void cadastrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarButtonActionPerformed
+        Instrumento ins = new Instrumento();
+        boolean podeCadastrar = true;
+        ArrayList<String> faltas = new ArrayList<>();
+        
+        if(nomeTxt.getText().equals("")){
+            podeCadastrar = false;
+            faltas.add("Nome");
+        }else{
+            ins.setNome(nomeTxt.getText());
+        }
+        
+        if(marcaTxt.getText().equals("")){
+            podeCadastrar = false;
+            faltas.add("Marca");
+        }else{
+            ins.setMarca(marcaTxt.getText());
+        }
+        
+        if(identificadorTxt.getText().equals("")){
+            podeCadastrar = false;
+            faltas.add("Identificador");
+        }else{
+            ins.setIdentificador(identificadorTxt.getText());
+        }
+        
+        if(valorTxt.getText().equals("")){
+            podeCadastrar = false;
+            faltas.add("Valor");
+        }else{
+            try{
+                Double valor = Double.parseDouble(valorTxt.getText());
+                ins.setValor(valor);
+            }catch (NumberFormatException e){
+                podeCadastrar = false;
+                JOptionPane.showMessageDialog(this, "Não podem haver números no campo valor.");
+            }
+        }
+        
+        try {
+            if (podeCadastrar) {
+                sys.cadastrarInstrumento(ins);
+                JOptionPane.showMessageDialog(this, "Instrumento cadastrado com sucesso!");
+                this.dispose();
+            } else {
+                String con = "";
+                for (String i : faltas) {
+                    con += i + "\n";
+                }
+                if (faltas.size() > 1) {
+                    JOptionPane.showMessageDialog(this, "Você deixou os seguintes campos vazios:  \n" + con);
+                } else {
+                    JOptionPane.showMessageDialog(this, "Você deixou o seguinte campo vazio: \n" + con);
+                }
+            }
+        } catch (InstrumentoJaExisteException e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+        
+    }//GEN-LAST:event_cadastrarButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton confirmarButton;
-    private javax.swing.JTextField cpfTxt;
-    private javax.swing.JTextField emailTxt;
+    private javax.swing.JButton cadastrarButton;
+    private javax.swing.JTextField identificadorTxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField nomeTxt3;
-    private javax.swing.JTextField rgTxt;
+    private javax.swing.JTextField marcaTxt;
+    private javax.swing.JTextField nomeTxt;
+    private javax.swing.JTextField valorTxt;
     // End of variables declaration//GEN-END:variables
 }

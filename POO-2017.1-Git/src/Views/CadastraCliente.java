@@ -94,9 +94,9 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         jLabel12 = new javax.swing.JLabel();
         cidadeTxt = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        numeroTxt = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
         dddTxt = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        numeroTxt = new javax.swing.JTextField();
         confirmarButton = new javax.swing.JButton();
         dataTxt = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
@@ -110,7 +110,7 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setText("Nome");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(25, 21, 45, 17);
+        jLabel1.setBounds(25, 21, 42, 20);
 
         nomeTxt.setForeground(new java.awt.Color(153, 153, 153));
         nomeTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -119,12 +119,12 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(nomeTxt);
-        nomeTxt.setBounds(25, 44, 369, 33);
+        nomeTxt.setBounds(25, 44, 369, 21);
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setText("CPF");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(420, 20, 30, 17);
+        jLabel2.setBounds(420, 20, 26, 20);
 
         cpfTxt.setForeground(new java.awt.Color(153, 153, 153));
         cpfTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -133,12 +133,12 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(cpfTxt);
-        cpfTxt.setBounds(420, 40, 221, 33);
+        cpfTxt.setBounds(420, 40, 221, 21);
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setText("RG");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(420, 80, 22, 17);
+        jLabel3.setBounds(420, 80, 19, 20);
 
         rgTxt.setForeground(new java.awt.Color(153, 153, 153));
         rgTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -147,12 +147,12 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(rgTxt);
-        rgTxt.setBounds(421, 103, 221, 33);
+        rgTxt.setBounds(421, 103, 221, 21);
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel4.setText("Genero");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(421, 148, 59, 17);
+        jLabel4.setBounds(421, 148, 50, 20);
 
         emailTxt.setForeground(new java.awt.Color(153, 153, 153));
         emailTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -161,16 +161,16 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(emailTxt);
-        emailTxt.setBounds(25, 103, 369, 33);
+        emailTxt.setBounds(25, 103, 369, 21);
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel5.setText("Email");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(25, 80, 40, 17);
+        jLabel5.setBounds(25, 80, 38, 20);
 
         generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino", "All" }));
         getContentPane().add(generoCombo);
-        generoCombo.setBounds(421, 171, 151, 33);
+        generoCombo.setBounds(421, 171, 151, 26);
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(25, 250, 682, 11);
 
@@ -181,22 +181,22 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(logradouroTxt);
-        logradouroTxt.setBounds(25, 290, 354, 33);
+        logradouroTxt.setBounds(25, 290, 354, 21);
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel6.setText("Logradouro");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(25, 267, 92, 17);
+        jLabel6.setBounds(25, 267, 82, 20);
 
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel7.setText("Endereço");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(25, 227, 75, 17);
+        jLabel7.setBounds(25, 227, 64, 20);
 
         jLabel8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel8.setText("Bairro");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(425, 267, 47, 17);
+        jLabel8.setBounds(425, 267, 42, 20);
 
         bairroTxt.setForeground(new java.awt.Color(153, 153, 153));
         bairroTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -205,12 +205,12 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(bairroTxt);
-        bairroTxt.setBounds(425, 290, 136, 33);
+        bairroTxt.setBounds(425, 290, 136, 21);
 
         jLabel9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel9.setText("Numero");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(425, 341, 62, 17);
+        jLabel9.setBounds(425, 341, 57, 20);
 
         numeroEnderecoTxt.setForeground(new java.awt.Color(153, 153, 153));
         numeroEnderecoTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -219,12 +219,12 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(numeroEnderecoTxt);
-        numeroEnderecoTxt.setBounds(425, 364, 136, 33);
+        numeroEnderecoTxt.setBounds(425, 364, 136, 21);
 
         jLabel10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel10.setText("Cep");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(25, 349, 31, 17);
+        jLabel10.setBounds(25, 349, 26, 20);
 
         cepTxt.setForeground(new java.awt.Color(153, 153, 153));
         cepTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -233,12 +233,12 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(cepTxt);
-        cepTxt.setBounds(25, 372, 136, 33);
+        cepTxt.setBounds(25, 372, 136, 21);
 
         jLabel11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel11.setText("Estado");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(243, 349, 53, 17);
+        jLabel11.setBounds(243, 349, 47, 20);
 
         estadoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre \t ", "Alagoas \t ", "Amapá \t ", "Amazonas \t\t ", "Bahia \t ", "Ceará \t ", "Distrito Federal  ", "Espírito Santo  ", "Goiás  ", "Maranhão \t", "Mato Grosso \t ", "Mato Grosso do Sul  ", "Minas Gerais \t ", "Pará \t ", "Paraíba \t ", "Paraná \t ", "Pernambuco ", "Piauí \t ", "Rio de Janeiro \t", "Rio Grande do Norte \t ", "Rio Grande do Sul \t", "Rondônia \t ", "Roraima \t ", "Santa Catarina \t ", "São Paulo \t", "Sergipe \t ", "Tocantins" }));
         estadoCombo.addActionListener(new java.awt.event.ActionListener() {
@@ -252,7 +252,7 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         jLabel12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel12.setText("Cidade");
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(25, 417, 54, 17);
+        jLabel12.setBounds(25, 417, 47, 20);
 
         cidadeTxt.setForeground(new java.awt.Color(153, 153, 153));
         cidadeTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -261,26 +261,12 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(cidadeTxt);
-        cidadeTxt.setBounds(25, 441, 136, 33);
+        cidadeTxt.setBounds(25, 441, 136, 21);
 
         jLabel13.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel13.setText("Telefone");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(70, 148, 70, 17);
-
-        numeroTxt.setForeground(new java.awt.Color(153, 153, 153));
-        numeroTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numeroTxtActionPerformed(evt);
-            }
-        });
-        getContentPane().add(numeroTxt);
-        numeroTxt.setBounds(28, 171, 30, 33);
-
-        jLabel14.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel14.setText("DDD");
-        getContentPane().add(jLabel14);
-        jLabel14.setBounds(25, 148, 33, 17);
+        jLabel13.setBounds(70, 148, 59, 20);
 
         dddTxt.setForeground(new java.awt.Color(153, 153, 153));
         dddTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -289,7 +275,21 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(dddTxt);
-        dddTxt.setBounds(70, 171, 155, 33);
+        dddTxt.setBounds(28, 171, 30, 21);
+
+        jLabel14.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel14.setText("DDD");
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(25, 148, 30, 20);
+
+        numeroTxt.setForeground(new java.awt.Color(153, 153, 153));
+        numeroTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numeroTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(numeroTxt);
+        numeroTxt.setBounds(70, 171, 155, 21);
 
         confirmarButton.setText("CONFIRMAR");
         confirmarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -298,7 +298,7 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(confirmarButton);
-        confirmarButton.setBounds(425, 440, 101, 35);
+        confirmarButton.setBounds(425, 440, 109, 27);
 
         dataTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -306,12 +306,12 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(dataTxt);
-        dataTxt.setBounds(237, 171, 142, 33);
+        dataTxt.setBounds(237, 171, 142, 21);
 
         jLabel15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel15.setText("Data de Nascimento");
         getContentPane().add(jLabel15);
-        jLabel15.setBounds(237, 148, 157, 17);
+        jLabel15.setBounds(237, 148, 140, 20);
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel16);
@@ -360,13 +360,13 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_estadoComboActionPerformed
 
-    private void numeroTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numeroTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_numeroTxtActionPerformed
-
     private void dddTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dddTxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_dddTxtActionPerformed
+
+    private void numeroTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numeroTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_numeroTxtActionPerformed
 
     private void confirmarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarButtonActionPerformed
 
@@ -415,11 +415,11 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
 
         cliente.setTipo("NORMAL");
 
-        if (this.dddTxt.getText().equals("")) {
+        if (this.numeroTxt.getText().equals("")) {
             campos.add("DDD");
             podeCadastrar = false;
         }
-        if (this.numeroTxt.getText().equals("")) {
+        if (this.dddTxt.getText().equals("")) {
             campos.add("Número de telefone");
             podeCadastrar = false;
         }

@@ -88,7 +88,7 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel1.setText("Insira o email ");
+        jLabel1.setText("Insira o ID ");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 35, -1, -1));
 
         emailBuscaTxt.setToolTipText("example@example.com");

@@ -148,15 +148,19 @@ public class SistemaLojaMusical implements Serializable {
         this.gerenciadorDeFinancas.efetuarPagamento(quantia);
     }
 
+    public double getDinheiroEmCaixa(){
+        return this.gerenciadorDeFinancas.getDinheiroEmCaixa();
+    }
+    
     // Gerenciador de Estoque
     /**
      *
-     * @param numSerie
+     * @param identificador
      * @return
      * @throws InstrumentoInexistenteException
      */
-    public Instrumento buscarInstrumento(String numSerie) throws InstrumentoInexistenteException {
-        return this.gerenciadorDeEstoque.buscarInstrumento(numSerie);
+    public Instrumento buscarInstrumento(String identificador) throws InstrumentoInexistenteException {
+        return this.gerenciadorDeEstoque.buscarInstrumento(identificador);
     }
 
     /**
@@ -170,26 +174,29 @@ public class SistemaLojaMusical implements Serializable {
 
     /**
      *
-     * @param numSerie
+     * @param identificador
      * @throws InstrumentoInexistenteException
      */
-    public void removerInstrumento(String numSerie) throws InstrumentoInexistenteException {
-        this.gerenciadorDeEstoque.removerInstrumento(numSerie);
+    public void removerInstrumento(String identificador) throws InstrumentoInexistenteException {
+        this.gerenciadorDeEstoque.removerInstrumento(identificador);
     }
 
     /**
      * Irá buscar um instrumento com código passado por parametro, efetuará o
      * recebimento da quantia do instrumento e então removerá o instrumento.
      *
-     * @param numSerie
+     * @param identificador
      * @throws InstrumentoInexistenteException
      * @throws QuantiaInvalidaException
      */
-    public void realizarVenda(String numSerie) throws InstrumentoInexistenteException, QuantiaInvalidaException {
-        Instrumento x = this.buscarInstrumento(numSerie);
+    public void realizarVenda(String identificador) throws InstrumentoInexistenteException, QuantiaInvalidaException {
+        Instrumento x = this.buscarInstrumento(identificador);
         this.efetuarRecebimento(x.getValor());
-        this.removerInstrumento(numSerie);
+        this.removerInstrumento(identificador);
     }
+    
+    
+    // Gerenciar Arquivos
 
     public void salvar() throws IOException {
         gerenciarArquivos.salvar(gerenciadorDeEstoque, gerenciadorDeFinancas, gerenciadorDePessoas);

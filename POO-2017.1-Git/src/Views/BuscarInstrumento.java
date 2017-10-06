@@ -39,16 +39,22 @@
  */
 package Views;
 
+import Classes.Instrumento;
+import Classes.SistemaLojaMusical;
+import Exceptions.InstrumentoInexistenteException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author junior
  */
 public class BuscarInstrumento extends javax.swing.JInternalFrame {
-
+    SistemaLojaMusical sys;
     /**
      * Creates new form BuscarInstrumento
      */
-    public BuscarInstrumento() {
+    public BuscarInstrumento(SistemaLojaMusical sys) {
+        this.sys = sys;
         initComponents();
     }
 
@@ -63,13 +69,16 @@ public class BuscarInstrumento extends javax.swing.JInternalFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        codigoTxt = new javax.swing.JTextPane();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        nomeTxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        confirmarButton1 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        marcaTxt = new javax.swing.JTextField();
+        buscarButton = new javax.swing.JButton();
+        valorTxt = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        nomeTxt1 = new javax.swing.JTextField();
 
         setClosable(true);
         setIconifiable(true);
@@ -78,77 +87,121 @@ public class BuscarInstrumento extends javax.swing.JInternalFrame {
 
         jLabel1.setText("código:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(306, 55, 51, 21);
+        jLabel1.setBounds(306, 55, 43, 17);
 
-        jScrollPane1.setViewportView(jTextPane1);
+        jScrollPane1.setViewportView(codigoTxt);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(255, 82, 152, 29);
+        jScrollPane1.setBounds(255, 82, 152, 26);
 
         jLabel2.setText("Nome:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(130, 240, 46, 21);
+        jLabel2.setBounds(130, 240, 39, 17);
 
-        jTextField1.setEditable(false);
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        nomeTxt.setEditable(false);
+        nomeTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                nomeTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(180, 230, 354, 33);
+        getContentPane().add(nomeTxt);
+        nomeTxt.setBounds(180, 230, 354, 21);
 
         jLabel3.setText("Marca:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(130, 200, 47, 21);
+        jLabel3.setBounds(130, 200, 39, 17);
 
-        jTextField2.setEditable(false);
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jLabel5.setText("Valor:");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(130, 270, 44, 17);
+
+        marcaTxt.setEditable(false);
+        marcaTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                marcaTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(180, 190, 354, 33);
+        getContentPane().add(marcaTxt);
+        marcaTxt.setBounds(180, 190, 354, 21);
 
-        confirmarButton1.setText("BUSCAR");
-        confirmarButton1.addActionListener(new java.awt.event.ActionListener() {
+        buscarButton.setText("BUSCAR");
+        buscarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                confirmarButton1ActionPerformed(evt);
+                buscarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(confirmarButton1);
-        confirmarButton1.setBounds(270, 120, 120, 30);
+        getContentPane().add(buscarButton);
+        buscarButton.setBounds(270, 120, 120, 30);
+
+        valorTxt.setEditable(false);
+        valorTxt.setFocusable(false);
+        valorTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                valorTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(valorTxt);
+        valorTxt.setBounds(180, 270, 354, 21);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(-10, 0, 680, 440);
+        jLabel4.setBounds(0, 0, 680, 440);
+
+        nomeTxt1.setEditable(false);
+        nomeTxt1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeTxt1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(nomeTxt1);
+        nomeTxt1.setBounds(180, 230, 354, 21);
 
         setBounds(170, 100, 675, 469);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_nomeTxtActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void marcaTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_marcaTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_marcaTxtActionPerformed
 
-    private void confirmarButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarButton1ActionPerformed
+    private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
+        try {
+            Instrumento i = sys.buscarInstrumento(this.codigoTxt.getText());
+            this.nomeTxt.setText(i.getNome());
+            this.marcaTxt.setText(i.getMarca());
+            valorTxt.setText(String.valueOf(i.getValor()));
+        } catch (InstrumentoInexistenteException ex) {
+            this.nomeTxt.setText("");
+            this.marcaTxt.setText("");
+            valorTxt.setText("");
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+        }
+    }//GEN-LAST:event_buscarButtonActionPerformed
 
-    }//GEN-LAST:event_confirmarButton1ActionPerformed
+    private void nomeTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxt1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeTxt1ActionPerformed
+
+    private void valorTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_valorTxtActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton confirmarButton1;
+    private javax.swing.JButton buscarButton;
+    private javax.swing.JTextPane codigoTxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTextField marcaTxt;
+    private javax.swing.JTextField nomeTxt;
+    private javax.swing.JTextField nomeTxt1;
+    private javax.swing.JTextField valorTxt;
     // End of variables declaration//GEN-END:variables
 }

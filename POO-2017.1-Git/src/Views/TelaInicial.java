@@ -3,6 +3,10 @@ package Views;
 import Classes.*;
 import Exceptions.InstrumentoJaExisteException;
 import java.awt.event.WindowListener;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -16,6 +20,12 @@ public class TelaInicial extends javax.swing.JFrame {
      */
     public TelaInicial(SistemaLojaMusical sys) {
         this.sys = sys;
+        try {
+            sys.recuperar();
+        } catch (Exception e){
+            System.out.println("Criando arquivos pela primeira vez.");
+            sys = new SistemaLojaMusical();
+        }
         initComponents();
         
     }
@@ -36,7 +46,7 @@ public class TelaInicial extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         lojaMenu = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem14 = new javax.swing.JMenuItem();
+        itemSair = new javax.swing.JMenuItem();
         pessoaMenu = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -70,12 +80,17 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jMenuItem1.setText("jMenuItem1");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Folk's WAY");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(new java.awt.Dimension(1024, 700));
         setMinimumSize(new java.awt.Dimension(800, 600));
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jDesktopPanePrincipal.setDesktopManager(null);
 
@@ -96,14 +111,14 @@ public class TelaInicial extends javax.swing.JFrame {
         });
         lojaMenu.add(jMenuItem2);
 
-        jMenuItem14.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_MASK));
-        jMenuItem14.setText("Sair");
-        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+        itemSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_MASK));
+        itemSair.setText("Sair");
+        itemSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem14ActionPerformed(evt);
+                itemSairActionPerformed(evt);
             }
         });
-        lojaMenu.add(jMenuItem14);
+        lojaMenu.add(itemSair);
 
         jMenuBar1.add(lojaMenu);
 
@@ -290,7 +305,7 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem8ActionPerformed
         
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-        CadastraFuncionario obj = new CadastraFuncionario();
+        CadastraFuncionario obj = new CadastraFuncionario(sys);
         jDesktopPanePrincipal.add(obj);
         obj.setVisible(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem9ActionPerformed
@@ -302,19 +317,19 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-        ListaFuncionario obj = new ListaFuncionario();
+        ListaFuncionario obj = new ListaFuncionario(sys);
         jDesktopPanePrincipal.add(obj);
         obj.setVisible(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        BuscarInstrumento obj = new BuscarInstrumento();
+        BuscarInstrumento obj = new BuscarInstrumento(sys);
         jDesktopPanePrincipal.add(obj);
         obj.setVisible(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        CadastraInstrumento obj = new CadastraInstrumento();
+        CadastraInstrumento obj = new CadastraInstrumento(sys);
         jDesktopPanePrincipal.add(obj);
         obj.setVisible(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem6ActionPerformed
@@ -326,7 +341,7 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
-        CaixaDisponivel obj = new CaixaDisponivel();
+        CaixaDisponivel obj = new CaixaDisponivel(sys);
         jDesktopPanePrincipal.add(obj);
         obj.setVisible(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem12ActionPerformed
@@ -341,9 +356,23 @@ public class TelaInicial extends javax.swing.JFrame {
         obj.setVisible(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
-    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
-        this.dispose();
-    }//GEN-LAST:event_jMenuItem14ActionPerformed
+    private void itemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemSairActionPerformed
+        try {
+            this.sys.salvar();
+            this.dispose();
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(this, "Poxa, deu erro ao fechar.");
+        }
+    }//GEN-LAST:event_itemSairActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        try {
+            this.sys.salvar();
+            this.dispose();
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(this, "Poxa, deu erro ao fechar.");
+        }
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
@@ -385,6 +414,7 @@ public class TelaInicial extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu adminMenu;
     private javax.swing.JMenu estoqueMenu;
+    private javax.swing.JMenuItem itemSair;
     private javax.swing.JDesktopPane jDesktopPanePrincipal;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
@@ -396,7 +426,6 @@ public class TelaInicial extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;

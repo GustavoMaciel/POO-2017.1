@@ -39,16 +39,19 @@
  */
 package Views;
 
+import Classes.SistemaLojaMusical;
+
 /**
  *
  * @author junior
  */
 public class CaixaDisponivel extends javax.swing.JInternalFrame {
-
+    SistemaLojaMusical sys;
     /**
      * Creates new form CaixaDisponivel
      */
-    public CaixaDisponivel() {
+    public CaixaDisponivel(SistemaLojaMusical sys){
+        this.sys = sys;
         initComponents();
     }
 
@@ -63,8 +66,8 @@ public class CaixaDisponivel extends javax.swing.JInternalFrame {
 
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        caixaTxt = new javax.swing.JTextField();
+        atualizarButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
@@ -77,20 +80,20 @@ public class CaixaDisponivel extends javax.swing.JInternalFrame {
 
         jLabel1.setText("Caixa disponível da empresa:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(240, 90, 220, 21);
+        jLabel1.setBounds(240, 90, 220, 17);
 
-        jTextField1.setEditable(false);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(210, 120, 246, 33);
+        caixaTxt.setEditable(false);
+        getContentPane().add(caixaTxt);
+        caixaTxt.setBounds(210, 120, 246, 21);
 
-        jButton2.setText("Atualizar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        atualizarButton.setText("Atualizar");
+        atualizarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                atualizarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(270, 170, 120, 35);
+        getContentPane().add(atualizarButton);
+        atualizarButton.setBounds(270, 170, 120, 27);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel2);
@@ -99,16 +102,16 @@ public class CaixaDisponivel extends javax.swing.JInternalFrame {
         setBounds(170, 100, 664, 509);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void atualizarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atualizarButtonActionPerformed
+        this.caixaTxt.setText(String.valueOf(sys.getDinheiroEmCaixa()));
+    }//GEN-LAST:event_atualizarButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton atualizarButton;
+    private javax.swing.JTextField caixaTxt;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

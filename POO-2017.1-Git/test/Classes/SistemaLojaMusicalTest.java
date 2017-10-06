@@ -20,7 +20,7 @@ public class SistemaLojaMusicalTest {
         SistemaLojaMusical sys = new SistemaLojaMusical();
         Instrumento x = new Instrumento();
         x.setValor(1200);
-        x.setNumeroSerie("0");
+        x.setIdentificador("0");
 
         Funcionario ana = new Funcionario();
         ana.setId("0");
@@ -46,7 +46,7 @@ public class SistemaLojaMusicalTest {
         }
 
         try {
-            sys.realizarVenda(x.getNumeroSerie());
+            sys.realizarVenda(x.getIdentificador());
             assertEquals(sys.getGerenciadorDeFinancas().getDinheiroEmCaixa(), x.getValor(), 0.001);
             sys.cadastrarInstrumento(x);
         } catch (InstrumentoInexistenteException | InstrumentoJaExisteException e) {
@@ -75,7 +75,7 @@ public class SistemaLojaMusicalTest {
         try {
             sys.removerCliente(aug.getEmail());
             sys.removerFuncionario(ana.getId());
-            sys.removerInstrumento(x.getNumeroSerie());
+            sys.removerInstrumento(x.getIdentificador());
         } catch (Exception e) {
             fail(e.getMessage());
         }

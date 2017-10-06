@@ -27,27 +27,26 @@ public class GerenciadorDeEstoque implements Serializable{
     public void setInstrumentos(Map<String, Instrumento> instrumentos) {
         this.instrumentos = instrumentos;
     }
-    
-    
-    public Instrumento buscarInstrumento(String numSerie) throws InstrumentoInexistenteException{
-        Instrumento x = this.instrumentos.get(numSerie);
+
+    public Instrumento buscarInstrumento(String identificador) throws InstrumentoInexistenteException{
+        Instrumento x = this.instrumentos.get(identificador);
         if(x == null){
-            throw new InstrumentoInexistenteException("Não existe instrumento com Nº de série: " + numSerie);
+            throw new InstrumentoInexistenteException("Não existe instrumento com identificador: " + identificador);
         }
         return x;
     }
 
     public void cadastrarInstrumento(Instrumento i) throws InstrumentoJaExisteException{
         try{
-            this.buscarInstrumento(i.getNumeroSerie());
-            throw new InstrumentoJaExisteException("Já existe instrumento com Nº de série: " + i.getNumeroSerie());
+            this.buscarInstrumento(i.getIdentificador());
+            throw new InstrumentoJaExisteException("Já existe instrumento com Identificador: " + i.getIdentificador());
         }catch(InstrumentoInexistenteException e){
-            this.instrumentos.put(i.getNumeroSerie(), i);
+            this.instrumentos.put(i.getIdentificador(), i);
         }
     }
 
-    public void removerInstrumento(String numSerie) throws InstrumentoInexistenteException{
-        this.buscarInstrumento(numSerie);
-        this.instrumentos.remove(numSerie);
+    public void removerInstrumento(String identificador) throws InstrumentoInexistenteException{
+        this.buscarInstrumento(identificador);
+        this.instrumentos.remove(identificador);
     }
 }

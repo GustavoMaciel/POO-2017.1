@@ -4,7 +4,7 @@ import java.io.Serializable;
 import javax.swing.Icon;
 
 public class Instrumento implements Serializable{
-    private String marca, numeroSerie, nome;
+    private String marca, identificador, nome;
     private double valor;
     private Icon icon;
 
@@ -13,10 +13,10 @@ public class Instrumento implements Serializable{
     }
 
     
-    public Instrumento(String marca, String numeroSerie, String nome, double valor, Icon icon) {
+    public Instrumento(String marca, String nome, String identificador, double valor, Icon icon) {
         this.marca = marca;
-        this.numeroSerie = numeroSerie;
         this.nome = nome;
+        this.identificador = identificador;
         this.valor = valor;
         this.icon = icon;
     }
@@ -26,8 +26,8 @@ public class Instrumento implements Serializable{
     public String getMarca(){
         return marca;
     }
-    public String getNumeroSerie(){
-        return numeroSerie;
+    public String getIdentificador(){
+        return identificador;
     }
     public double getValor(){
         return valor;
@@ -43,8 +43,8 @@ public class Instrumento implements Serializable{
     public void setMarca(String marca){
         this.marca = marca;
     }
-    public void setNumeroSerie(String numero){
-        this.numeroSerie = numero;
+    public void setIdentificador(String identificador){
+        this.identificador = identificador;
     }
     public void setValor(double valor){
         this.valor = valor;

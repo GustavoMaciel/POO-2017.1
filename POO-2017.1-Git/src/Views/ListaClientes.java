@@ -69,14 +69,14 @@ public class ListaClientes extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        emailTxt = new javax.swing.JTextField();
+        emailBuscaTxt = new javax.swing.JTextField();
         buscarButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         nomeTxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         cpfTxt = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        emailtxt = new javax.swing.JTextField();
+        emailTxt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         rgTxt = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -94,19 +94,19 @@ public class ListaClientes extends javax.swing.JInternalFrame {
         setTitle("Listar Clientes");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        emailTxt.setForeground(new java.awt.Color(153, 153, 153));
-        emailTxt.setText("insra o email");
-        emailTxt.addActionListener(new java.awt.event.ActionListener() {
+        emailBuscaTxt.setForeground(new java.awt.Color(153, 153, 153));
+        emailBuscaTxt.setToolTipText("Insira o e-mail");
+        emailBuscaTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailTxtActionPerformed(evt);
+                emailBuscaTxtActionPerformed(evt);
             }
         });
-        emailTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+        emailBuscaTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                emailTxtKeyPressed(evt);
+                emailBuscaTxtKeyPressed(evt);
             }
         });
-        getContentPane().add(emailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 331, -1));
+        getContentPane().add(emailBuscaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 331, -1));
 
         buscarButton.setText("Buscar");
         buscarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -141,13 +141,13 @@ public class ListaClientes extends javax.swing.JInternalFrame {
         jLabel4.setText("Email");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
 
-        emailtxt.setEditable(false);
-        emailtxt.addActionListener(new java.awt.event.ActionListener() {
+        emailTxt.setEditable(false);
+        emailTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailtxtActionPerformed(evt);
+                emailTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(emailtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 345, -1));
+        getContentPane().add(emailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 345, -1));
 
         jLabel5.setText("RG");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, -1, -1));
@@ -207,17 +207,33 @@ public class ListaClientes extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
-        
+        try{
+            Cliente i = sys.buscarCliente(emailBuscaTxt.getText());
+            this.nomeTxt.setText(i.getNome());
+            this.cpfTxt.setText(i.getCpf());
+            this.emailTxt.setText(i.getEmail());
+            this.rgTxt.setText(i.getRg());
+            this.dddTxt.setText(i.getTelefone().getDdd());
+            this.telefoneTxt.setText(i.getTelefone().getNumero());
+            if(i.getGenero().startsWith("M")){
+                this.generoCombo.setSelectedIndex(0);
+            }else{
+                this.generoCombo.setSelectedIndex(1);
+            }
+            this.nascimentoTxt.setText(i.getDataNascimento());
+        }catch(ClienteInexistenteException e){
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
     }//GEN-LAST:event_buscarButtonActionPerformed
 
-    private void emailTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailTxtKeyPressed
+    private void emailBuscaTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailBuscaTxtKeyPressed
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
         this.buscarButton.doClick();}
-    }//GEN-LAST:event_emailTxtKeyPressed
+    }//GEN-LAST:event_emailBuscaTxtKeyPressed
 
-    private void emailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxtActionPerformed
+    private void emailBuscaTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailBuscaTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailTxtActionPerformed
+    }//GEN-LAST:event_emailBuscaTxtActionPerformed
 
     private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
         // TODO add your handling code here:
@@ -227,9 +243,9 @@ public class ListaClientes extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cpfTxtActionPerformed
 
-    private void emailtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailtxtActionPerformed
+    private void emailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailtxtActionPerformed
+    }//GEN-LAST:event_emailTxtActionPerformed
 
     private void rgTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rgTxtActionPerformed
         // TODO add your handling code here:
@@ -252,8 +268,8 @@ public class ListaClientes extends javax.swing.JInternalFrame {
     private javax.swing.JButton buscarButton;
     private javax.swing.JTextField cpfTxt;
     private javax.swing.JTextField dddTxt;
+    private javax.swing.JTextField emailBuscaTxt;
     private javax.swing.JTextField emailTxt;
-    private javax.swing.JTextField emailtxt;
     private javax.swing.JComboBox<String> generoCombo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

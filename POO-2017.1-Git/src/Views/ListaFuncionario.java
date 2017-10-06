@@ -39,16 +39,21 @@
  */
 package Views;
 
+import Classes.*;
+import Exceptions.FuncionarioInexistenteException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author junior
  */
 public class ListaFuncionario extends javax.swing.JInternalFrame {
-
+    SistemaLojaMusical sys;
     /**
      * Creates new form ListaFuncionario
      */
-    public ListaFuncionario() {
+    public ListaFuncionario(SistemaLojaMusical sys) {
+        this.sys = sys;
         initComponents();
     }
 
@@ -61,7 +66,7 @@ public class ListaFuncionario extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        emailTxt = new javax.swing.JTextField();
+        idTxt = new javax.swing.JTextField();
         telefoneTxt = new javax.swing.JTextField();
         buscarButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -74,7 +79,7 @@ public class ListaFuncionario extends javax.swing.JInternalFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         generoCombo = new javax.swing.JComboBox<>();
-        emailtxt = new javax.swing.JTextField();
+        emailTxt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         rgTxt = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -86,20 +91,20 @@ public class ListaFuncionario extends javax.swing.JInternalFrame {
         setTitle("Lista Funcionario");
         getContentPane().setLayout(null);
 
-        emailTxt.setForeground(new java.awt.Color(153, 153, 153));
-        emailTxt.setText("insra o email");
-        emailTxt.addActionListener(new java.awt.event.ActionListener() {
+        idTxt.setForeground(new java.awt.Color(153, 153, 153));
+        idTxt.setToolTipText("Insira o ID");
+        idTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailTxtActionPerformed(evt);
+                idTxtActionPerformed(evt);
             }
         });
-        emailTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+        idTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                emailTxtKeyPressed(evt);
+                idTxtKeyPressed(evt);
             }
         });
-        getContentPane().add(emailTxt);
-        emailTxt.setBounds(177, 44, 331, 33);
+        getContentPane().add(idTxt);
+        idTxt.setBounds(177, 44, 331, 21);
 
         telefoneTxt.setEditable(false);
         telefoneTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -108,7 +113,7 @@ public class ListaFuncionario extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(telefoneTxt);
-        telefoneTxt.setBounds(124, 351, 125, 33);
+        telefoneTxt.setBounds(124, 351, 125, 21);
 
         buscarButton.setText("Buscar");
         buscarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -117,15 +122,15 @@ public class ListaFuncionario extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(buscarButton);
-        buscarButton.setBounds(280, 100, 130, 35);
+        buscarButton.setBounds(280, 100, 130, 27);
 
         jLabel2.setText("Nome");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(82, 213, 42, 21);
+        jLabel2.setBounds(82, 213, 36, 17);
 
         jLabel7.setText("Telefone");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(124, 331, 59, 21);
+        jLabel7.setBounds(124, 331, 52, 17);
 
         nomeTxt.setEditable(false);
         nomeTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -134,15 +139,15 @@ public class ListaFuncionario extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(nomeTxt);
-        nomeTxt.setBounds(82, 236, 345, 33);
+        nomeTxt.setBounds(82, 236, 345, 21);
 
         jLabel8.setText("Data de nascimento");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(264, 331, 137, 21);
+        jLabel8.setBounds(264, 331, 119, 17);
 
         jLabel3.setText("Cpf");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(439, 213, 23, 21);
+        jLabel3.setBounds(439, 213, 21, 17);
 
         nascimentoTxt.setEditable(false);
         nascimentoTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -151,7 +156,7 @@ public class ListaFuncionario extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(nascimentoTxt);
-        nascimentoTxt.setBounds(264, 351, 161, 33);
+        nascimentoTxt.setBounds(264, 351, 161, 21);
 
         cpfTxt.setEditable(false);
         cpfTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -160,33 +165,33 @@ public class ListaFuncionario extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(cpfTxt);
-        cpfTxt.setBounds(439, 236, 170, 33);
+        cpfTxt.setBounds(439, 236, 170, 21);
 
         jLabel9.setText("Genero");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(444, 331, 51, 21);
+        jLabel9.setBounds(444, 331, 43, 17);
 
         jLabel4.setText("Email");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(82, 269, 38, 21);
+        jLabel4.setBounds(82, 269, 34, 17);
 
         generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino\t", "Feminino" }));
         generoCombo.setEnabled(false);
         getContentPane().add(generoCombo);
         generoCombo.setBounds(444, 351, 162, 30);
 
-        emailtxt.setEditable(false);
-        emailtxt.addActionListener(new java.awt.event.ActionListener() {
+        emailTxt.setEditable(false);
+        emailTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailtxtActionPerformed(evt);
+                emailTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(emailtxt);
-        emailtxt.setBounds(82, 292, 345, 33);
+        getContentPane().add(emailTxt);
+        emailTxt.setBounds(82, 292, 345, 21);
 
         jLabel5.setText("RG");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(440, 269, 20, 21);
+        jLabel5.setBounds(440, 269, 17, 17);
 
         rgTxt.setEditable(false);
         rgTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -195,11 +200,11 @@ public class ListaFuncionario extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(rgTxt);
-        rgTxt.setBounds(440, 292, 170, 33);
+        rgTxt.setBounds(440, 292, 170, 21);
 
         jLabel6.setText("DDD");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(84, 331, 33, 21);
+        jLabel6.setBounds(84, 331, 27, 17);
 
         dddTxt.setEditable(false);
         dddTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -208,7 +213,7 @@ public class ListaFuncionario extends javax.swing.JInternalFrame {
             }
         });
         getContentPane().add(dddTxt);
-        dddTxt.setBounds(84, 351, 27, 33);
+        dddTxt.setBounds(84, 351, 27, 21);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -217,20 +222,45 @@ public class ListaFuncionario extends javax.swing.JInternalFrame {
         setBounds(170, 100, 694, 495);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void emailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxtActionPerformed
+    private void idTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailTxtActionPerformed
+    }//GEN-LAST:event_idTxtActionPerformed
 
-    private void emailTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailTxtKeyPressed
+    private void idTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idTxtKeyPressed
         
-    }//GEN-LAST:event_emailTxtKeyPressed
+    }//GEN-LAST:event_idTxtKeyPressed
 
     private void telefoneTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefoneTxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_telefoneTxtActionPerformed
 
     private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
-        
+        try{
+            Funcionario i = sys.buscarFuncionario(idTxt.getText());
+            
+            nomeTxt.setText(i.getNome());
+            cpfTxt.setText(i.getCpf());
+            emailTxt.setText(i.getEmail());
+            rgTxt.setText(i.getRg());
+            dddTxt.setText(i.getTelefone().getDdd());
+            telefoneTxt.setText(i.getTelefone().getNumero());
+            nascimentoTxt.setText(i.getDataNascimento());
+            if(i.getGenero().startsWith("M")){
+                generoCombo.setSelectedIndex(0);
+            }else{
+                generoCombo.setSelectedIndex(1);
+            }
+        }catch(FuncionarioInexistenteException e){
+            JOptionPane.showMessageDialog(this, e.getMessage());
+            nomeTxt.setText("");
+            cpfTxt.setText("");
+            emailTxt.setText("");
+            rgTxt.setText("");
+            dddTxt.setText("");
+            telefoneTxt.setText("");
+            nascimentoTxt.setText("");
+            generoCombo.setSelectedIndex(0);
+        }
     }//GEN-LAST:event_buscarButtonActionPerformed
 
     private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
@@ -245,9 +275,9 @@ public class ListaFuncionario extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cpfTxtActionPerformed
 
-    private void emailtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailtxtActionPerformed
+    private void emailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailtxtActionPerformed
+    }//GEN-LAST:event_emailTxtActionPerformed
 
     private void rgTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rgTxtActionPerformed
         // TODO add your handling code here:
@@ -263,8 +293,8 @@ public class ListaFuncionario extends javax.swing.JInternalFrame {
     private javax.swing.JTextField cpfTxt;
     private javax.swing.JTextField dddTxt;
     private javax.swing.JTextField emailTxt;
-    private javax.swing.JTextField emailtxt;
     private javax.swing.JComboBox<String> generoCombo;
+    private javax.swing.JTextField idTxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

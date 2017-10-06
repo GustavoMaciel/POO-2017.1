@@ -38,7 +38,7 @@ public class TestarArquivos {
         try {
             sys.removerCliente(i.getEmail());
             sys.removerFuncionario(x.getId());
-            sys.removerInstrumento(ins.getNumeroSerie());
+            sys.removerInstrumento(ins.getIdentificador());
         } catch (Exception e) {
             fail(e.getMessage());
         }
