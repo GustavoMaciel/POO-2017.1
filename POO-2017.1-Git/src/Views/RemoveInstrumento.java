@@ -61,21 +61,153 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
-        );
+        jLabel1 = new javax.swing.JLabel();
+        nomeTxt3 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        cpfTxt = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        rgTxt = new javax.swing.JTextField();
+        emailTxt = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        confirmarButton = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        nomeTxt4 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
 
-        pack();
+        setClosable(true);
+        setIconifiable(true);
+        setTitle("Remover Instrumento");
+        getContentPane().setLayout(null);
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel1.setText("Nome");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(40, 180, 45, 17);
+
+        nomeTxt3.setEditable(false);
+        nomeTxt3.setForeground(new java.awt.Color(153, 153, 153));
+        nomeTxt3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeTxt3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(nomeTxt3);
+        nomeTxt3.setBounds(40, 200, 240, 33);
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel2.setText("Marca");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(440, 180, 47, 17);
+
+        cpfTxt.setEditable(false);
+        cpfTxt.setForeground(new java.awt.Color(153, 153, 153));
+        cpfTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cpfTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cpfTxt);
+        cpfTxt.setBounds(440, 200, 221, 33);
+
+        jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel3.setText("Valor");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(440, 250, 41, 17);
+
+        rgTxt.setEditable(false);
+        rgTxt.setForeground(new java.awt.Color(153, 153, 153));
+        rgTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rgTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(rgTxt);
+        rgTxt.setBounds(440, 270, 221, 33);
+
+        emailTxt.setEditable(false);
+        emailTxt.setForeground(new java.awt.Color(153, 153, 153));
+        emailTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(emailTxt);
+        emailTxt.setBounds(40, 270, 240, 33);
+
+        jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel5.setText("Numero de Série");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(40, 250, 133, 17);
+
+        confirmarButton.setBackground(new java.awt.Color(201, 61, 74));
+        confirmarButton.setForeground(new java.awt.Color(1, 1, 1));
+        confirmarButton.setText("REMOVER");
+        confirmarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                confirmarButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(confirmarButton);
+        confirmarButton.setBounds(510, 435, 150, 30);
+
+        jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel4.setText("Numero de Série");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(270, 60, 140, 17);
+
+        nomeTxt4.setForeground(new java.awt.Color(153, 153, 153));
+        nomeTxt4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeTxt4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(nomeTxt4);
+        nomeTxt4.setBounds(220, 90, 240, 33);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(0, 0, 700, 500);
+
+        setBounds(170, 100, 704, 523);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void nomeTxt3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxt3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeTxt3ActionPerformed
+
+    private void cpfTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cpfTxtActionPerformed
+
+    private void rgTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rgTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rgTxtActionPerformed
+
+    private void emailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailTxtActionPerformed
+
+    private void confirmarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarButtonActionPerformed
+
+    }//GEN-LAST:event_confirmarButtonActionPerformed
+
+    private void nomeTxt4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxt4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeTxt4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton confirmarButton;
+    private javax.swing.JTextField cpfTxt;
+    private javax.swing.JTextField emailTxt;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JTextField nomeTxt3;
+    private javax.swing.JTextField nomeTxt4;
+    private javax.swing.JTextField rgTxt;
     // End of variables declaration//GEN-END:variables
 }

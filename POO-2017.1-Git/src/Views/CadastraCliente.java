@@ -100,13 +100,17 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         confirmarButton = new javax.swing.JButton();
         dataTxt = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
         setTitle("Cadastra Clientes");
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setText("Nome");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(25, 21, 45, 17);
 
         nomeTxt.setForeground(new java.awt.Color(153, 153, 153));
         nomeTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -114,9 +118,13 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
                 nomeTxtActionPerformed(evt);
             }
         });
+        getContentPane().add(nomeTxt);
+        nomeTxt.setBounds(25, 44, 369, 33);
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setText("CPF");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(420, 20, 30, 17);
 
         cpfTxt.setForeground(new java.awt.Color(153, 153, 153));
         cpfTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -124,9 +132,13 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
                 cpfTxtActionPerformed(evt);
             }
         });
+        getContentPane().add(cpfTxt);
+        cpfTxt.setBounds(420, 40, 221, 33);
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setText("RG");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(420, 80, 22, 17);
 
         rgTxt.setForeground(new java.awt.Color(153, 153, 153));
         rgTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -134,9 +146,13 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
                 rgTxtActionPerformed(evt);
             }
         });
+        getContentPane().add(rgTxt);
+        rgTxt.setBounds(421, 103, 221, 33);
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel4.setText("Genero");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(421, 148, 59, 17);
 
         emailTxt.setForeground(new java.awt.Color(153, 153, 153));
         emailTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -144,11 +160,19 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
                 emailTxtActionPerformed(evt);
             }
         });
+        getContentPane().add(emailTxt);
+        emailTxt.setBounds(25, 103, 369, 33);
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel5.setText("Email");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(25, 80, 40, 17);
 
         generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino", "All" }));
+        getContentPane().add(generoCombo);
+        generoCombo.setBounds(421, 171, 151, 33);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(25, 250, 682, 11);
 
         logradouroTxt.setForeground(new java.awt.Color(153, 153, 153));
         logradouroTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -156,15 +180,23 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
                 logradouroTxtActionPerformed(evt);
             }
         });
+        getContentPane().add(logradouroTxt);
+        logradouroTxt.setBounds(25, 290, 354, 33);
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel6.setText("Logradouro");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(25, 267, 92, 17);
 
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel7.setText("Endereço");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(25, 227, 75, 17);
 
         jLabel8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel8.setText("Bairro");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(425, 267, 47, 17);
 
         bairroTxt.setForeground(new java.awt.Color(153, 153, 153));
         bairroTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -172,9 +204,13 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
                 bairroTxtActionPerformed(evt);
             }
         });
+        getContentPane().add(bairroTxt);
+        bairroTxt.setBounds(425, 290, 136, 33);
 
         jLabel9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel9.setText("Numero");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(425, 341, 62, 17);
 
         numeroEnderecoTxt.setForeground(new java.awt.Color(153, 153, 153));
         numeroEnderecoTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -182,9 +218,13 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
                 numeroEnderecoTxtActionPerformed(evt);
             }
         });
+        getContentPane().add(numeroEnderecoTxt);
+        numeroEnderecoTxt.setBounds(425, 364, 136, 33);
 
         jLabel10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel10.setText("Cep");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(25, 349, 31, 17);
 
         cepTxt.setForeground(new java.awt.Color(153, 153, 153));
         cepTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -192,9 +232,13 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
                 cepTxtActionPerformed(evt);
             }
         });
+        getContentPane().add(cepTxt);
+        cepTxt.setBounds(25, 372, 136, 33);
 
         jLabel11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel11.setText("Estado");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(243, 349, 53, 17);
 
         estadoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre \t ", "Alagoas \t ", "Amapá \t ", "Amazonas \t\t ", "Bahia \t ", "Ceará \t ", "Distrito Federal  ", "Espírito Santo  ", "Goiás  ", "Maranhão \t", "Mato Grosso \t ", "Mato Grosso do Sul  ", "Minas Gerais \t ", "Pará \t ", "Paraíba \t ", "Paraná \t ", "Pernambuco ", "Piauí \t ", "Rio de Janeiro \t", "Rio Grande do Norte \t ", "Rio Grande do Sul \t", "Rondônia \t ", "Roraima \t ", "Santa Catarina \t ", "São Paulo \t", "Sergipe \t ", "Tocantins" }));
         estadoCombo.addActionListener(new java.awt.event.ActionListener() {
@@ -202,9 +246,13 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
                 estadoComboActionPerformed(evt);
             }
         });
+        getContentPane().add(estadoCombo);
+        estadoCombo.setBounds(243, 375, 136, 26);
 
         jLabel12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel12.setText("Cidade");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(25, 417, 54, 17);
 
         cidadeTxt.setForeground(new java.awt.Color(153, 153, 153));
         cidadeTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -212,9 +260,13 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
                 cidadeTxtActionPerformed(evt);
             }
         });
+        getContentPane().add(cidadeTxt);
+        cidadeTxt.setBounds(25, 441, 136, 33);
 
         jLabel13.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel13.setText("Telefone");
+        getContentPane().add(jLabel13);
+        jLabel13.setBounds(70, 148, 70, 17);
 
         numeroTxt.setForeground(new java.awt.Color(153, 153, 153));
         numeroTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -222,9 +274,13 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
                 numeroTxtActionPerformed(evt);
             }
         });
+        getContentPane().add(numeroTxt);
+        numeroTxt.setBounds(28, 171, 30, 33);
 
         jLabel14.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel14.setText("DDD");
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(25, 148, 33, 17);
 
         dddTxt.setForeground(new java.awt.Color(153, 153, 153));
         dddTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -232,6 +288,8 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
                 dddTxtActionPerformed(evt);
             }
         });
+        getContentPane().add(dddTxt);
+        dddTxt.setBounds(70, 171, 155, 33);
 
         confirmarButton.setText("CONFIRMAR");
         confirmarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -239,163 +297,27 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
                 confirmarButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(confirmarButton);
+        confirmarButton.setBounds(425, 440, 101, 35);
 
         dataTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dataTxtActionPerformed(evt);
             }
         });
+        getContentPane().add(dataTxt);
+        dataTxt.setBounds(237, 171, 142, 33);
 
         jLabel15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel15.setText("Data de Nascimento");
+        getContentPane().add(jLabel15);
+        jLabel15.setBounds(237, 148, 157, 17);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nomeTxt)
-                            .addComponent(emailTxt)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(cepTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel10))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(estadoCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel11)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel12)
-                                            .addComponent(jLabel1)
-                                            .addComponent(jLabel5)
-                                            .addComponent(jLabel6)
-                                            .addComponent(logradouroTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(0, 0, Short.MAX_VALUE)))
-                                .addGap(15, 15, 15))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(numeroTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel14))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel13)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addComponent(dddTxt))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel15)
-                                    .addComponent(dataTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel7)
-                            .addComponent(cidadeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel3)
-                                    .addComponent(rgTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel2)
-                                    .addComponent(cpfTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(generoCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(65, 65, 65))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8)
-                                    .addComponent(bairroTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel9)
-                                    .addComponent(numeroEnderecoTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(confirmarButton))
-                                .addGap(146, 146, 146))))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nomeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(59, 59, 59))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(emailTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel15)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(dataTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel13)
-                                    .addComponent(jLabel14))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(numeroTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(dddTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cpfTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rgTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(generoCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(23, 23, 23)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(logradouroTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel11)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(cepTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(estadoCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel12))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(bairroTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(numeroEnderecoTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cidadeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(confirmarButton))
-                .addContainerGap(30, Short.MAX_VALUE))
-        );
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
+        getContentPane().add(jLabel16);
+        jLabel16.setBounds(0, 0, 670, 500);
 
-        setBounds(170, 100, 674, 502);
+        setBounds(170, 100, 674, 528);
     }// </editor-fold>//GEN-END:initComponents
 
     private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
@@ -574,6 +496,7 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
