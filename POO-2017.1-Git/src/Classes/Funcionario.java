@@ -8,8 +8,8 @@ import java.io.Serializable;
  * @author gmnun
  */
 public class Funcionario extends Pessoa implements Serializable{
-    String tipo, id;
-    double pagamento;
+    private String tipo, id;
+    private double pagamento;
 
     public Funcionario() {
         this("", "", 0, "", "", "", "", "", new Telefone(), new Endereco(), "");

@@ -8,8 +8,8 @@ import java.io.Serializable;
  * @author gmnun
  */
 public class Cliente extends Pessoa implements Serializable{
-    String tipo;
-    boolean statusDevedor;
+    private String tipo;
+    private boolean statusDevedor;
 
     public Cliente() {
         this("", false, "","","","","", new Telefone(), new Endereco(), "");

@@ -10,7 +10,7 @@ import java.util.Map;
  * @author gmnun
  */
 public class GerenciadorDeEstoque implements Serializable{
-    Map<String, Instrumento> instrumentos;
+    private Map<String, Instrumento> instrumentos;
 
     public GerenciadorDeEstoque() {
         this(new HashMap<String, Instrumento>());
@@ -19,6 +19,15 @@ public class GerenciadorDeEstoque implements Serializable{
     public GerenciadorDeEstoque(Map<String, Instrumento> instrumentos) {
         this.instrumentos = instrumentos;
     }
+
+    public Map<String, Instrumento> getInstrumentos() {
+        return instrumentos;
+    }
+
+    public void setInstrumentos(Map<String, Instrumento> instrumentos) {
+        this.instrumentos = instrumentos;
+    }
+    
     
     public Instrumento buscarInstrumento(String numSerie) throws InstrumentoInexistenteException{
         Instrumento x = this.instrumentos.get(numSerie);
