@@ -71,11 +71,11 @@ public class sobre extends javax.swing.JInternalFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Informações.png"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(-10, -10, 570, 440);
+        jLabel2.setBounds(-10, -10, 570, 430);
 
-        jLabel3.setText("Folk's Way: versão 3.0.0, 2017.");
+        jLabel3.setText("Folk's Way: versão Beta 0.3, 2017.");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(210, 420, 220, 21);
+        jLabel3.setBounds(200, 420, 250, 15);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         jLabel1.setToolTipText("");

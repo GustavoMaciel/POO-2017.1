@@ -82,15 +82,16 @@ public class Comprar extends javax.swing.JInternalFrame {
         jLabel5 = new javax.swing.JLabel();
         iconLabel = new javax.swing.JLabel();
         comprarButton = new javax.swing.JButton();
+        jToggleButton1 = new javax.swing.JToggleButton();
         jLabel6 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
-        setTitle("Comprar Instrumento");
-        getContentPane().setLayout(null);
+        setTitle("Vender Instrumento");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         identificadorTxt.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
-        identificadorTxt.setForeground(new java.awt.Color(153, 153, 153));
+        identificadorTxt.setForeground(new java.awt.Color(0, 0, 0));
         identificadorTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 identificadorTxtActionPerformed(evt);
@@ -101,92 +102,82 @@ public class Comprar extends javax.swing.JInternalFrame {
                 identificadorTxtKeyPressed(evt);
             }
         });
-        getContentPane().add(identificadorTxt);
-        identificadorTxt.setBounds(22, 44, 130, 33);
+        getContentPane().add(identificadorTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 44, 130, 33));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setText("Cod.");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(22, 18, 31, 20);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 18, -1, 20));
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setText("Nome");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(177, 18, 42, 20);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 18, -1, 20));
 
         nomeInsTxt.setEditable(false);
         nomeInsTxt.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
-        nomeInsTxt.setForeground(new java.awt.Color(153, 153, 153));
+        nomeInsTxt.setForeground(new java.awt.Color(0, 0, 0));
         nomeInsTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeInsTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(nomeInsTxt);
-        nomeInsTxt.setBounds(177, 44, 231, 33);
+        getContentPane().add(nomeInsTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 44, 231, 33));
 
         marcaTxt.setEditable(false);
         marcaTxt.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
-        marcaTxt.setForeground(new java.awt.Color(153, 153, 153));
+        marcaTxt.setForeground(new java.awt.Color(0, 0, 0));
         marcaTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 marcaTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(marcaTxt);
-        marcaTxt.setBounds(443, 44, 219, 33);
+        getContentPane().add(marcaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(443, 44, 219, 33));
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setText("Marca");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(443, 18, 42, 20);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(443, 18, -1, 20));
 
         valorTxt.setEditable(false);
         valorTxt.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
-        valorTxt.setForeground(new java.awt.Color(153, 153, 153));
+        valorTxt.setForeground(new java.awt.Color(0, 0, 0));
         valorTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 valorTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(valorTxt);
-        valorTxt.setBounds(177, 115, 231, 33);
+        getContentPane().add(valorTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 115, 231, 33));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel4.setText("Valor");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(177, 89, 36, 20);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 89, -1, 20));
 
         qtdTxt.setEditable(false);
         qtdTxt.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
-        qtdTxt.setForeground(new java.awt.Color(153, 153, 153));
+        qtdTxt.setForeground(new java.awt.Color(0, 0, 0));
         qtdTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 qtdTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(qtdTxt);
-        qtdTxt.setBounds(445, 115, 217, 33);
+        getContentPane().add(qtdTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 115, 217, 33));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel5.setText("Quantidade em Estoque");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(450, 90, 180, 20);
-        getContentPane().add(iconLabel);
-        iconLabel.setBounds(177, 175, 485, 219);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 180, 20));
+        getContentPane().add(iconLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 175, 485, 219));
 
-        comprarButton.setText("COMPRAR");
+        comprarButton.setText("Vender");
         comprarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comprarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(comprarButton);
-        comprarButton.setBounds(519, 412, 143, 27);
+        getContentPane().add(comprarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(519, 412, 143, -1));
+
+        jToggleButton1.setText("Buscar");
+        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 130, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(0, 0, 690, 480);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 480));
 
         setBounds(170, 100, 698, 504);
     }// </editor-fold>//GEN-END:initComponents
@@ -258,6 +249,7 @@ public class Comprar extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JTextField marcaTxt;
     private javax.swing.JTextField nomeInsTxt;
     private javax.swing.JTextField qtdTxt;

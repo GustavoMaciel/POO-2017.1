@@ -76,15 +76,14 @@ public class CaixaDisponivel extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setResizable(true);
         setTitle("Caixa Disponível");
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Caixa disponível da empresa:");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(240, 90, 220, 17);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 220, -1));
 
         caixaTxt.setEditable(false);
-        getContentPane().add(caixaTxt);
-        caixaTxt.setBounds(210, 120, 246, 21);
+        caixaTxt.setForeground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(caixaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 246, -1));
         caixaTxt.setText(String.valueOf(sys.getDinheiroEmCaixa()));
 
         atualizarButton.setText("Atualizar");
@@ -93,12 +92,10 @@ public class CaixaDisponivel extends javax.swing.JInternalFrame {
                 atualizarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(atualizarButton);
-        atualizarButton.setBounds(270, 170, 120, 27);
+        getContentPane().add(atualizarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 120, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 660, 480);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 480));
 
         setBounds(170, 100, 664, 509);
     }// </editor-fold>//GEN-END:initComponents

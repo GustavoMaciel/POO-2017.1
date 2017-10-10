@@ -36,17 +36,17 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="-10" y="-10" width="570" height="440"/>
+          <AbsoluteConstraints x="-10" y="-10" width="570" height="430"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Folk&apos;s Way: vers&#xe3;o 3.0.0, 2017."/>
+        <Property name="text" type="java.lang.String" value="Folk&apos;s Way: vers&#xe3;o Beta 0.3, 2017."/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="210" y="420" width="220" height="-1"/>
+          <AbsoluteConstraints x="200" y="420" width="250" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

@@ -91,6 +91,7 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         jLabel1.setText("Insira o ID ");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 35, -1, -1));
 
+        emailBuscaTxt.setForeground(new java.awt.Color(0, 0, 0));
         emailBuscaTxt.setToolTipText("example@example.com");
         emailBuscaTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -113,6 +114,7 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 180, -1, -1));
 
         nomeTxt.setEditable(false);
+        nomeTxt.setForeground(new java.awt.Color(0, 0, 0));
         nomeTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeTxtActionPerformed(evt);
@@ -124,6 +126,7 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(396, 180, -1, -1));
 
         cpfTxt.setEditable(false);
+        cpfTxt.setForeground(new java.awt.Color(0, 0, 0));
         cpfTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cpfTxtActionPerformed(evt);
@@ -135,6 +138,7 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 236, -1, -1));
 
         emailtxt.setEditable(false);
+        emailtxt.setForeground(new java.awt.Color(0, 0, 0));
         emailtxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailtxtActionPerformed(evt);
@@ -146,6 +150,7 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 236, -1, -1));
 
         rgTxt.setEditable(false);
+        rgTxt.setForeground(new java.awt.Color(0, 0, 0));
         rgTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rgTxtActionPerformed(evt);
@@ -157,6 +162,7 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 292, -1, -1));
 
         dddTxt.setEditable(false);
+        dddTxt.setForeground(new java.awt.Color(0, 0, 0));
         dddTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dddTxtActionPerformed(evt);
@@ -165,6 +171,7 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(dddTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 315, 27, -1));
 
         telefoneTxt.setEditable(false);
+        telefoneTxt.setForeground(new java.awt.Color(0, 0, 0));
         telefoneTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 telefoneTxtActionPerformed(evt);
@@ -179,6 +186,7 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 292, -1, -1));
 
         nascimentoTxt.setEditable(false);
+        nascimentoTxt.setForeground(new java.awt.Color(0, 0, 0));
         nascimentoTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nascimentoTxtActionPerformed(evt);
@@ -193,6 +201,7 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         generoCombo.setEnabled(false);
         getContentPane().add(generoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 315, 162, -1));
 
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 450));
 

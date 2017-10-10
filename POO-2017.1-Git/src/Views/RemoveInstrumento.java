@@ -80,72 +80,66 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
         removerButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         idTxt = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        idMonstrarTxt1 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
         setTitle("Remover Instrumento");
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setText("Nome");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(40, 180, 42, 20);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
 
         nomeTxt.setEditable(false);
-        nomeTxt.setForeground(new java.awt.Color(153, 153, 153));
+        nomeTxt.setForeground(new java.awt.Color(0, 0, 0));
         nomeTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(nomeTxt);
-        nomeTxt.setBounds(40, 200, 240, 21);
+        getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 240, -1));
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setText("Marca");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(440, 180, 42, 20);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, -1, -1));
 
         marcaTxt.setEditable(false);
-        marcaTxt.setForeground(new java.awt.Color(153, 153, 153));
+        marcaTxt.setForeground(new java.awt.Color(0, 0, 0));
         marcaTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 marcaTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(marcaTxt);
-        marcaTxt.setBounds(440, 200, 221, 21);
+        getContentPane().add(marcaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, 221, -1));
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setText("Valor");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(440, 250, 36, 20);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, -1, -1));
 
         valorTxt.setEditable(false);
-        valorTxt.setForeground(new java.awt.Color(153, 153, 153));
+        valorTxt.setForeground(new java.awt.Color(0, 0, 0));
         valorTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 valorTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(valorTxt);
-        valorTxt.setBounds(440, 270, 221, 21);
+        getContentPane().add(valorTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, 221, -1));
 
         idMonstrarTxt.setEditable(false);
-        idMonstrarTxt.setForeground(new java.awt.Color(153, 153, 153));
+        idMonstrarTxt.setForeground(new java.awt.Color(0, 0, 0));
         idMonstrarTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 idMonstrarTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(idMonstrarTxt);
-        idMonstrarTxt.setBounds(40, 270, 240, 21);
+        getContentPane().add(idMonstrarTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 240, -1));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel5.setText("Identificador");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(40, 250, 89, 20);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, -1, -1));
 
         removerButton.setBackground(new java.awt.Color(201, 61, 74));
         removerButton.setForeground(new java.awt.Color(1, 1, 1));
@@ -155,15 +149,13 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
                 removerButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(removerButton);
-        removerButton.setBounds(510, 435, 150, 30);
+        getContentPane().add(removerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 435, 150, 30));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel4.setText("Identificador");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(270, 60, 140, 20);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, 140, -1));
 
-        idTxt.setForeground(new java.awt.Color(153, 153, 153));
+        idTxt.setForeground(new java.awt.Color(0, 0, 0));
         idTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 idTxtActionPerformed(evt);
@@ -174,12 +166,23 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
                 idTxtKeyPressed(evt);
             }
         });
-        getContentPane().add(idTxt);
-        idTxt.setBounds(220, 90, 240, 21);
+        getContentPane().add(idTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 240, -1));
+
+        jLabel7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel7.setText("Quantidade");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
+
+        idMonstrarTxt1.setEditable(false);
+        idMonstrarTxt1.setForeground(new java.awt.Color(0, 0, 0));
+        idMonstrarTxt1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idMonstrarTxt1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(idMonstrarTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 240, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(0, 0, 700, 500);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 500));
 
         setBounds(170, 100, 704, 523);
     }// </editor-fold>//GEN-END:initComponents
@@ -243,9 +246,14 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_idTxtKeyPressed
 
+    private void idMonstrarTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idMonstrarTxt1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idMonstrarTxt1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField idMonstrarTxt;
+    private javax.swing.JTextField idMonstrarTxt1;
     private javax.swing.JTextField idTxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -253,6 +261,7 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField marcaTxt;
     private javax.swing.JTextField nomeTxt;
     private javax.swing.JButton removerButton;

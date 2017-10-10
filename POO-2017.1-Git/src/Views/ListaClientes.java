@@ -87,6 +87,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
         nascimentoTxt = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         generoCombo = new javax.swing.JComboBox<>();
+        jToggleButton1 = new javax.swing.JToggleButton();
         jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -94,7 +95,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
         setTitle("Listar Clientes");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        emailBuscaTxt.setForeground(new java.awt.Color(153, 153, 153));
+        emailBuscaTxt.setForeground(new java.awt.Color(0, 0, 0));
         emailBuscaTxt.setToolTipText("Insira o e-mail");
         emailBuscaTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,12 +115,12 @@ public class ListaClientes extends javax.swing.JInternalFrame {
                 buscarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(buscarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, -1, -1));
+        getContentPane().add(buscarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, -1, -1));
 
         jLabel2.setText("Nome");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
 
-        nomeTxt.setEditable(false);
+        nomeTxt.setForeground(new java.awt.Color(0, 0, 0));
         nomeTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeTxtActionPerformed(evt);
@@ -130,7 +131,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
         jLabel3.setText("Cpf");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, -1, -1));
 
-        cpfTxt.setEditable(false);
+        cpfTxt.setForeground(new java.awt.Color(0, 0, 0));
         cpfTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cpfTxtActionPerformed(evt);
@@ -141,7 +142,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
         jLabel4.setText("Email");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
 
-        emailTxt.setEditable(false);
+        emailTxt.setForeground(new java.awt.Color(0, 0, 0));
         emailTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailTxtActionPerformed(evt);
@@ -152,7 +153,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
         jLabel5.setText("RG");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, -1, -1));
 
-        rgTxt.setEditable(false);
+        rgTxt.setForeground(new java.awt.Color(0, 0, 0));
         rgTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rgTxtActionPerformed(evt);
@@ -163,7 +164,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
         jLabel6.setText("DDD");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
 
-        dddTxt.setEditable(false);
+        dddTxt.setForeground(new java.awt.Color(0, 0, 0));
         dddTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dddTxtActionPerformed(evt);
@@ -171,7 +172,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
         });
         getContentPane().add(dddTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 27, -1));
 
-        telefoneTxt.setEditable(false);
+        telefoneTxt.setForeground(new java.awt.Color(0, 0, 0));
         telefoneTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 telefoneTxtActionPerformed(evt);
@@ -185,7 +186,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
         jLabel8.setText("Data de nascimento");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, -1, -1));
 
-        nascimentoTxt.setEditable(false);
+        nascimentoTxt.setForeground(new java.awt.Color(0, 0, 0));
         nascimentoTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nascimentoTxtActionPerformed(evt);
@@ -196,9 +197,15 @@ public class ListaClientes extends javax.swing.JInternalFrame {
         jLabel9.setText("Genero");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, -1, -1));
 
+        generoCombo.setEditable(true);
         generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino\t", "Feminino" }));
         generoCombo.setEnabled(false);
         getContentPane().add(generoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, 162, 30));
+
+        jToggleButton1.setBackground(new java.awt.Color(255, 51, 51));
+        jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jToggleButton1.setText("Alterar");
+        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 410, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 470));
@@ -280,6 +287,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JTextField nascimentoTxt;
     private javax.swing.JTextField nomeTxt;
     private javax.swing.JTextField rgTxt;

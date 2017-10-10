@@ -77,17 +77,18 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
         identificadorTxt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         cadastrarButton = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        identificadorTxt1 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
         setTitle("Cadastra Instrumento");
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setText("Nome");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(40, 70, 42, 20);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
 
         nomeTxt.setForeground(new java.awt.Color(153, 153, 153));
         nomeTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -95,13 +96,11 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
                 nomeTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(nomeTxt);
-        nomeTxt.setBounds(40, 90, 240, 21);
+        getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 240, -1));
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setText("Marca");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(440, 70, 42, 20);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, -1, -1));
 
         marcaTxt.setForeground(new java.awt.Color(153, 153, 153));
         marcaTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -109,13 +108,11 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
                 marcaTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(marcaTxt);
-        marcaTxt.setBounds(440, 90, 221, 21);
+        getContentPane().add(marcaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 221, -1));
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setText("Valor");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(440, 140, 36, 20);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, -1, -1));
 
         valorTxt.setForeground(new java.awt.Color(153, 153, 153));
         valorTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -123,8 +120,7 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
                 valorTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(valorTxt);
-        valorTxt.setBounds(440, 160, 221, 21);
+        getContentPane().add(valorTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, 221, -1));
 
         identificadorTxt.setForeground(new java.awt.Color(153, 153, 153));
         identificadorTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -132,13 +128,11 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
                 identificadorTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(identificadorTxt);
-        identificadorTxt.setBounds(40, 160, 240, 21);
+        getContentPane().add(identificadorTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 240, -1));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel5.setText("Identificador");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(40, 140, 89, 20);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
 
         cadastrarButton.setText("CADASTRAR");
         cadastrarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -146,12 +140,22 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
                 cadastrarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(cadastrarButton);
-        cadastrarButton.setBounds(528, 440, 150, 27);
+        getContentPane().add(cadastrarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(528, 440, 150, -1));
+
+        jLabel6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel6.setText("Quantidade");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
+
+        identificadorTxt1.setForeground(new java.awt.Color(153, 153, 153));
+        identificadorTxt1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                identificadorTxt1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(identificadorTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 240, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(0, 0, 710, 510);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 510));
 
         setBounds(170, 100, 717, 535);
     }// </editor-fold>//GEN-END:initComponents
@@ -233,15 +237,21 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
         
     }//GEN-LAST:event_cadastrarButtonActionPerformed
 
+    private void identificadorTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_identificadorTxt1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_identificadorTxt1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cadastrarButton;
     private javax.swing.JTextField identificadorTxt;
+    private javax.swing.JTextField identificadorTxt1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField marcaTxt;
     private javax.swing.JTextField nomeTxt;
     private javax.swing.JTextField valorTxt;
