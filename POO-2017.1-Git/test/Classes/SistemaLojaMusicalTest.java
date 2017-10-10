@@ -48,8 +48,7 @@ public class SistemaLojaMusicalTest {
         try {
             sys.realizarVenda(x.getIdentificador());
             assertEquals(sys.getGerenciadorDeFinancas().getDinheiroEmCaixa(), x.getValor(), 0.001);
-            sys.cadastrarInstrumento(x);
-        } catch (InstrumentoInexistenteException | InstrumentoJaExisteException e) {
+        } catch (InstrumentoInexistenteException  e) {
             fail(e.getMessage());
         }
 
