@@ -49,4 +49,14 @@ public class GerenciadorDeEstoque implements Serializable{
         this.buscarInstrumento(identificador);
         this.instrumentos.remove(identificador);
     }
+    
+    public String[] idInstrumentosToStringArray(){
+        String[] ids = new String[this.instrumentos.size()];
+        int x = 0;
+        for(Instrumento i: this.instrumentos.values()){
+            ids[x] = i.getIdentificador();
+            x++;
+        }
+        return ids;
+    }
 }

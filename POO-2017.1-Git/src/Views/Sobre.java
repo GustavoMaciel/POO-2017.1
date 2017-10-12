@@ -43,12 +43,12 @@ package Views;
  *
  * @author junior
  */
-public class sobre extends javax.swing.JInternalFrame {
+public class Sobre extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form sobre
      */
-    public sobre() {
+    public Sobre() {
         initComponents();
     }
 
@@ -75,7 +75,7 @@ public class sobre extends javax.swing.JInternalFrame {
 
         jLabel3.setText("Folk's Way: versão Beta 0.3, 2017.");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(200, 420, 250, 15);
+        jLabel3.setBounds(200, 420, 250, 17);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         jLabel1.setToolTipText("");

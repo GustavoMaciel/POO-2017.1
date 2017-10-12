@@ -21,6 +21,7 @@ public class SistemaLojaMusicalTest {
         Instrumento x = new Instrumento();
         x.setValor(1200);
         x.setIdentificador("0");
+        x.setQuantidade(10);
 
         Funcionario ana = new Funcionario();
         ana.setId("0");
@@ -35,7 +36,7 @@ public class SistemaLojaMusicalTest {
         } catch (Exception e) {
             fail(e.getMessage());
         }
-
+        
         try {
             sys.cadastrarInstrumento(x);
             sys.cadastrarCliente(aug);
@@ -48,7 +49,7 @@ public class SistemaLojaMusicalTest {
         try {
             sys.realizarVenda(x.getIdentificador());
             assertEquals(sys.getGerenciadorDeFinancas().getDinheiroEmCaixa(), x.getValor(), 0.001);
-        } catch (InstrumentoInexistenteException  e) {
+        } catch (InstrumentoInexistenteException | QuantidadeInsuficienteException  e) {
             fail(e.getMessage());
         }
 

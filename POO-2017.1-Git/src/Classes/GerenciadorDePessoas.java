@@ -80,21 +80,23 @@ public class GerenciadorDePessoas implements Serializable{
         this.funcionarios.remove(id);
     }
     
-    public String[] nomeClientesToStringArray(){
-        String[] nomes = new String[this.clientes.size()];
+    public String[] emailClientesToStringArray(){
+        String[] emails = new String[this.clientes.size()];
         int x = 0;
         for(Cliente i: this.clientes.values()){
-            nomes[x] = i.getNome();
+            emails[x] = i.getEmail();
+            x++;
         }
-        return nomes;
+        return emails;
     }
     
-    public String[] nomeFuncionariosToStringArray(){
-        String[] nomes = new String[this.funcionarios.size()];
+    public String[] idFuncionariosToStringArray(){
+        String[] ids = new String[this.funcionarios.size()];
         int x = 0;
         for(Funcionario i: this.funcionarios.values()){
-            nomes[x] = i.getNome();
+            ids[x] = i.getId();
+            x++;
         }
-        return nomes;
+        return ids;
     }
 }

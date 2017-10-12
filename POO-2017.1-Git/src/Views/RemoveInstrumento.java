@@ -172,7 +172,7 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
                 sys.removerInstrumento(idTxt.getText());
                 idTxt.setText("");
                 nomeTxt.setText("");
-                marcaTxt.setText("'");
+                marcaTxt.setText("");
                 valorTxt.setText("");
                 idMonstrarTxt.setText("");
                 qtdTxt.setText("");

@@ -113,20 +113,14 @@ public class SistemaLojaMusical implements Serializable {
         this.gerenciadorDePessoas.removerFuncionario(id);
     }
 
-    /**
-     *
-     * @return
-     */
-    public String[] nomesClientesToStringArray() {
-        return this.gerenciadorDePessoas.nomeClientesToStringArray();
+    public String[] emailClientesToStringArray() {
+        return this.gerenciadorDePessoas.emailClientesToStringArray();
     }
-
-    /**
-     *
-     * @return
-     */
-    public String[] nomesFuncionariosToStringArray() {
-        return this.gerenciadorDePessoas.nomeFuncionariosToStringArray();
+    public String[] idFuncionariosToStringArray() {
+        return this.gerenciadorDePessoas.idFuncionariosToStringArray();
+    }
+    public String[] idInstrumentosToStringArray(){
+        return this.gerenciadorDeEstoque.idInstrumentosToStringArray();
     }
 
     // Gerenciador de Finanças
