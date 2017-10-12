@@ -213,7 +213,6 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
 
         generoCombo.setEditable(true);
         generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino\t", "Feminino" }));
-        generoCombo.setEnabled(false);
         getContentPane().add(generoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 170, 30));
 
         jToggleButton1.setBackground(new java.awt.Color(255, 51, 51));

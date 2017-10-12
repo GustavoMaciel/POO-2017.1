@@ -72,16 +72,16 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         codigoTxt = new javax.swing.JTextPane();
         jLabel2 = new javax.swing.JLabel();
-        nomeTxt = new javax.swing.JTextField();
+        qtdTxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         marcaTxt = new javax.swing.JTextField();
         buscarButton = new javax.swing.JButton();
-        valorTxt = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        qtdTxt = new javax.swing.JTextField();
-        nomeTxt1 = new javax.swing.JTextField();
         alterarButton = new javax.swing.JToggleButton();
+        nomeTxt = new javax.swing.JTextField();
+        nomeTxt3 = new javax.swing.JTextField();
+        valorTxt = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -100,13 +100,13 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
         jLabel2.setText("Nome:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, -1, -1));
 
-        nomeTxt.setForeground(new java.awt.Color(0, 0, 0));
-        nomeTxt.addActionListener(new java.awt.event.ActionListener() {
+        qtdTxt.setForeground(new java.awt.Color(0, 0, 0));
+        qtdTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTxtActionPerformed(evt);
+                qtdTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 354, -1));
+        getContentPane().add(qtdTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 354, -1));
 
         jLabel3.setText("Marca:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, -1, -1));
@@ -130,24 +130,8 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
         });
         getContentPane().add(buscarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 120, 30));
 
-        valorTxt.setForeground(new java.awt.Color(0, 0, 0));
-        valorTxt.setFocusable(false);
-        getContentPane().add(valorTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 354, -1));
-
         jLabel6.setText("Quantidade:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 90, -1));
-
-        qtdTxt.setForeground(new java.awt.Color(0, 0, 0));
-        qtdTxt.setFocusable(false);
-        getContentPane().add(qtdTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 354, -1));
-
-        nomeTxt1.setEditable(false);
-        nomeTxt1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTxt1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(nomeTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 354, -1));
 
         alterarButton.setText("Alterar");
         alterarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -157,15 +141,39 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
         });
         getContentPane().add(alterarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(441, 380, 90, -1));
 
+        nomeTxt.setForeground(new java.awt.Color(0, 0, 0));
+        nomeTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 354, -1));
+
+        nomeTxt3.setForeground(new java.awt.Color(0, 0, 0));
+        nomeTxt3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeTxt3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(nomeTxt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 354, -1));
+
+        valorTxt.setForeground(new java.awt.Color(0, 0, 0));
+        valorTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                valorTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(valorTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 354, -1));
+
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 440));
 
         setBounds(170, 100, 675, 469);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
+    private void qtdTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qtdTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTxtActionPerformed
+    }//GEN-LAST:event_qtdTxtActionPerformed
 
     private void marcaTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_marcaTxtActionPerformed
         // TODO add your handling code here:
@@ -174,38 +182,34 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
     private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
         try {
             Instrumento atual = sys.buscarInstrumento(this.codigoTxt.getText());
-            this.nomeTxt.setText(atual.getNome());
+            this.qtdTxt.setText(atual.getNome());
             this.marcaTxt.setText(atual.getMarca());
-            valorTxt.setText(String.valueOf(atual.getValor()));
+            qtdTxt.setText(String.valueOf(atual.getValor()));
             qtdTxt.setText(String.valueOf(atual.getQuantidade()));
             liberado = true;
         } catch (InstrumentoInexistenteException ex) {
-            this.nomeTxt.setText("");
+            this.qtdTxt.setText("");
             this.marcaTxt.setText("");
             qtdTxt.setText("");
-            valorTxt.setText("");
+            qtdTxt.setText("");
             liberado = false;
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }//GEN-LAST:event_buscarButtonActionPerformed
-
-    private void nomeTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxt1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTxt1ActionPerformed
 
     private void alterarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarButtonActionPerformed
         if(liberado){
             try{
                 Instrumento atual = sys.buscarInstrumento(codigoTxt.getText());
                 atual.setMarca(marcaTxt.getText());
-                atual.setNome(nomeTxt.getText());
+                atual.setNome(qtdTxt.getText());
                 try{
                     atual.setQuantidade(Integer.parseInt(qtdTxt.getText()));
                 }catch(NumberFormatException e){
                     JOptionPane.showMessageDialog(this, "Não foi possível alterar a quantidade, não podem haver letras.");
                 }
                 try{
-                    atual.setValor(Integer.parseInt(valorTxt.getText()));
+                    atual.setValor(Integer.parseInt(qtdTxt.getText()));
                 }catch(NumberFormatException e){
                     JOptionPane.showMessageDialog(this, "Não foi possível alterar o valor, não podem haver letras.");
                 }
@@ -216,6 +220,18 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, "Não foi possível alterar.");
         }
     }//GEN-LAST:event_alterarButtonActionPerformed
+
+    private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeTxtActionPerformed
+
+    private void nomeTxt3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxt3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeTxt3ActionPerformed
+
+    private void valorTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_valorTxtActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -231,7 +247,7 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField marcaTxt;
     private javax.swing.JTextField nomeTxt;
-    private javax.swing.JTextField nomeTxt1;
+    private javax.swing.JTextField nomeTxt3;
     private javax.swing.JTextField qtdTxt;
     private javax.swing.JTextField valorTxt;
     // End of variables declaration//GEN-END:variables
