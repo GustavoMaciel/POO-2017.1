@@ -96,11 +96,6 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
 
         nomeTxt.setEditable(false);
         nomeTxt.setForeground(new java.awt.Color(0, 0, 0));
-        nomeTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 240, -1));
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -109,11 +104,6 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
 
         marcaTxt.setEditable(false);
         marcaTxt.setForeground(new java.awt.Color(0, 0, 0));
-        marcaTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                marcaTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(marcaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, 221, -1));
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -122,20 +112,10 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
 
         valorTxt.setEditable(false);
         valorTxt.setForeground(new java.awt.Color(0, 0, 0));
-        valorTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(valorTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, 221, -1));
 
         idMonstrarTxt.setEditable(false);
         idMonstrarTxt.setForeground(new java.awt.Color(0, 0, 0));
-        idMonstrarTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idMonstrarTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(idMonstrarTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 240, -1));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -157,11 +137,6 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, 140, -1));
 
         idTxt.setForeground(new java.awt.Color(0, 0, 0));
-        idTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idTxtActionPerformed(evt);
-            }
-        });
         idTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 idTxtKeyPressed(evt);
@@ -175,11 +150,6 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
 
         qtdTxt.setEditable(false);
         qtdTxt.setForeground(new java.awt.Color(0, 0, 0));
-        qtdTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                qtdTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(qtdTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 240, -1));
 
         buscarButton.setText("Buscar");
@@ -196,26 +166,11 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
         setBounds(170, 100, 704, 523);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTxtActionPerformed
-
-    private void marcaTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_marcaTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_marcaTxtActionPerformed
-
-    private void valorTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_valorTxtActionPerformed
-
-    private void idMonstrarTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idMonstrarTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_idMonstrarTxtActionPerformed
-
     private void removerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerButtonActionPerformed
         if(podeIr){
             try{
                 sys.removerInstrumento(idTxt.getText());
+                idTxt.setText("");
                 nomeTxt.setText("");
                 marcaTxt.setText("'");
                 valorTxt.setText("");
@@ -231,19 +186,11 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_removerButtonActionPerformed
 
-    private void idTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_idTxtActionPerformed
-
     private void idTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idTxtKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){
             this.buscarButton.doClick();
         }
     }//GEN-LAST:event_idTxtKeyPressed
-
-    private void qtdTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qtdTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_qtdTxtActionPerformed
 
     private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
         try{

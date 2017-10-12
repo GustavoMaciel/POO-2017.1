@@ -43,6 +43,7 @@ import Classes.Instrumento;
 import Classes.SistemaLojaMusical;
 import Exceptions.InstrumentoInexistenteException;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -107,11 +108,6 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, -1, -1));
 
         qtdTxt.setForeground(new java.awt.Color(0, 0, 0));
-        qtdTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                qtdTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(qtdTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 354, -1));
 
         jLabel3.setText("Marca:");
@@ -121,11 +117,6 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 44, -1));
 
         marcaTxt.setForeground(new java.awt.Color(0, 0, 0));
-        marcaTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                marcaTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(marcaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 354, -1));
 
         buscarButton.setText("Buscar");
@@ -140,11 +131,6 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 90, -1));
 
         nomeTxt.setForeground(new java.awt.Color(0, 0, 0));
-        nomeTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 354, -1));
 
         nomeTxt3.setForeground(new java.awt.Color(0, 0, 0));
@@ -156,11 +142,6 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
         getContentPane().add(nomeTxt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 354, -1));
 
         valorTxt.setForeground(new java.awt.Color(0, 0, 0));
-        valorTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(valorTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 354, -1));
 
         alterarButton.setText("Alterar");
@@ -176,14 +157,6 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
 
         setBounds(170, 100, 675, 469);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void qtdTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qtdTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_qtdTxtActionPerformed
-
-    private void marcaTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_marcaTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_marcaTxtActionPerformed
 
     private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
         try {
@@ -203,36 +176,35 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_buscarButtonActionPerformed
 
-    private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTxtActionPerformed
-
     private void nomeTxt3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxt3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nomeTxt3ActionPerformed
 
-    private void valorTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_valorTxtActionPerformed
-
     private void alterarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarButtonActionPerformed
     if(liberado){
                 try{
+                    ArrayList<String> campos = new ArrayList<>();
                     Instrumento atual = sys.buscarInstrumento(codigoTxt.getText());
                     atual.setMarca(marcaTxt.getText());
                     atual.setNome(nomeTxt.getText());
+                    boolean naoPassou = false;
                     try{
                         atual.setQuantidade(Integer.parseInt(qtdTxt.getText()));
                     }catch(NumberFormatException e){
-                        JOptionPane.showMessageDialog(this, "Não foi possível alterar a quantidade, não podem haver letras.");
+                        campos.add("Quantidade");
+                        naoPassou = true;
                     }
                     try{
                         atual.setValor(Double.parseDouble(valorTxt.getText()));
                     }catch(NumberFormatException e){
-                        JOptionPane.showMessageDialog(this, "Não foi possível alterar o valor, não podem haver letras.");
+                        campos.add("Valor");
+                        naoPassou = true;
                     }
-
-                    JOptionPane.showMessageDialog(this, "Todos os componentes possíveis foram alterados.");
+                    if(naoPassou){
+                        JOptionPane.showMessageDialog(this, "Os seguintes campos não puderam ser alterados: \n" + campos.toString());
+                    }else{
+                        JOptionPane.showMessageDialog(this, "Instrumento alterado com sucesso!");
+                    }
                 }catch (InstrumentoInexistenteException e){
                     JOptionPane.showMessageDialog(this, e.getMessage());
                 }

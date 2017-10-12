@@ -101,11 +101,6 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
 
         emailBuscaTxt.setForeground(new java.awt.Color(0, 0, 0));
         emailBuscaTxt.setToolTipText("example@example.com");
-        emailBuscaTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailBuscaTxtActionPerformed(evt);
-            }
-        });
         emailBuscaTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 emailBuscaTxtKeyPressed(evt);
@@ -128,11 +123,6 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
 
         nomeTxt.setEditable(false);
         nomeTxt.setForeground(new java.awt.Color(0, 0, 0));
-        nomeTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 185, 345, -1));
 
         jLabel3.setText("Cpf");
@@ -140,11 +130,6 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
 
         cpfTxt.setEditable(false);
         cpfTxt.setForeground(new java.awt.Color(0, 0, 0));
-        cpfTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cpfTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(cpfTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 185, 170, -1));
 
         jLabel4.setText("Email");
@@ -152,11 +137,6 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
 
         emailtxt.setEditable(false);
         emailtxt.setForeground(new java.awt.Color(0, 0, 0));
-        emailtxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailtxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(emailtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 241, 345, -1));
 
         jLabel5.setText("RG");
@@ -164,11 +144,6 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
 
         rgTxt.setEditable(false);
         rgTxt.setForeground(new java.awt.Color(0, 0, 0));
-        rgTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rgTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(rgTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(396, 241, 170, -1));
 
         jLabel6.setText("DDD");
@@ -176,20 +151,10 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
 
         dddTxt.setEditable(false);
         dddTxt.setForeground(new java.awt.Color(0, 0, 0));
-        dddTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dddTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(dddTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 27, -1));
 
         telefoneTxt.setEditable(false);
         telefoneTxt.setForeground(new java.awt.Color(0, 0, 0));
-        telefoneTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                telefoneTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(telefoneTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 125, -1));
 
         jLabel7.setText("Telefone");
@@ -200,11 +165,6 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
 
         nascimentoTxt.setEditable(false);
         nascimentoTxt.setForeground(new java.awt.Color(0, 0, 0));
-        nascimentoTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nascimentoTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(nascimentoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, 161, -1));
 
         jLabel9.setText("Genero");
@@ -255,43 +215,11 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
         
     }//GEN-LAST:event_removerButtonActionPerformed
 
-    private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTxtActionPerformed
-
-    private void cpfTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cpfTxtActionPerformed
-
-    private void emailtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailtxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailtxtActionPerformed
-
-    private void rgTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rgTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rgTxtActionPerformed
-
-    private void dddTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dddTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dddTxtActionPerformed
-
-    private void telefoneTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefoneTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_telefoneTxtActionPerformed
-
-    private void nascimentoTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nascimentoTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nascimentoTxtActionPerformed
-
     private void emailBuscaTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailBuscaTxtKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
            this.buscarButton.doClick();
         }
     }//GEN-LAST:event_emailBuscaTxtKeyPressed
-
-    private void emailBuscaTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailBuscaTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailBuscaTxtActionPerformed
 
     private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
         try {

@@ -188,9 +188,13 @@ public class SistemaLojaMusical implements Serializable {
      * @param identificador
      * @throws InstrumentoInexistenteException
      * @throws QuantiaInvalidaException
+     * @throws QuantidadeInsuficienteException
      */
-    public void realizarVenda(String identificador) throws InstrumentoInexistenteException, QuantiaInvalidaException {
+    public void realizarVenda(String identificador) throws InstrumentoInexistenteException, QuantiaInvalidaException, QuantidadeInsuficienteException{
         Instrumento x = this.buscarInstrumento(identificador);
+        if(x.getQuantidade() <= 0){
+            throw new QuantidadeInsuficienteException("Não há quantidade suficiente em estoque.");
+        }
         this.efetuarRecebimento(x.getValor());
         x.setQuantidade(x.getQuantidade()-1);
     }

@@ -124,11 +124,6 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
 
         nomeTxt.setEditable(false);
         nomeTxt.setForeground(new java.awt.Color(0, 0, 0));
-        nomeTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 203, 345, -1));
 
         jLabel3.setText("CPF");
@@ -136,11 +131,6 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
 
         cpfTxt.setEditable(false);
         cpfTxt.setForeground(new java.awt.Color(0, 0, 0));
-        cpfTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cpfTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(cpfTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(396, 203, 170, -1));
 
         jLabel4.setText("Email");
@@ -148,11 +138,6 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
 
         emailTxt.setEditable(false);
         emailTxt.setForeground(new java.awt.Color(0, 0, 0));
-        emailTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(emailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 259, 345, -1));
 
         jLabel5.setText("RG");
@@ -160,11 +145,6 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
 
         rgTxt.setEditable(false);
         rgTxt.setForeground(new java.awt.Color(0, 0, 0));
-        rgTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rgTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(rgTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 259, 170, -1));
 
         jLabel6.setText("DDD");
@@ -172,20 +152,10 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
 
         dddTxt.setEditable(false);
         dddTxt.setForeground(new java.awt.Color(0, 0, 0));
-        dddTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dddTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(dddTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 315, 27, -1));
 
         telefoneTxt.setEditable(false);
         telefoneTxt.setForeground(new java.awt.Color(0, 0, 0));
-        telefoneTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                telefoneTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(telefoneTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 315, 125, -1));
 
         jLabel7.setText("Telefone");
@@ -196,11 +166,6 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
 
         nascimentoTxt.setEditable(false);
         nascimentoTxt.setForeground(new java.awt.Color(0, 0, 0));
-        nascimentoTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nascimentoTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(nascimentoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 315, 161, -1));
 
         jLabel9.setText("Genero");
@@ -235,6 +200,7 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         if(liberado){
             try{
                 sys.removerFuncionario(idTxt.getText());
+                idTxt.setText("");
                 nomeTxt.setText("");
                 cpfTxt.setText("");
                 emailTxt.setText("");
@@ -251,34 +217,6 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, "Não foi possível remover.");
         }
     }//GEN-LAST:event_removerButtonActionPerformed
-
-    private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTxtActionPerformed
-
-    private void cpfTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cpfTxtActionPerformed
-
-    private void emailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailTxtActionPerformed
-
-    private void rgTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rgTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rgTxtActionPerformed
-
-    private void dddTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dddTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dddTxtActionPerformed
-
-    private void telefoneTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefoneTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_telefoneTxtActionPerformed
-
-    private void nascimentoTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nascimentoTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nascimentoTxtActionPerformed
 
     private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
         try{

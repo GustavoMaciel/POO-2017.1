@@ -42,6 +42,7 @@ package Views;
 import Classes.*;
 import Exceptions.InstrumentoInexistenteException;
 import Exceptions.QuantiaInvalidaException;
+import Exceptions.QuantidadeInsuficienteException;
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
@@ -54,7 +55,7 @@ public class VenderInstrumento extends javax.swing.JInternalFrame {
     SistemaLojaMusical sys;
 
     /**
-     * Creates new form Comprar
+     * Creates new form VenderInstrumento
      */
     public VenderInstrumento(SistemaLojaMusical sys) {
         this.sys = sys;
@@ -208,22 +209,7 @@ public class VenderInstrumento extends javax.swing.JInternalFrame {
 
     private void identificadorTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_identificadorTxtKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            try {
-                Instrumento atual = sys.buscarInstrumento(this.identificadorTxt.getText());
-                this.nomeInsTxt.setText(atual.getNome());
-                this.marcaTxt.setText(atual.getMarca());
-                this.valorTxt.setText(String.valueOf(atual.getValor()));
-                this.qtdTxt.setText(String.valueOf(atual.getQuantidade()));
-                liberado = true;
-            }
-            catch(InstrumentoInexistenteException e){
-                this.nomeInsTxt.setText("");
-                this.marcaTxt.setText("");
-                this.valorTxt.setText("");
-                this.qtdTxt.setText("");
-                JOptionPane.showMessageDialog(this, e.getMessage());
-                liberado = false;
-            }
+            this.buscarButton.doClick();
         }
     }//GEN-LAST:event_identificadorTxtKeyPressed
 
@@ -234,7 +220,7 @@ public class VenderInstrumento extends javax.swing.JInternalFrame {
                 sys.realizarVenda(ins.getIdentificador());
                 this.qtdTxt.setText(String.valueOf(ins.getQuantidade()));
                 JOptionPane.showMessageDialog(this, "Instrumento vendido com sucesso!");
-            } catch (InstrumentoInexistenteException | QuantiaInvalidaException ex) {
+            } catch (InstrumentoInexistenteException | QuantiaInvalidaException | QuantidadeInsuficienteException ex) {
                 JOptionPane.showMessageDialog(this, ex.getMessage());
             }
         }else{

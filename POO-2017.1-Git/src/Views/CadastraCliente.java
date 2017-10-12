@@ -112,11 +112,6 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 21, -1, -1));
 
         nomeTxt.setForeground(new java.awt.Color(0, 0, 0));
-        nomeTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 44, 369, -1));
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -124,11 +119,6 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
 
         cpfTxt.setForeground(new java.awt.Color(0, 0, 0));
-        cpfTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cpfTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(cpfTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, 221, -1));
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -136,11 +126,6 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 80, -1, -1));
 
         rgTxt.setForeground(new java.awt.Color(0, 0, 0));
-        rgTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rgTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(rgTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 103, 221, -1));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -148,11 +133,6 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 148, -1, -1));
 
         emailTxt.setForeground(new java.awt.Color(0, 0, 0));
-        emailTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(emailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 103, 369, -1));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -160,20 +140,10 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 80, -1, -1));
 
         generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino", "All" }));
-        generoCombo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                generoComboActionPerformed(evt);
-            }
-        });
         getContentPane().add(generoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 171, 151, -1));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 250, 610, 11));
 
         logradouroTxt.setForeground(new java.awt.Color(0, 0, 0));
-        logradouroTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                logradouroTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(logradouroTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 290, 354, -1));
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -189,11 +159,6 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 267, -1, -1));
 
         bairroTxt.setForeground(new java.awt.Color(0, 0, 0));
-        bairroTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bairroTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(bairroTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 290, 136, -1));
 
         jLabel9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -201,11 +166,6 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, -1, -1));
 
         numeroEnderecoTxt.setForeground(new java.awt.Color(0, 0, 0));
-        numeroEnderecoTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numeroEnderecoTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(numeroEnderecoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, 136, -1));
 
         jLabel10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -213,11 +173,6 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 349, -1, -1));
 
         cepTxt.setForeground(new java.awt.Color(0, 0, 0));
-        cepTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cepTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(cepTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 372, 136, -1));
 
         jLabel11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -225,11 +180,6 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 350, -1, -1));
 
         estadoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins" }));
-        estadoCombo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                estadoComboActionPerformed(evt);
-            }
-        });
         getContentPane().add(estadoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 370, 136, 26));
 
         jLabel12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -237,11 +187,6 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 417, -1, -1));
 
         cidadeTxt.setForeground(new java.awt.Color(0, 0, 0));
-        cidadeTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cidadeTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(cidadeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 441, 136, -1));
 
         jLabel13.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -249,11 +194,6 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 148, -1, -1));
 
         dddTxt.setForeground(new java.awt.Color(0, 0, 0));
-        dddTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dddTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(dddTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 30, 30));
 
         jLabel14.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -261,11 +201,6 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
 
         numeroTxt.setForeground(new java.awt.Color(0, 0, 0));
-        numeroTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numeroTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(numeroTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 171, 155, 30));
 
         confirmarButton.setText("CONFIRMAR");
@@ -288,54 +223,6 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
 
         setBounds(170, 100, 674, 528);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTxtActionPerformed
-
-    private void cpfTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cpfTxtActionPerformed
-
-    private void rgTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rgTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rgTxtActionPerformed
-
-    private void emailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailTxtActionPerformed
-
-    private void logradouroTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logradouroTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_logradouroTxtActionPerformed
-
-    private void bairroTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bairroTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bairroTxtActionPerformed
-
-    private void numeroEnderecoTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numeroEnderecoTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_numeroEnderecoTxtActionPerformed
-
-    private void cepTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cepTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cepTxtActionPerformed
-
-    private void cidadeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidadeTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cidadeTxtActionPerformed
-
-    private void estadoComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estadoComboActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_estadoComboActionPerformed
-
-    private void dddTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dddTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dddTxtActionPerformed
-
-    private void numeroTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numeroTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_numeroTxtActionPerformed
 
     private void confirmarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarButtonActionPerformed
 
@@ -451,10 +338,6 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
 
         
     }//GEN-LAST:event_confirmarButtonActionPerformed
-
-    private void generoComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generoComboActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_generoComboActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

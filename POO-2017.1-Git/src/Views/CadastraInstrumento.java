@@ -91,11 +91,6 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
 
         nomeTxt.setForeground(new java.awt.Color(153, 153, 153));
-        nomeTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 240, -1));
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -103,11 +98,6 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, -1, -1));
 
         marcaTxt.setForeground(new java.awt.Color(153, 153, 153));
-        marcaTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                marcaTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(marcaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 221, -1));
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -115,19 +105,9 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, -1, -1));
 
         valorTxt.setForeground(new java.awt.Color(153, 153, 153));
-        valorTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(valorTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, 221, -1));
 
         identificadorTxt.setForeground(new java.awt.Color(153, 153, 153));
-        identificadorTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                identificadorTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(identificadorTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 240, -1));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -147,11 +127,6 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
 
         qtdTxt.setForeground(new java.awt.Color(153, 153, 153));
-        qtdTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                qtdTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(qtdTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 240, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
@@ -159,22 +134,6 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
 
         setBounds(170, 100, 717, 535);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTxtActionPerformed
-
-    private void marcaTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_marcaTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_marcaTxtActionPerformed
-
-    private void valorTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_valorTxtActionPerformed
-
-    private void identificadorTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_identificadorTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_identificadorTxtActionPerformed
 
     private void cadastrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarButtonActionPerformed
         Instrumento ins = new Instrumento();
@@ -248,10 +207,6 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
         }
         
     }//GEN-LAST:event_cadastrarButtonActionPerformed
-
-    private void qtdTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qtdTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_qtdTxtActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
