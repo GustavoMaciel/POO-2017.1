@@ -272,11 +272,6 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         getContentPane().add(confirmarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 440, -1, -1));
 
         dataTxt.setForeground(new java.awt.Color(0, 0, 0));
-        dataTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dataTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(dataTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 171, 160, 30));
 
         jLabel15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -347,7 +342,13 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
             campos.add("CPF");
             podeCadastrar = false;
         } else {
-            cliente.setCpf(this.cpfTxt.getText());
+            try{
+                Long.parseLong(cpfTxt.getText());
+                cliente.setCpf(this.cpfTxt.getText());
+            }catch(NumberFormatException e){
+                podeCadastrar = false;
+                JOptionPane.showMessageDialog(this, "Só podem haver números no CPF");
+            }
         }
 
         if (this.dataTxt.getText().equals("")) {
@@ -377,8 +378,14 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
             campos.add("RG");
             podeCadastrar = false;
         } else {
-            cliente.setRg(this.rgTxt.getText());
+            try{
+                Long.parseLong(rgTxt.getText());
+                cliente.setRg(this.rgTxt.getText());
+            }catch(NumberFormatException e){
+                podeCadastrar = false;
+                JOptionPane.showMessageDialog(this, "Só podem haver números no RG.");
         }
+            }
 
         cliente.setStatusDevedor(false);
 
@@ -439,12 +446,8 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
 
-
+        
     }//GEN-LAST:event_confirmarButtonActionPerformed
-
-    private void dataTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dataTxtActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

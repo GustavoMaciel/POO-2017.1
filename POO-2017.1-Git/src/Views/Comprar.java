@@ -81,8 +81,8 @@ public class Comprar extends javax.swing.JInternalFrame {
         qtdTxt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         iconLabel = new javax.swing.JLabel();
-        comprarButton = new javax.swing.JButton();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        venderButton = new javax.swing.JButton();
+        buscarButton = new javax.swing.JToggleButton();
         jLabel6 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -165,16 +165,16 @@ public class Comprar extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 200, 20));
         getContentPane().add(iconLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 175, 485, 219));
 
-        comprarButton.setText("Vender");
-        comprarButton.addActionListener(new java.awt.event.ActionListener() {
+        venderButton.setText("Vender");
+        venderButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comprarButtonActionPerformed(evt);
+                venderButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(comprarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(519, 412, 143, -1));
+        getContentPane().add(venderButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(519, 412, 143, -1));
 
-        jToggleButton1.setText("Buscar");
-        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 130, -1));
+        buscarButton.setText("Buscar");
+        getContentPane().add(buscarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 130, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 480));
@@ -223,7 +223,7 @@ public class Comprar extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_identificadorTxtKeyPressed
 
-    private void comprarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarButtonActionPerformed
+    private void venderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_venderButtonActionPerformed
         if(liberado){
             try {
                 Instrumento ins = sys.buscarInstrumento(this.identificadorTxt.getText());
@@ -236,11 +236,11 @@ public class Comprar extends javax.swing.JInternalFrame {
         }else{
             JOptionPane.showMessageDialog(this, "Insira o código e aperte enter.");
         }
-    }//GEN-LAST:event_comprarButtonActionPerformed
+    }//GEN-LAST:event_venderButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton comprarButton;
+    private javax.swing.JToggleButton buscarButton;
     private javax.swing.JLabel iconLabel;
     private javax.swing.JTextField identificadorTxt;
     private javax.swing.JLabel jLabel1;
@@ -249,10 +249,10 @@ public class Comprar extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JTextField marcaTxt;
     private javax.swing.JTextField nomeInsTxt;
     private javax.swing.JTextField qtdTxt;
     private javax.swing.JTextField valorTxt;
+    private javax.swing.JButton venderButton;
     // End of variables declaration//GEN-END:variables
 }

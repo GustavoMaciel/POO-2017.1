@@ -87,7 +87,7 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
         nascimentoTxt = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         generoCombo = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        buscarButton = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -214,8 +214,13 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
         generoCombo.setEnabled(false);
         getContentPane().add(generoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 162, 30));
 
-        jButton1.setText("Buscar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, -1, -1));
+        buscarButton.setText("Buscar");
+        buscarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buscarButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(buscarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, -1, -1));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 450));
@@ -228,8 +233,6 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
         if (liberado == true) {
             try {
                 this.sys.removerCliente(this.clien.getEmail());
-                JOptionPane.showMessageDialog(this, "Cliente removido com sucesso!");
-                
                 //Renovar tudo para zerar campos.
                 
                 this.emailBuscaTxt.setText("");
@@ -240,7 +243,8 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
                 this.dddTxt.setText("");
                 this.telefoneTxt.setText("");
                 this.nascimentoTxt.setText("");
-                this.generoCombo.setSelectedIndex(0);                
+                this.generoCombo.setSelectedIndex(0);
+                JOptionPane.showMessageDialog(this, "Cliente removido com sucesso!");
                 
             } catch (ClienteInexistenteException e) {
                 JOptionPane.showMessageDialog(this, e.getMessage());
@@ -316,14 +320,45 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_emailBuscaTxtActionPerformed
 
+    private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
+        try {
+                this.clien = sys.buscarCliente(this.emailBuscaTxt.getText());
+                this.nomeTxt.setText(clien.getNome());
+                this.cpfTxt.setText(clien.getCpf());
+                this.emailtxt.setText(clien.getEmail());
+                this.rgTxt.setText(clien.getRg());
+                this.dddTxt.setText(clien.getTelefone().getDdd());
+                this.telefoneTxt.setText(clien.getTelefone().getNumero());
+                this.nascimentoTxt.setText(clien.getDataNascimento());
+                if (clien.getGenero().startsWith("M")) {
+                    this.generoCombo.setSelectedIndex(0);
+                } else {
+                    this.generoCombo.setSelectedIndex(1);
+                }
+                liberado = true;
+            } catch (ClienteInexistenteException e) {
+                liberado = false;
+                this.emailBuscaTxt.setText("");
+                this.nomeTxt.setText("");
+                this.cpfTxt.setText("");
+                this.rgTxt.setText("");
+                this.emailtxt.setText("");
+                this.dddTxt.setText("");
+                this.telefoneTxt.setText("");
+                this.nascimentoTxt.setText("");
+                this.generoCombo.setSelectedIndex(0);     
+                JOptionPane.showMessageDialog(this, e.getMessage());
+            }
+    }//GEN-LAST:event_buscarButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buscarButton;
     private javax.swing.JTextField cpfTxt;
     private javax.swing.JTextField dddTxt;
     private javax.swing.JTextField emailBuscaTxt;
     private javax.swing.JTextField emailtxt;
     private javax.swing.JComboBox<String> generoCombo;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;

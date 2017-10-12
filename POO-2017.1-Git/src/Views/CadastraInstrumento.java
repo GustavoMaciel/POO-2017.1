@@ -78,7 +78,7 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
         jLabel5 = new javax.swing.JLabel();
         cadastrarButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        identificadorTxt1 = new javax.swing.JTextField();
+        qtdTxt = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -146,13 +146,13 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
         jLabel6.setText("Quantidade");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
 
-        identificadorTxt1.setForeground(new java.awt.Color(153, 153, 153));
-        identificadorTxt1.addActionListener(new java.awt.event.ActionListener() {
+        qtdTxt.setForeground(new java.awt.Color(153, 153, 153));
+        qtdTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                identificadorTxt1ActionPerformed(evt);
+                qtdTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(identificadorTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 240, -1));
+        getContentPane().add(qtdTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 240, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 510));
@@ -193,6 +193,18 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
             faltas.add("Marca");
         }else{
             ins.setMarca(marcaTxt.getText());
+        }
+        
+        if(qtdTxt.getText().equals("")){
+            podeCadastrar = false;
+            faltas.add("Quantidade");
+        }else{
+            try{
+                ins.setQuantidade(Integer.parseInt(qtdTxt.getText()));
+            }catch (NumberFormatException e){
+                podeCadastrar = false;
+                JOptionPane.showMessageDialog(this, "Só podem haver números na quantidade.");
+            }
         }
         
         if(identificadorTxt.getText().equals("")){
@@ -237,15 +249,14 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
         
     }//GEN-LAST:event_cadastrarButtonActionPerformed
 
-    private void identificadorTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_identificadorTxt1ActionPerformed
+    private void qtdTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qtdTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_identificadorTxt1ActionPerformed
+    }//GEN-LAST:event_qtdTxtActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cadastrarButton;
     private javax.swing.JTextField identificadorTxt;
-    private javax.swing.JTextField identificadorTxt1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -254,6 +265,7 @@ public class CadastraInstrumento extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField marcaTxt;
     private javax.swing.JTextField nomeTxt;
+    private javax.swing.JTextField qtdTxt;
     private javax.swing.JTextField valorTxt;
     // End of variables declaration//GEN-END:variables
 }

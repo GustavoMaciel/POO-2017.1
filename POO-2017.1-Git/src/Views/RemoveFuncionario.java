@@ -39,16 +39,23 @@
  */
 package Views;
 
+import Classes.*;
+import Exceptions.FuncionarioInexistenteException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author junior
  */
 public class RemoveFuncionario extends javax.swing.JInternalFrame {
+    boolean liberado = false;
+    SistemaLojaMusical sys;
 
     /**
      * Creates new form RemoveClientes
      */
-    public RemoveFuncionario() {
+    public RemoveFuncionario(SistemaLojaMusical sys) {
+        this.sys = sys;
         initComponents();
     }
 
@@ -62,14 +69,14 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        emailBuscaTxt = new javax.swing.JTextField();
+        idTxt = new javax.swing.JTextField();
         removerButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         nomeTxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         cpfTxt = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        emailtxt = new javax.swing.JTextField();
+        emailTxt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         rgTxt = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -80,7 +87,7 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         nascimentoTxt = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         generoCombo = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        buscarButton = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -92,14 +99,14 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         jLabel1.setText("Insira o ID ");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, -1, -1));
 
-        emailBuscaTxt.setForeground(new java.awt.Color(0, 0, 0));
-        emailBuscaTxt.setToolTipText("example@example.com");
-        emailBuscaTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+        idTxt.setForeground(new java.awt.Color(0, 0, 0));
+        idTxt.setToolTipText("example@example.com");
+        idTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                emailBuscaTxtKeyPressed(evt);
+                idTxtKeyPressed(evt);
             }
         });
-        getContentPane().add(emailBuscaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 317, -1));
+        getContentPane().add(idTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 317, -1));
 
         removerButton.setBackground(new java.awt.Color(255, 51, 51));
         removerButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -123,7 +130,7 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         });
         getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 203, 345, -1));
 
-        jLabel3.setText("Cpf");
+        jLabel3.setText("CPF");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(396, 180, -1, -1));
 
         cpfTxt.setEditable(false);
@@ -138,14 +145,14 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         jLabel4.setText("Email");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 236, -1, -1));
 
-        emailtxt.setEditable(false);
-        emailtxt.setForeground(new java.awt.Color(0, 0, 0));
-        emailtxt.addActionListener(new java.awt.event.ActionListener() {
+        emailTxt.setEditable(false);
+        emailTxt.setForeground(new java.awt.Color(0, 0, 0));
+        emailTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailtxtActionPerformed(evt);
+                emailTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(emailtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 259, 345, -1));
+        getContentPane().add(emailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 259, 345, -1));
 
         jLabel5.setText("RG");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 236, -1, -1));
@@ -202,8 +209,13 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         generoCombo.setEnabled(false);
         getContentPane().add(generoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 315, 162, -1));
 
-        jButton1.setText("Buscar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, -1, -1));
+        buscarButton.setText("Buscar");
+        buscarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buscarButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(buscarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, -1, -1));
 
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
@@ -212,12 +224,29 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         setBounds(170, 100, 619, 480);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void emailBuscaTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailBuscaTxtKeyPressed
+    private void idTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idTxtKeyPressed
         
-    }//GEN-LAST:event_emailBuscaTxtKeyPressed
+    }//GEN-LAST:event_idTxtKeyPressed
 
     private void removerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerButtonActionPerformed
-
+        if(liberado){
+            try{
+                sys.removerFuncionario(idTxt.getText());
+                nomeTxt.setText("");
+                cpfTxt.setText("");
+                emailTxt.setText("");
+                rgTxt.setText("");
+                dddTxt.setText("");
+                telefoneTxt.setText("");
+                nascimentoTxt.setText("");
+                generoCombo.setSelectedIndex(0);
+                JOptionPane.showMessageDialog(this, "Funcionário removido com sucesso!");
+            }catch (FuncionarioInexistenteException e){
+                JOptionPane.showMessageDialog(cpfTxt, e.getMessage());
+            }
+        }else {
+            JOptionPane.showMessageDialog(this, "Não foi possível remover.");
+        }
     }//GEN-LAST:event_removerButtonActionPerformed
 
     private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
@@ -228,9 +257,9 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cpfTxtActionPerformed
 
-    private void emailtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailtxtActionPerformed
+    private void emailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailtxtActionPerformed
+    }//GEN-LAST:event_emailTxtActionPerformed
 
     private void rgTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rgTxtActionPerformed
         // TODO add your handling code here:
@@ -248,14 +277,45 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nascimentoTxtActionPerformed
 
+    private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
+        try{
+            Funcionario fun = sys.buscarFuncionario(idTxt.getText());
+            nomeTxt.setText(fun.getNome());
+            cpfTxt.setText(fun.getCpf());
+            emailTxt.setText(fun.getEmail());
+            rgTxt.setText(fun.getRg());
+            dddTxt.setText(fun.getTelefone().getDdd());
+            telefoneTxt.setText(fun.getTelefone().getNumero());
+            nascimentoTxt.setText(fun.getDataNascimento());
+            if(fun.getGenero().startsWith("M")){
+                generoCombo.setSelectedIndex(0);
+            }else{
+                generoCombo.setSelectedIndex(1);
+            }
+            liberado = true;
+        }catch (FuncionarioInexistenteException e){
+            nomeTxt.setText("");
+            cpfTxt.setText("");
+            emailTxt.setText("");
+            rgTxt.setText("");
+            dddTxt.setText("");
+            telefoneTxt.setText("");
+            nascimentoTxt.setText("");
+            generoCombo.setSelectedIndex(0);
+            JOptionPane.showMessageDialog(this, e.getMessage());
+            liberado = false;
+        }
+        
+    }//GEN-LAST:event_buscarButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buscarButton;
     private javax.swing.JTextField cpfTxt;
     private javax.swing.JTextField dddTxt;
-    private javax.swing.JTextField emailBuscaTxt;
-    private javax.swing.JTextField emailtxt;
+    private javax.swing.JTextField emailTxt;
     private javax.swing.JComboBox<String> generoCombo;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JTextField idTxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;

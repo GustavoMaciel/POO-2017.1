@@ -420,7 +420,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         } else {
             try {
                 Long.parseLong(rgTxt.getText());
-                x.setCpf(this.rgTxt.getText());
+                x.setRg(this.rgTxt.getText());
             } catch (NumberFormatException e) {
                 podeCadastrar = false;
                 JOptionPane.showMessageDialog(this, "Não pode haver letras no RG");
@@ -432,47 +432,40 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         podeCadastrar = false;
     }
 
-    if (this.numeroTxt.getText () 
-        .equals("")) {
+    if (this.numeroTxt.getText ().equals("")) {
             campos.add("Número de telefone");
         podeCadastrar = false;
     }
     Telefone tel = new Telefone(this.dddTxt.getText(), this.numeroTxt.getText());
-
     x.setTelefone (tel);
 
-    if (this.logradouroTxt.getText () 
-        .equals("")) {
+    if (this.logradouroTxt.getText ().equals("")) {
             campos.add("Logradouro");
         podeCadastrar = false;
     }
 
-    if (this.bairroTxt.getText () 
-        .equals("")) {
+    if (this.bairroTxt.getText ().equals("")) {
             campos.add("Bairro");
         podeCadastrar = false;
     }
 
-    if (this.numeroEnderecoTxt.getText () 
-        .equals("")) {
+    if (this.numeroEnderecoTxt.getText ().equals("")) {
             campos.add("Número de Endereço");
         podeCadastrar = false;
     }
 
-    if (this.cepTxt.getText () 
-        .equals("")) {
+    if (this.cepTxt.getText ().equals("")) {
             campos.add("CEP");
         podeCadastrar = false;
     }
 
-    if (this.cidadeTxt.getText () 
-        .equals("")) {
+    if (this.cidadeTxt.getText ().equals("")) {
             campos.add("Cidade");
         podeCadastrar = false;
     }
     Endereco end = new Endereco(this.logradouroTxt.getText(), this.bairroTxt.getText(), this.numeroEnderecoTxt.getText(), this.cepTxt.getText(), this.estadoCombo.getItemAt(this.estadoCombo.getSelectedIndex()), this.cidadeTxt.getText());
 
-    x.setEndereco (end);
+    x.setEndereco(end);
 
     if (this.tipoTxt.getText ().equals("")) {
             campos.add("Tipo");
@@ -498,9 +491,10 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
             pagamento = Double.parseDouble(pagamentoTxt.getText());
             x.setPagamento(pagamento);
         } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Só podem haver números no pagamento.");
             podeCadastrar = false;
         }
-            JOptionPane.showMessageDialog(this, "Só podem haver números no pagamento.");
+            
         }
     }    
         try {

@@ -310,7 +310,7 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
-        RemoveFuncionario obj = new RemoveFuncionario();
+        RemoveFuncionario obj = new RemoveFuncionario(sys);
         jDesktopPanePrincipal.add(obj);
         obj.setVisible(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem10ActionPerformed

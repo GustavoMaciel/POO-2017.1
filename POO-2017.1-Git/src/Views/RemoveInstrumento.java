@@ -81,8 +81,8 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
         jLabel4 = new javax.swing.JLabel();
         idTxt = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        idMonstrarTxt1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        qtdTxt = new javax.swing.JTextField();
+        buscarButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -173,17 +173,22 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
         jLabel7.setText("Quantidade");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
 
-        idMonstrarTxt1.setEditable(false);
-        idMonstrarTxt1.setForeground(new java.awt.Color(0, 0, 0));
-        idMonstrarTxt1.addActionListener(new java.awt.event.ActionListener() {
+        qtdTxt.setEditable(false);
+        qtdTxt.setForeground(new java.awt.Color(0, 0, 0));
+        qtdTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idMonstrarTxt1ActionPerformed(evt);
+                qtdTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(idMonstrarTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 240, -1));
+        getContentPane().add(qtdTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 240, -1));
 
-        jButton1.setText("Buscar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 130, -1, -1));
+        buscarButton.setText("Buscar");
+        buscarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buscarButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(buscarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 130, -1, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 500));
@@ -211,13 +216,13 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
         if(podeIr){
             try{
                 sys.removerInstrumento(idTxt.getText());
-                JOptionPane.showMessageDialog(this, "Instrumento removido com sucesso!");
-                
                 nomeTxt.setText("");
                 marcaTxt.setText("'");
                 valorTxt.setText("");
                 idMonstrarTxt.setText("");
+                qtdTxt.setText("");
                 podeIr = false;
+                JOptionPane.showMessageDialog(this, "Instrumento removido com sucesso!");
             }catch(InstrumentoInexistenteException e){
                 JOptionPane.showMessageDialog(this, e.getMessage());
             }
@@ -238,28 +243,49 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
                 marcaTxt.setText(ins.getMarca());
                 valorTxt.setText(String.valueOf(ins.getValor()));
                 idMonstrarTxt.setText(ins.getIdentificador());
+                qtdTxt.setText(String.valueOf(ins.getQuantidade()));
                 podeIr = true;
             }catch (InstrumentoInexistenteException e){
                 nomeTxt.setText("");
                 marcaTxt.setText("");
                 valorTxt.setText("");
                 idMonstrarTxt.setText("");
+                qtdTxt.setText("");
                 JOptionPane.showMessageDialog(this, e.getMessage());
                 podeIr = false;
             }
         }
     }//GEN-LAST:event_idTxtKeyPressed
 
-    private void idMonstrarTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idMonstrarTxt1ActionPerformed
+    private void qtdTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qtdTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_idMonstrarTxt1ActionPerformed
+    }//GEN-LAST:event_qtdTxtActionPerformed
+
+    private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
+        try{
+                Instrumento ins = sys.buscarInstrumento(idTxt.getText());
+                nomeTxt.setText(ins.getNome());
+                marcaTxt.setText(ins.getMarca());
+                valorTxt.setText(String.valueOf(ins.getValor()));
+                idMonstrarTxt.setText(ins.getIdentificador());
+                qtdTxt.setText(String.valueOf(ins.getQuantidade()));
+                podeIr = true;
+            }catch (InstrumentoInexistenteException e){
+                nomeTxt.setText("");
+                marcaTxt.setText("");
+                valorTxt.setText("");
+                idMonstrarTxt.setText("");
+                qtdTxt.setText("");
+                JOptionPane.showMessageDialog(this, e.getMessage());
+                podeIr = false;
+            }
+    }//GEN-LAST:event_buscarButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buscarButton;
     private javax.swing.JTextField idMonstrarTxt;
-    private javax.swing.JTextField idMonstrarTxt1;
     private javax.swing.JTextField idTxt;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -269,6 +295,7 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField marcaTxt;
     private javax.swing.JTextField nomeTxt;
+    private javax.swing.JTextField qtdTxt;
     private javax.swing.JButton removerButton;
     private javax.swing.JTextField valorTxt;
     // End of variables declaration//GEN-END:variables
