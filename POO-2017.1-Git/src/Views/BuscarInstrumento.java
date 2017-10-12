@@ -80,6 +80,7 @@ public class BuscarInstrumento extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         valorTxt1 = new javax.swing.JTextField();
         nomeTxt1 = new javax.swing.JTextField();
+        jToggleButton1 = new javax.swing.JToggleButton();
         jLabel4 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -161,6 +162,9 @@ public class BuscarInstrumento extends javax.swing.JInternalFrame {
         });
         getContentPane().add(nomeTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 354, -1));
 
+        jToggleButton1.setText("Alterar");
+        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(441, 380, 90, -1));
+
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 440));
 
@@ -212,6 +216,7 @@ public class BuscarInstrumento extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JTextField marcaTxt;
     private javax.swing.JTextField nomeTxt;
     private javax.swing.JTextField nomeTxt1;
