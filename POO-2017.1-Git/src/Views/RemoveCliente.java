@@ -302,7 +302,6 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
                 liberado = true;
             } catch (ClienteInexistenteException e) {
                 liberado = false;
-                this.emailBuscaTxt.setText("");
                 this.nomeTxt.setText("");
                 this.cpfTxt.setText("");
                 this.rgTxt.setText("");
@@ -338,7 +337,6 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
                 liberado = true;
             } catch (ClienteInexistenteException e) {
                 liberado = false;
-                this.emailBuscaTxt.setText("");
                 this.nomeTxt.setText("");
                 this.cpfTxt.setText("");
                 this.rgTxt.setText("");

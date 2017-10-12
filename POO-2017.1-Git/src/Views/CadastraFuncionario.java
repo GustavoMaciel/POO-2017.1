@@ -130,7 +130,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         jLabel15.setText("Data de Nascimento");
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 136, -1, -1));
 
-        generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino", "All" }));
+        generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino" }));
         getContentPane().add(generoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 159, 151, -1));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 238, 682, 11));
 
@@ -175,7 +175,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(numeroEnderecoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 136, -1));
 
         jLabel10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel10.setText("Cep");
+        jLabel10.setText("CEP");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 337, -1, -1));
 
         cepTxt.setForeground(java.awt.Color.black);
@@ -190,7 +190,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         jLabel11.setText("Estado");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, -1, -1));
 
-        estadoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre \t ", "Alagoas \t ", "Amapá \t ", "Amazonas \t\t ", "Bahia \t ", "Ceará \t ", "Distrito Federal  ", "Espírito Santo  ", "Goiás  ", "Maranhão \t", "Mato Grosso \t ", "Mato Grosso do Sul  ", "Minas Gerais \t ", "Pará \t ", "Paraíba \t ", "Paraná \t ", "Pernambuco ", "Piauí \t ", "Rio de Janeiro \t", "Rio Grande do Norte \t ", "Rio Grande do Sul \t", "Rondônia \t ", "Roraima \t ", "Santa Catarina \t ", "São Paulo \t", "Sergipe \t ", "Tocantins" }));
+        estadoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins" }));
         estadoCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 estadoComboActionPerformed(evt);
@@ -300,7 +300,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel19.setText("Id");
+        jLabel19.setText("ID");
         getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 500, -1, -1));
 
         idTxt.setForeground(java.awt.Color.black);
@@ -405,7 +405,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
             x.setEmail(this.emailTxt.getText());
         }
 
-        x.setGenero(this.generoCombo.getItemAt(this.generoCombo.getSelectedIndex()).toUpperCase());
+        x.setGenero(this.generoCombo.getItemAt(this.generoCombo.getSelectedIndex()));
 
         if (this.nomeTxt.getText().equals("")) {
             campos.add("Nome");

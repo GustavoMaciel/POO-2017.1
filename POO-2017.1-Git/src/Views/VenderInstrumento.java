@@ -82,7 +82,7 @@ public class VenderInstrumento extends javax.swing.JInternalFrame {
         jLabel5 = new javax.swing.JLabel();
         iconLabel = new javax.swing.JLabel();
         venderButton = new javax.swing.JButton();
-        buscarButton = new javax.swing.JToggleButton();
+        buscarButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -90,7 +90,6 @@ public class VenderInstrumento extends javax.swing.JInternalFrame {
         setTitle("Vender Instrumento");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        identificadorTxt.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
         identificadorTxt.setForeground(new java.awt.Color(0, 0, 0));
         identificadorTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,7 +178,7 @@ public class VenderInstrumento extends javax.swing.JInternalFrame {
                 buscarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(buscarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 130, -1));
+        getContentPane().add(buscarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 90, 130, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 480));
@@ -244,7 +243,7 @@ public class VenderInstrumento extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_venderButtonActionPerformed
 
     private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
-        try {
+         try {
                 Instrumento atual = sys.buscarInstrumento(this.identificadorTxt.getText());
                 this.nomeInsTxt.setText(atual.getNome());
                 this.marcaTxt.setText(atual.getMarca());
@@ -264,7 +263,7 @@ public class VenderInstrumento extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JToggleButton buscarButton;
+    private javax.swing.JButton buscarButton;
     private javax.swing.JLabel iconLabel;
     private javax.swing.JTextField identificadorTxt;
     private javax.swing.JLabel jLabel1;

@@ -78,10 +78,10 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
         marcaTxt = new javax.swing.JTextField();
         buscarButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        alterarButton = new javax.swing.JToggleButton();
         nomeTxt = new javax.swing.JTextField();
         nomeTxt3 = new javax.swing.JTextField();
         valorTxt = new javax.swing.JTextField();
+        alterarButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -122,7 +122,7 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
         });
         getContentPane().add(marcaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 354, -1));
 
-        buscarButton.setText("BUSCAR");
+        buscarButton.setText("Buscar");
         buscarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buscarButtonActionPerformed(evt);
@@ -132,14 +132,6 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
 
         jLabel6.setText("Quantidade:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 90, -1));
-
-        alterarButton.setText("Alterar");
-        alterarButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                alterarButtonActionPerformed(evt);
-            }
-        });
-        getContentPane().add(alterarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(441, 380, 90, -1));
 
         nomeTxt.setForeground(new java.awt.Color(0, 0, 0));
         nomeTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -165,8 +157,16 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
         });
         getContentPane().add(valorTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 354, -1));
 
+        alterarButton.setText("Alterar");
+        alterarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alterarButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(alterarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, 90, -1));
+
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 440));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 680, 440));
 
         setBounds(170, 100, 675, 469);
     }// </editor-fold>//GEN-END:initComponents
@@ -182,44 +182,20 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
     private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
         try {
             Instrumento atual = sys.buscarInstrumento(this.codigoTxt.getText());
-            this.qtdTxt.setText(atual.getNome());
+            this.nomeTxt.setText(atual.getNome());
             this.marcaTxt.setText(atual.getMarca());
-            qtdTxt.setText(String.valueOf(atual.getValor()));
+            valorTxt.setText(String.valueOf(atual.getValor()));
             qtdTxt.setText(String.valueOf(atual.getQuantidade()));
             liberado = true;
         } catch (InstrumentoInexistenteException ex) {
-            this.qtdTxt.setText("");
+            this.nomeTxt.setText("");
             this.marcaTxt.setText("");
             qtdTxt.setText("");
-            qtdTxt.setText("");
+            valorTxt.setText("");
             liberado = false;
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }//GEN-LAST:event_buscarButtonActionPerformed
-
-    private void alterarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarButtonActionPerformed
-        if(liberado){
-            try{
-                Instrumento atual = sys.buscarInstrumento(codigoTxt.getText());
-                atual.setMarca(marcaTxt.getText());
-                atual.setNome(qtdTxt.getText());
-                try{
-                    atual.setQuantidade(Integer.parseInt(qtdTxt.getText()));
-                }catch(NumberFormatException e){
-                    JOptionPane.showMessageDialog(this, "Não foi possível alterar a quantidade, não podem haver letras.");
-                }
-                try{
-                    atual.setValor(Integer.parseInt(qtdTxt.getText()));
-                }catch(NumberFormatException e){
-                    JOptionPane.showMessageDialog(this, "Não foi possível alterar o valor, não podem haver letras.");
-                }
-            }catch (InstrumentoInexistenteException e){
-                JOptionPane.showMessageDialog(this, e.getMessage());
-            }
-        }else{
-            JOptionPane.showMessageDialog(this, "Não foi possível alterar.");
-        }
-    }//GEN-LAST:event_alterarButtonActionPerformed
 
     private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
         // TODO add your handling code here:
@@ -233,9 +209,35 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_valorTxtActionPerformed
 
+    private void alterarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarButtonActionPerformed
+    if(liberado){
+                try{
+                    Instrumento atual = sys.buscarInstrumento(codigoTxt.getText());
+                    atual.setMarca(marcaTxt.getText());
+                    atual.setNome(nomeTxt.getText());
+                    try{
+                        atual.setQuantidade(Integer.parseInt(qtdTxt.getText()));
+                    }catch(NumberFormatException e){
+                        JOptionPane.showMessageDialog(this, "Não foi possível alterar a quantidade, não podem haver letras.");
+                    }
+                    try{
+                        atual.setValor(Double.parseDouble(valorTxt.getText()));
+                    }catch(NumberFormatException e){
+                        JOptionPane.showMessageDialog(this, "Não foi possível alterar o valor, não podem haver letras.");
+                    }
+
+                    JOptionPane.showMessageDialog(this, "Todos os componentes possíveis foram alterados.");
+                }catch (InstrumentoInexistenteException e){
+                    JOptionPane.showMessageDialog(this, e.getMessage());
+                }
+            }else{
+                JOptionPane.showMessageDialog(this, "Não foi possível alterar.");
+            }
+    }//GEN-LAST:event_alterarButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JToggleButton alterarButton;
+    private javax.swing.JButton alterarButton;
     private javax.swing.JButton buscarButton;
     private javax.swing.JTextPane codigoTxt;
     private javax.swing.JLabel jLabel1;

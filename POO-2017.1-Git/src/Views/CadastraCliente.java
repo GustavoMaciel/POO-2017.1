@@ -160,6 +160,11 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 80, -1, -1));
 
         generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino", "All" }));
+        generoCombo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generoComboActionPerformed(evt);
+            }
+        });
         getContentPane().add(generoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 171, 151, -1));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 250, 610, 11));
 
@@ -204,7 +209,7 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         getContentPane().add(numeroEnderecoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, 136, -1));
 
         jLabel10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel10.setText("Cep");
+        jLabel10.setText("CEP");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 349, -1, -1));
 
         cepTxt.setForeground(new java.awt.Color(0, 0, 0));
@@ -219,7 +224,7 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
         jLabel11.setText("Estado");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 350, -1, -1));
 
-        estadoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre \t ", "Alagoas \t ", "Amapá \t ", "Amazonas \t\t ", "Bahia \t ", "Ceará \t ", "Distrito Federal  ", "Espírito Santo  ", "Goiás  ", "Maranhão \t", "Mato Grosso \t ", "Mato Grosso do Sul  ", "Minas Gerais \t ", "Pará \t ", "Paraíba \t ", "Paraná \t ", "Pernambuco ", "Piauí \t ", "Rio de Janeiro \t", "Rio Grande do Norte \t ", "Rio Grande do Sul \t", "Rondônia \t ", "Roraima \t ", "Santa Catarina \t ", "São Paulo \t", "Sergipe \t ", "Tocantins" }));
+        estadoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins" }));
         estadoCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 estadoComboActionPerformed(evt);
@@ -365,7 +370,7 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
             cliente.setEmail(this.emailTxt.getText());
         }
 
-        cliente.setGenero(this.generoCombo.getItemAt(this.generoCombo.getSelectedIndex()).toUpperCase());
+        cliente.setGenero(this.generoCombo.getItemAt(this.generoCombo.getSelectedIndex()));
 
         if (this.nomeTxt.getText().equals("")) {
             campos.add("Nome");
@@ -423,7 +428,9 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
             podeCadastrar = false;
         }
 
-        Endereco end = new Endereco(this.logradouroTxt.getText(), this.bairroTxt.getText(), this.numeroEnderecoTxt.getText(), this.cepTxt.getText(), this.estadoCombo.getItemAt(this.estadoCombo.getSelectedIndex()), this.cidadeTxt.getText());
+        Endereco end = new Endereco(this.logradouroTxt.getText(), this.bairroTxt.getText(),
+                this.numeroEnderecoTxt.getText(), this.cepTxt.getText(), 
+                this.estadoCombo.getItemAt(this.estadoCombo.getSelectedIndex()), this.cidadeTxt.getText());
         cliente.setEndereco(end);
 
         try {
@@ -448,6 +455,10 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
 
         
     }//GEN-LAST:event_confirmarButtonActionPerformed
+
+    private void generoComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generoComboActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_generoComboActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

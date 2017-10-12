@@ -49,6 +49,7 @@ import javax.swing.JOptionPane;
  * @author junior
  */
 public class AlterarCliente extends javax.swing.JInternalFrame {
+    boolean liberado = false;
     public SistemaLojaMusical sys;
 
     /**
@@ -87,7 +88,6 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         nascimentoTxt = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         generoCombo = new javax.swing.JComboBox<>();
-        jToggleButton1 = new javax.swing.JToggleButton();
         jLabel10 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         logradouroTxt = new javax.swing.JTextField();
@@ -102,6 +102,8 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         estadoCombo = new javax.swing.JComboBox<>();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
+        alterarButton = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -121,7 +123,7 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
                 emailBuscaTxtKeyPressed(evt);
             }
         });
-        getContentPane().add(emailBuscaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 331, -1));
+        getContentPane().add(emailBuscaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 331, -1));
 
         buscarButton.setText("Buscar");
         buscarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -131,6 +133,7 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         });
         getContentPane().add(buscarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, -1, -1));
 
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setText("Nome");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
 
@@ -142,7 +145,8 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         });
         getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 345, -1));
 
-        jLabel3.setText("Cpf");
+        jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel3.setText("CPF");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 100, -1, -1));
 
         cpfTxt.setForeground(new java.awt.Color(0, 0, 0));
@@ -153,6 +157,7 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         });
         getContentPane().add(cpfTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 170, -1));
 
+        jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel4.setText("Email");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
 
@@ -164,6 +169,7 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         });
         getContentPane().add(emailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 345, -1));
 
+        jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel5.setText("RG");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, -1, -1));
 
@@ -175,6 +181,7 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         });
         getContentPane().add(rgTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 170, -1));
 
+        jLabel6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel6.setText("DDD");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
 
@@ -194,9 +201,11 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         });
         getContentPane().add(telefoneTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 125, -1));
 
+        jLabel7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel7.setText("Telefone");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, -1));
 
+        jLabel8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel8.setText("Data de nascimento");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, -1, -1));
 
@@ -208,17 +217,12 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         });
         getContentPane().add(nascimentoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 150, -1));
 
+        jLabel9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel9.setText("Genero");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, -1, -1));
 
-        generoCombo.setEditable(true);
-        generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino\t", "Feminino" }));
+        generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino" }));
         getContentPane().add(generoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 170, 30));
-
-        jToggleButton1.setBackground(new java.awt.Color(255, 51, 51));
-        jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButton1.setText("Alterar");
-        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 490, 100, -1));
 
         jLabel10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel10.setText("Endereço");
@@ -266,7 +270,7 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         getContentPane().add(cepTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 136, -1));
 
         jLabel13.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel13.setText("Cep");
+        jLabel13.setText("CEP");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, -1, -1));
 
         cidadeTxt.setForeground(new java.awt.Color(0, 0, 0));
@@ -281,7 +285,7 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         jLabel14.setText("Cidade");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 450, -1, -1));
 
-        estadoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre \t ", "Alagoas \t ", "Amapá \t ", "Amazonas \t\t ", "Bahia \t ", "Ceará \t ", "Distrito Federal  ", "Espírito Santo  ", "Goiás  ", "Maranhão \t", "Mato Grosso \t ", "Mato Grosso do Sul  ", "Minas Gerais \t ", "Pará \t ", "Paraíba \t ", "Paraná \t ", "Pernambuco ", "Piauí \t ", "Rio de Janeiro \t", "Rio Grande do Norte \t ", "Rio Grande do Sul \t", "Rondônia \t ", "Roraima \t ", "Santa Catarina \t ", "São Paulo \t", "Sergipe \t ", "Tocantins" }));
+        estadoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins" }));
         estadoCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 estadoComboActionPerformed(evt);
@@ -296,6 +300,20 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         jLabel16.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel16.setText("Bairro");
         getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 330, -1, -1));
+
+        alterarButton.setBackground(new java.awt.Color(255, 51, 51));
+        alterarButton.setForeground(new java.awt.Color(255, 255, 255));
+        alterarButton.setText("Alterar");
+        alterarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alterarButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(alterarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 490, 100, -1));
+
+        jLabel17.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel17.setText("Informe o E-mail");
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 130, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 570));
@@ -312,20 +330,42 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
             this.rgTxt.setText(i.getRg());
             this.dddTxt.setText(i.getTelefone().getDdd());
             this.telefoneTxt.setText(i.getTelefone().getNumero());
-            if(i.getGenero().startsWith("M")){
-                this.generoCombo.setSelectedIndex(0);
-            }else{
-                this.generoCombo.setSelectedIndex(1);
-            }
+            generoCombo.setSelectedItem(i.getGenero());
             this.nascimentoTxt.setText(i.getDataNascimento());
+            Endereco end = i.getEndereco();
+            logradouroTxt.setText(end.getLogradouro());
+            bairroTxt.setText(end.getBairro());
+            cepTxt.setText(end.getCep());
+            numeroEnderecoTxt.setText(end.getNumero());
+            cidadeTxt.setText(end.getCidade());
+            estadoCombo.setSelectedItem(end.getEstado());
+            
+            liberado = true;
+            
         }catch(ClienteInexistenteException e){
+            this.nomeTxt.setText("");
+            this.cpfTxt.setText("");
+            this.emailTxt.setText("");
+            this.rgTxt.setText("");
+            this.dddTxt.setText("");
+            this.telefoneTxt.setText("");
+            this.generoCombo.setSelectedIndex(0);
+            nascimentoTxt.setText("");
+            logradouroTxt.setText("");
+            bairroTxt.setText("");
+            cepTxt.setText("");
+            numeroEnderecoTxt.setText("");
+            cidadeTxt.setText("");
+            estadoCombo.setSelectedIndex(0);
+            liberado = false;
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }//GEN-LAST:event_buscarButtonActionPerformed
 
     private void emailBuscaTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailBuscaTxtKeyPressed
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
-        this.buscarButton.doClick();}
+            this.buscarButton.doClick();
+        }
     }//GEN-LAST:event_emailBuscaTxtKeyPressed
 
     private void emailBuscaTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailBuscaTxtActionPerformed
@@ -384,8 +424,52 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_estadoComboActionPerformed
 
+    private void alterarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarButtonActionPerformed
+        if(liberado){
+            try{
+                Cliente atual = sys.buscarCliente(emailBuscaTxt.getText());
+                atual.setCpf(cpfTxt.getText());
+                atual.setDataNascimento(nascimentoTxt.getText());
+                atual.setEmail(emailTxt.getText());
+                atual.setGenero(generoCombo.getItemAt(generoCombo.getSelectedIndex()));
+                atual.setNome(nomeTxt.getText());
+                atual.setRg(rgTxt.getText());
+                Telefone tel = new Telefone();
+                tel.setDdd(dddTxt.getText());
+                tel.setNumero(telefoneTxt.getText());
+                atual.setTelefone(tel);
+                Endereco end = new Endereco();
+                end.setBairro(bairroTxt.getText());
+                end.setCep(cepTxt.getText());
+                end.setCidade(cidadeTxt.getText());
+                end.setLogradouro(logradouroTxt.getText());
+                end.setNumero(numeroEnderecoTxt.getText());
+                end.setEstado(estadoCombo.getItemAt(estadoCombo.getSelectedIndex()));
+                boolean passar = true;
+                if(!atual.getEmail().equals(emailBuscaTxt.getText())){
+                    try{
+                        sys.cadastrarCliente(atual);
+                        sys.removerCliente(emailBuscaTxt.getText());
+                    }catch(ClienteInexistenteException | ClienteJaExistenteException e){
+                        JOptionPane.showMessageDialog(this, e.getMessage());
+                        passar = false;
+                    }
+                }
+                if(passar){
+                    JOptionPane.showMessageDialog(this, "Cliente alterado com sucesso!");
+                }
+                
+            }catch (ClienteInexistenteException e){
+                JOptionPane.showMessageDialog(this, e.getMessage());
+            }
+        }else{
+            JOptionPane.showMessageDialog(this, "Não foi possível alterar");
+        }
+    }//GEN-LAST:event_alterarButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton alterarButton;
     private javax.swing.JTextField bairroTxt;
     private javax.swing.JButton buscarButton;
     private javax.swing.JTextField cepTxt;
@@ -404,6 +488,7 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -413,7 +498,6 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JTextField logradouroTxt;
     private javax.swing.JTextField nascimentoTxt;
     private javax.swing.JTextField nomeTxt;

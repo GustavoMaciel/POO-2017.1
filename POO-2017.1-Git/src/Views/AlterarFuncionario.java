@@ -102,7 +102,7 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
         emailTxt3 = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
         emailTxt4 = new javax.swing.JTextField();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -157,7 +157,7 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
         jLabel8.setText("Data de nascimento");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, -1, -1));
 
-        jLabel3.setText("Cpf");
+        jLabel3.setText("CPF");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, -1, -1));
 
         nascimentoTxt.setForeground(new java.awt.Color(0, 0, 0));
@@ -182,7 +182,7 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
         jLabel4.setText("Email");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, -1, -1));
 
-        generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino\t", "Feminino" }));
+        generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino" }));
         getContentPane().add(generoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 230, 162, 30));
 
         emailTxt.setForeground(new java.awt.Color(0, 0, 0));
@@ -267,7 +267,7 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
         jLabel15.setText("Cidade");
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, -1, -1));
 
-        generoCombo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre \t ", "Alagoas \t ", "Amapá \t ", "Amazonas \t\t ", "Bahia \t ", "Ceará \t ", "Distrito Federal  ", "Espírito Santo  ", "Goiás  ", "Maranhão \t", "Mato Grosso \t ", "Mato Grosso do Sul  ", "Minas Gerais \t ", "Pará \t ", "Paraíba \t ", "Paraná \t ", "Pernambuco ", "Piauí \t ", "Rio de Janeiro \t", "Rio Grande do Norte \t ", "Rio Grande do Sul \t", "Rondônia \t ", "Roraima \t ", "Santa Catarina \t ", "São Paulo \t", "Sergipe \t ", "Tocantins" }));
+        generoCombo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins" }));
         generoCombo1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 generoCombo1ActionPerformed(evt);
@@ -278,10 +278,10 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
         jLabel16.setText("Estado");
         getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 330, -1, -1));
 
-        jLabel17.setText("Cep");
+        jLabel17.setText("CEP");
         getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, -1, -1));
 
-        jLabel18.setText("Id");
+        jLabel18.setText("ID");
         getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 450, -1, -1));
 
         emailTxt2.setForeground(new java.awt.Color(0, 0, 0));
@@ -314,10 +314,10 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
         });
         getContentPane().add(emailTxt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 470, 170, -1));
 
-        jToggleButton1.setBackground(new java.awt.Color(236, 82, 72));
-        jToggleButton1.setForeground(new java.awt.Color(254, 254, 254));
-        jToggleButton1.setText("Alterar");
-        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 510, 100, -1));
+        jButton1.setBackground(new java.awt.Color(255, 0, 51));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Alterar");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 520, 100, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 570));
@@ -440,6 +440,7 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> generoCombo;
     private javax.swing.JComboBox<String> generoCombo1;
     private javax.swing.JTextField idTxt;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -458,7 +459,6 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JTextField nascimentoTxt;
     private javax.swing.JTextField nascimentoTxt1;
     private javax.swing.JTextField nomeTxt;

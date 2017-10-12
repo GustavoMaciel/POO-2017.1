@@ -62,7 +62,6 @@ public class GerenciadorDePessoas implements Serializable{
             this.clientes.put(i.getEmail(), i);
         }
     }
-    
     public void cadastrarFuncionario(Funcionario i) throws FuncionarioJaExisteException{
         try{
             this.buscarFuncionario(i.getId());
