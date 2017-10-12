@@ -92,21 +92,25 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
         setClosable(true);
         setIconifiable(true);
         setTitle("Remover Clientes");
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setText("Insira o E-mail ");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(250, 20, 110, 20);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 110, -1));
 
+        emailBuscaTxt.setForeground(new java.awt.Color(0, 0, 0));
         emailBuscaTxt.setToolTipText("example@example.com");
+        emailBuscaTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailBuscaTxtActionPerformed(evt);
+            }
+        });
         emailBuscaTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 emailBuscaTxtKeyPressed(evt);
             }
         });
-        getContentPane().add(emailBuscaTxt);
-        emailBuscaTxt.setBounds(149, 44, 317, 21);
+        getContentPane().add(emailBuscaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 44, 317, -1));
 
         removerButton.setBackground(new java.awt.Color(255, 51, 51));
         removerButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -116,112 +120,101 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
                 removerButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(removerButton);
-        removerButton.setBounds(456, 395, 110, 30);
+        getContentPane().add(removerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 395, 110, 30));
 
         jLabel2.setText("Nome");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(38, 162, 36, 17);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 162, -1, -1));
 
         nomeTxt.setEditable(false);
+        nomeTxt.setForeground(new java.awt.Color(0, 0, 0));
         nomeTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(nomeTxt);
-        nomeTxt.setBounds(38, 185, 345, 21);
+        getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 185, 345, -1));
 
         jLabel3.setText("Cpf");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(395, 162, 21, 17);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 162, -1, -1));
 
         cpfTxt.setEditable(false);
+        cpfTxt.setForeground(new java.awt.Color(0, 0, 0));
         cpfTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cpfTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(cpfTxt);
-        cpfTxt.setBounds(395, 185, 170, 21);
+        getContentPane().add(cpfTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 185, 170, -1));
 
         jLabel4.setText("Email");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(38, 218, 34, 17);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 218, -1, -1));
 
         emailtxt.setEditable(false);
+        emailtxt.setForeground(new java.awt.Color(0, 0, 0));
         emailtxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailtxtActionPerformed(evt);
             }
         });
-        getContentPane().add(emailtxt);
-        emailtxt.setBounds(38, 241, 345, 21);
+        getContentPane().add(emailtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 241, 345, -1));
 
         jLabel5.setText("RG");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(396, 218, 17, 17);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(396, 218, -1, -1));
 
         rgTxt.setEditable(false);
+        rgTxt.setForeground(new java.awt.Color(0, 0, 0));
         rgTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rgTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(rgTxt);
-        rgTxt.setBounds(396, 241, 170, 21);
+        getContentPane().add(rgTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(396, 241, 170, -1));
 
         jLabel6.setText("DDD");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(40, 280, 27, 17);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
 
         dddTxt.setEditable(false);
+        dddTxt.setForeground(new java.awt.Color(0, 0, 0));
         dddTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dddTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(dddTxt);
-        dddTxt.setBounds(40, 300, 27, 21);
+        getContentPane().add(dddTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 27, -1));
 
         telefoneTxt.setEditable(false);
+        telefoneTxt.setForeground(new java.awt.Color(0, 0, 0));
         telefoneTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 telefoneTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(telefoneTxt);
-        telefoneTxt.setBounds(80, 300, 125, 21);
+        getContentPane().add(telefoneTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 125, -1));
 
         jLabel7.setText("Telefone");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(80, 280, 52, 17);
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
 
         jLabel8.setText("Data de nascimento");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(220, 280, 119, 17);
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, -1, -1));
 
         nascimentoTxt.setEditable(false);
+        nascimentoTxt.setForeground(new java.awt.Color(0, 0, 0));
         nascimentoTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nascimentoTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(nascimentoTxt);
-        nascimentoTxt.setBounds(220, 300, 161, 21);
+        getContentPane().add(nascimentoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, 161, -1));
 
         jLabel9.setText("Genero");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(400, 280, 43, 17);
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, -1, -1));
 
         generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino\t", "Feminino" }));
         generoCombo.setEnabled(false);
-        getContentPane().add(generoCombo);
-        generoCombo.setBounds(400, 300, 162, 30);
+        getContentPane().add(generoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 162, 30));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(0, 0, 610, 450);
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 450));
 
         setBounds(170, 100, 616, 479);
     }// </editor-fold>//GEN-END:initComponents
@@ -314,6 +307,10 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
             }
         }
     }//GEN-LAST:event_emailBuscaTxtKeyPressed
+
+    private void emailBuscaTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailBuscaTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailBuscaTxtActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

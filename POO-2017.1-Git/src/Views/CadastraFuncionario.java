@@ -104,7 +104,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         setClosable(true);
         setIconifiable(true);
         setTitle("Cadastra Funcionario");
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         emailTxt.setForeground(java.awt.Color.black);
         emailTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -112,13 +112,11 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 emailTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(emailTxt);
-        emailTxt.setBounds(25, 91, 369, 21);
+        getContentPane().add(emailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 91, 369, -1));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel5.setText("Email");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(25, 68, 38, 20);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 68, -1, -1));
 
         nascimentoTxt.setForeground(java.awt.Color.black);
         nascimentoTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -126,19 +124,15 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 nascimentoTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(nascimentoTxt);
-        nascimentoTxt.setBounds(237, 159, 142, 21);
+        getContentPane().add(nascimentoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 159, 150, -1));
 
         jLabel15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel15.setText("Data de Nascimento");
-        getContentPane().add(jLabel15);
-        jLabel15.setBounds(237, 136, 140, 20);
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 136, -1, -1));
 
         generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino", "All" }));
-        getContentPane().add(generoCombo);
-        generoCombo.setBounds(421, 159, 151, 26);
-        getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(25, 238, 682, 11);
+        getContentPane().add(generoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 159, 151, -1));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 238, 682, 11));
 
         logradouroTxt.setForeground(java.awt.Color.black);
         logradouroTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -146,23 +140,19 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 logradouroTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(logradouroTxt);
-        logradouroTxt.setBounds(25, 278, 354, 21);
+        getContentPane().add(logradouroTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 278, 354, -1));
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel6.setText("Logradouro");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(25, 255, 82, 20);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 255, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel7.setText("Endereço");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(25, 215, 64, 20);
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 215, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel8.setText("Bairro");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(425, 255, 42, 20);
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 255, -1, -1));
 
         bairroTxt.setForeground(java.awt.Color.black);
         bairroTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -170,13 +160,11 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 bairroTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(bairroTxt);
-        bairroTxt.setBounds(425, 278, 136, 21);
+        getContentPane().add(bairroTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 278, 136, -1));
 
         jLabel9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel9.setText("Numero");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(425, 329, 57, 20);
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 329, -1, -1));
 
         numeroEnderecoTxt.setForeground(java.awt.Color.black);
         numeroEnderecoTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -184,13 +172,11 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 numeroEnderecoTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(numeroEnderecoTxt);
-        numeroEnderecoTxt.setBounds(425, 352, 136, 21);
+        getContentPane().add(numeroEnderecoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 352, 136, -1));
 
         jLabel10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel10.setText("Cep");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(25, 337, 26, 20);
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 337, -1, -1));
 
         cepTxt.setForeground(java.awt.Color.black);
         cepTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -198,13 +184,11 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 cepTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(cepTxt);
-        cepTxt.setBounds(25, 360, 136, 21);
+        getContentPane().add(cepTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 360, 136, -1));
 
         jLabel11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel11.setText("Estado");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(243, 337, 47, 20);
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(243, 337, -1, -1));
 
         estadoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre \t ", "Alagoas \t ", "Amapá \t ", "Amazonas \t\t ", "Bahia \t ", "Ceará \t ", "Distrito Federal  ", "Espírito Santo  ", "Goiás  ", "Maranhão \t", "Mato Grosso \t ", "Mato Grosso do Sul  ", "Minas Gerais \t ", "Pará \t ", "Paraíba \t ", "Paraná \t ", "Pernambuco ", "Piauí \t ", "Rio de Janeiro \t", "Rio Grande do Norte \t ", "Rio Grande do Sul \t", "Rondônia \t ", "Roraima \t ", "Santa Catarina \t ", "São Paulo \t", "Sergipe \t ", "Tocantins" }));
         estadoCombo.addActionListener(new java.awt.event.ActionListener() {
@@ -212,13 +196,11 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 estadoComboActionPerformed(evt);
             }
         });
-        getContentPane().add(estadoCombo);
-        estadoCombo.setBounds(243, 363, 136, 26);
+        getContentPane().add(estadoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(243, 363, 136, 26));
 
         jLabel12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel12.setText("Cidade");
-        getContentPane().add(jLabel12);
-        jLabel12.setBounds(25, 405, 47, 20);
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 405, -1, -1));
 
         cidadeTxt.setForeground(java.awt.Color.black);
         cidadeTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -226,13 +208,11 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 cidadeTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(cidadeTxt);
-        cidadeTxt.setBounds(25, 429, 136, 21);
+        getContentPane().add(cidadeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 429, 136, -1));
 
         jLabel13.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel13.setText("Telefone");
-        getContentPane().add(jLabel13);
-        jLabel13.setBounds(70, 136, 59, 20);
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 136, -1, -1));
 
         dddTxt.setForeground(java.awt.Color.black);
         dddTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -240,18 +220,15 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 dddTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(dddTxt);
-        dddTxt.setBounds(28, 159, 30, 21);
+        getContentPane().add(dddTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 159, 30, -1));
 
         jLabel14.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel14.setText("DDD");
-        getContentPane().add(jLabel14);
-        jLabel14.setBounds(25, 136, 30, 20);
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 136, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setText("Nome");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(25, 9, 42, 20);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 9, -1, -1));
 
         numeroTxt.setForeground(java.awt.Color.black);
         numeroTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -259,8 +236,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 numeroTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(numeroTxt);
-        numeroTxt.setBounds(70, 159, 155, 21);
+        getContentPane().add(numeroTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 159, 155, -1));
 
         nomeTxt.setForeground(java.awt.Color.black);
         nomeTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -268,8 +244,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 nomeTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(nomeTxt);
-        nomeTxt.setBounds(25, 32, 369, 21);
+        getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 32, 369, -1));
 
         confirmarButton.setText("CONFIRMAR");
         confirmarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -277,13 +252,11 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 confirmarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(confirmarButton);
-        confirmarButton.setBounds(570, 520, 109, 27);
+        getContentPane().add(confirmarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 520, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setText("CPF");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(421, 9, 26, 20);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 9, -1, -1));
 
         cpfTxt.setForeground(java.awt.Color.black);
         cpfTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -291,13 +264,11 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 cpfTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(cpfTxt);
-        cpfTxt.setBounds(421, 29, 221, 21);
+        getContentPane().add(cpfTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 29, 221, -1));
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setText("RG");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(421, 68, 19, 20);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 68, -1, -1));
 
         rgTxt.setForeground(java.awt.Color.black);
         rgTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -305,20 +276,16 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 rgTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(rgTxt);
-        rgTxt.setBounds(421, 91, 221, 21);
+        getContentPane().add(rgTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 91, 221, -1));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel4.setText("Genero");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(421, 136, 50, 20);
-        getContentPane().add(jSeparator2);
-        jSeparator2.setBounds(20, 490, 682, 11);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 136, -1, -1));
+        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 682, 11));
 
         jLabel17.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel17.setText("Administrativo");
-        getContentPane().add(jLabel17);
-        jLabel17.setBounds(20, 470, 150, 20);
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, 150, -1));
 
         tipoTxt.setForeground(java.awt.Color.black);
         tipoTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -326,18 +293,15 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 tipoTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(tipoTxt);
-        tipoTxt.setBounds(20, 520, 136, 21);
+        getContentPane().add(tipoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, 136, -1));
 
         jLabel18.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel18.setText("Tipo");
-        getContentPane().add(jLabel18);
-        jLabel18.setBounds(20, 500, 30, 20);
+        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel19.setText("Id");
-        getContentPane().add(jLabel19);
-        jLabel19.setBounds(180, 500, 14, 20);
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 500, -1, -1));
 
         idTxt.setForeground(java.awt.Color.black);
         idTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -345,13 +309,11 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 idTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(idTxt);
-        idTxt.setBounds(180, 520, 136, 21);
+        getContentPane().add(idTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 520, 136, -1));
 
         jLabel20.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel20.setText("Pagamento");
-        getContentPane().add(jLabel20);
-        jLabel20.setBounds(340, 500, 120, 20);
+        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 500, 120, -1));
 
         pagamentoTxt.setForeground(java.awt.Color.black);
         pagamentoTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -359,12 +321,10 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 pagamentoTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(pagamentoTxt);
-        pagamentoTxt.setBounds(340, 520, 136, 21);
+        getContentPane().add(pagamentoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 520, 136, -1));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
-        getContentPane().add(jLabel16);
-        jLabel16.setBounds(0, 0, 710, 600);
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 600));
 
         setBounds(170, 10, 722, 634);
     }// </editor-fold>//GEN-END:initComponents

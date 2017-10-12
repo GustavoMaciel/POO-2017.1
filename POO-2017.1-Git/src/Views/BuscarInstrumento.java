@@ -77,52 +77,50 @@ public class BuscarInstrumento extends javax.swing.JInternalFrame {
         marcaTxt = new javax.swing.JTextField();
         buscarButton = new javax.swing.JButton();
         valorTxt = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        valorTxt1 = new javax.swing.JTextField();
         nomeTxt1 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
         setTitle("Buscar Instrumentos");
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("código:");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(306, 55, 43, 17);
+        jLabel1.setText("Código:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, -1, -1));
 
+        codigoTxt.setForeground(new java.awt.Color(0, 0, 0));
         jScrollPane1.setViewportView(codigoTxt);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(255, 82, 152, 26);
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 82, 152, -1));
 
         jLabel2.setText("Nome:");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(130, 240, 39, 17);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, -1, -1));
 
         nomeTxt.setEditable(false);
+        nomeTxt.setForeground(new java.awt.Color(0, 0, 0));
         nomeTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(nomeTxt);
-        nomeTxt.setBounds(180, 230, 354, 21);
+        getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 354, -1));
 
         jLabel3.setText("Marca:");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(130, 200, 39, 17);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, -1, -1));
 
         jLabel5.setText("Valor:");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(130, 270, 44, 17);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 44, -1));
 
         marcaTxt.setEditable(false);
+        marcaTxt.setForeground(new java.awt.Color(0, 0, 0));
         marcaTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 marcaTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(marcaTxt);
-        marcaTxt.setBounds(180, 190, 354, 21);
+        getContentPane().add(marcaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 354, -1));
 
         buscarButton.setText("BUSCAR");
         buscarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -130,22 +128,30 @@ public class BuscarInstrumento extends javax.swing.JInternalFrame {
                 buscarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(buscarButton);
-        buscarButton.setBounds(270, 120, 120, 30);
+        getContentPane().add(buscarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 120, 30));
 
         valorTxt.setEditable(false);
+        valorTxt.setForeground(new java.awt.Color(0, 0, 0));
         valorTxt.setFocusable(false);
         valorTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 valorTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(valorTxt);
-        valorTxt.setBounds(180, 270, 354, 21);
+        getContentPane().add(valorTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 354, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(0, 0, 680, 440);
+        jLabel6.setText("Quantidade:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 90, -1));
+
+        valorTxt1.setEditable(false);
+        valorTxt1.setForeground(new java.awt.Color(0, 0, 0));
+        valorTxt1.setFocusable(false);
+        valorTxt1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                valorTxt1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(valorTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 354, -1));
 
         nomeTxt1.setEditable(false);
         nomeTxt1.addActionListener(new java.awt.event.ActionListener() {
@@ -153,8 +159,10 @@ public class BuscarInstrumento extends javax.swing.JInternalFrame {
                 nomeTxt1ActionPerformed(evt);
             }
         });
-        getContentPane().add(nomeTxt1);
-        nomeTxt1.setBounds(180, 230, 354, 21);
+        getContentPane().add(nomeTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 354, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 440));
 
         setBounds(170, 100, 675, 469);
     }// </editor-fold>//GEN-END:initComponents
@@ -189,6 +197,10 @@ public class BuscarInstrumento extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_valorTxtActionPerformed
 
+    private void valorTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorTxt1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_valorTxt1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buscarButton;
@@ -198,10 +210,12 @@ public class BuscarInstrumento extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField marcaTxt;
     private javax.swing.JTextField nomeTxt;
     private javax.swing.JTextField nomeTxt1;
     private javax.swing.JTextField valorTxt;
+    private javax.swing.JTextField valorTxt1;
     // End of variables declaration//GEN-END:variables
 }
