@@ -91,7 +91,7 @@ public class ListaFuncionario extends javax.swing.JInternalFrame {
         setTitle("Lista Funcionario");
         getContentPane().setLayout(null);
 
-        idTxt.setForeground(new java.awt.Color(153, 153, 153));
+        idTxt.setForeground(new java.awt.Color(0, 0, 0));
         idTxt.setToolTipText("Insira o ID");
         idTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

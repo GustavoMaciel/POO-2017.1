@@ -32,7 +32,7 @@
     <Component class="javax.swing.JTextField" name="emailTxt">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="99" type="rgb"/>
+          <Color blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
         </Property>
       </Properties>
       <Events>
@@ -58,6 +58,11 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="nascimentoTxt">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
+        </Property>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nascimentoTxtActionPerformed"/>
       </Events>
@@ -109,7 +114,7 @@
     <Component class="javax.swing.JTextField" name="logradouroTxt">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="99" type="rgb"/>
+          <Color blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
         </Property>
       </Properties>
       <Events>
@@ -163,7 +168,7 @@
     <Component class="javax.swing.JTextField" name="bairroTxt">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="99" type="rgb"/>
+          <Color blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
         </Property>
       </Properties>
       <Events>
@@ -191,7 +196,7 @@
     <Component class="javax.swing.JTextField" name="numeroEnderecoTxt">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="99" type="rgb"/>
+          <Color blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
         </Property>
       </Properties>
       <Events>
@@ -219,7 +224,7 @@
     <Component class="javax.swing.JTextField" name="cepTxt">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="99" type="rgb"/>
+          <Color blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
         </Property>
       </Properties>
       <Events>
@@ -306,7 +311,7 @@
     <Component class="javax.swing.JTextField" name="cidadeTxt">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="99" type="rgb"/>
+          <Color blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
         </Property>
       </Properties>
       <Events>
@@ -334,7 +339,7 @@
     <Component class="javax.swing.JTextField" name="dddTxt">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="99" type="rgb"/>
+          <Color blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
         </Property>
       </Properties>
       <Events>
@@ -375,7 +380,7 @@
     <Component class="javax.swing.JTextField" name="numeroTxt">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="99" type="rgb"/>
+          <Color blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
         </Property>
       </Properties>
       <Events>
@@ -390,7 +395,7 @@
     <Component class="javax.swing.JTextField" name="nomeTxt">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="99" type="rgb"/>
+          <Color blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
         </Property>
       </Properties>
       <Events>
@@ -431,7 +436,7 @@
     <Component class="javax.swing.JTextField" name="cpfTxt">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="99" type="rgb"/>
+          <Color blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
         </Property>
       </Properties>
       <Events>
@@ -459,7 +464,7 @@
     <Component class="javax.swing.JTextField" name="rgTxt">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="99" type="rgb"/>
+          <Color blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
         </Property>
       </Properties>
       <Events>
@@ -507,7 +512,7 @@
     <Component class="javax.swing.JTextField" name="tipoTxt">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="99" type="rgb"/>
+          <Color blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
         </Property>
       </Properties>
       <Events>
@@ -548,7 +553,7 @@
     <Component class="javax.swing.JTextField" name="idTxt">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="99" type="rgb"/>
+          <Color blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
         </Property>
       </Properties>
       <Events>
@@ -576,7 +581,7 @@
     <Component class="javax.swing.JTextField" name="pagamentoTxt">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="99" red="99" type="rgb"/>
+          <Color blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
         </Property>
       </Properties>
       <Events>

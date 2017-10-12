@@ -91,6 +91,7 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         jLabel1.setText("Insira o ID ");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 35, -1, -1));
 
+        emailBuscaTxt.setForeground(new java.awt.Color(0, 0, 0));
         emailBuscaTxt.setToolTipText("example@example.com");
         emailBuscaTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {

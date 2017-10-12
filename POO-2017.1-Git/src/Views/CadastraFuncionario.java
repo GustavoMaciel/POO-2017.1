@@ -106,7 +106,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         setTitle("Cadastra Funcionario");
         getContentPane().setLayout(null);
 
-        emailTxt.setForeground(new java.awt.Color(153, 153, 153));
+        emailTxt.setForeground(java.awt.Color.black);
         emailTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailTxtActionPerformed(evt);
@@ -120,6 +120,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel5);
         jLabel5.setBounds(25, 68, 38, 20);
 
+        nascimentoTxt.setForeground(java.awt.Color.black);
         nascimentoTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nascimentoTxtActionPerformed(evt);
@@ -139,7 +140,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(25, 238, 682, 11);
 
-        logradouroTxt.setForeground(new java.awt.Color(153, 153, 153));
+        logradouroTxt.setForeground(java.awt.Color.black);
         logradouroTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 logradouroTxtActionPerformed(evt);
@@ -163,7 +164,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel8);
         jLabel8.setBounds(425, 255, 42, 20);
 
-        bairroTxt.setForeground(new java.awt.Color(153, 153, 153));
+        bairroTxt.setForeground(java.awt.Color.black);
         bairroTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bairroTxtActionPerformed(evt);
@@ -177,7 +178,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel9);
         jLabel9.setBounds(425, 329, 57, 20);
 
-        numeroEnderecoTxt.setForeground(new java.awt.Color(153, 153, 153));
+        numeroEnderecoTxt.setForeground(java.awt.Color.black);
         numeroEnderecoTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numeroEnderecoTxtActionPerformed(evt);
@@ -191,7 +192,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel10);
         jLabel10.setBounds(25, 337, 26, 20);
 
-        cepTxt.setForeground(new java.awt.Color(153, 153, 153));
+        cepTxt.setForeground(java.awt.Color.black);
         cepTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cepTxtActionPerformed(evt);
@@ -219,7 +220,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel12);
         jLabel12.setBounds(25, 405, 47, 20);
 
-        cidadeTxt.setForeground(new java.awt.Color(153, 153, 153));
+        cidadeTxt.setForeground(java.awt.Color.black);
         cidadeTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cidadeTxtActionPerformed(evt);
@@ -233,7 +234,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel13);
         jLabel13.setBounds(70, 136, 59, 20);
 
-        dddTxt.setForeground(new java.awt.Color(153, 153, 153));
+        dddTxt.setForeground(java.awt.Color.black);
         dddTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dddTxtActionPerformed(evt);
@@ -252,7 +253,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(25, 9, 42, 20);
 
-        numeroTxt.setForeground(new java.awt.Color(153, 153, 153));
+        numeroTxt.setForeground(java.awt.Color.black);
         numeroTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numeroTxtActionPerformed(evt);
@@ -261,7 +262,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(numeroTxt);
         numeroTxt.setBounds(70, 159, 155, 21);
 
-        nomeTxt.setForeground(new java.awt.Color(153, 153, 153));
+        nomeTxt.setForeground(java.awt.Color.black);
         nomeTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeTxtActionPerformed(evt);
@@ -284,7 +285,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(421, 9, 26, 20);
 
-        cpfTxt.setForeground(new java.awt.Color(153, 153, 153));
+        cpfTxt.setForeground(java.awt.Color.black);
         cpfTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cpfTxtActionPerformed(evt);
@@ -298,7 +299,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(421, 68, 19, 20);
 
-        rgTxt.setForeground(new java.awt.Color(153, 153, 153));
+        rgTxt.setForeground(java.awt.Color.black);
         rgTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rgTxtActionPerformed(evt);
@@ -319,7 +320,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel17);
         jLabel17.setBounds(20, 470, 150, 20);
 
-        tipoTxt.setForeground(new java.awt.Color(153, 153, 153));
+        tipoTxt.setForeground(java.awt.Color.black);
         tipoTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tipoTxtActionPerformed(evt);
@@ -338,7 +339,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel19);
         jLabel19.setBounds(180, 500, 14, 20);
 
-        idTxt.setForeground(new java.awt.Color(153, 153, 153));
+        idTxt.setForeground(java.awt.Color.black);
         idTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 idTxtActionPerformed(evt);
@@ -352,7 +353,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel20);
         jLabel20.setBounds(340, 500, 120, 20);
 
-        pagamentoTxt.setForeground(new java.awt.Color(153, 153, 153));
+        pagamentoTxt.setForeground(java.awt.Color.black);
         pagamentoTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pagamentoTxtActionPerformed(evt);
