@@ -80,6 +80,7 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         nascimentoTxt = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         generoCombo = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -89,7 +90,7 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setText("Insira o ID ");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 35, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, -1, -1));
 
         emailBuscaTxt.setForeground(new java.awt.Color(0, 0, 0));
         emailBuscaTxt.setToolTipText("example@example.com");
@@ -98,7 +99,7 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
                 emailBuscaTxtKeyPressed(evt);
             }
         });
-        getContentPane().add(emailBuscaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 64, 317, -1));
+        getContentPane().add(emailBuscaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 317, -1));
 
         removerButton.setBackground(new java.awt.Color(255, 51, 51));
         removerButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -201,6 +202,9 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
         generoCombo.setEnabled(false);
         getContentPane().add(generoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 315, 162, -1));
 
+        jButton1.setText("Buscar");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, -1, -1));
+
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 450));
@@ -251,6 +255,7 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
     private javax.swing.JTextField emailBuscaTxt;
     private javax.swing.JTextField emailtxt;
     private javax.swing.JComboBox<String> generoCombo;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;

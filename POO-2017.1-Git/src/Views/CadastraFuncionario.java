@@ -163,7 +163,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
 
         jLabel9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel9.setText("Numero");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 329, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 340, -1, -1));
 
         numeroEnderecoTxt.setForeground(new java.awt.Color(153, 153, 153));
         numeroEnderecoTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -171,7 +171,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 numeroEnderecoTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(numeroEnderecoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 352, 136, -1));
+        getContentPane().add(numeroEnderecoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 136, -1));
 
         jLabel10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel10.setText("Cep");
@@ -187,7 +187,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
 
         jLabel11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel11.setText("Estado");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(243, 337, -1, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, -1, -1));
 
         estadoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre \t ", "Alagoas \t ", "Amapá \t ", "Amazonas \t\t ", "Bahia \t ", "Ceará \t ", "Distrito Federal  ", "Espírito Santo  ", "Goiás  ", "Maranhão \t", "Mato Grosso \t ", "Mato Grosso do Sul  ", "Minas Gerais \t ", "Pará \t ", "Paraíba \t ", "Paraná \t ", "Pernambuco ", "Piauí \t ", "Rio de Janeiro \t", "Rio Grande do Norte \t ", "Rio Grande do Sul \t", "Rondônia \t ", "Roraima \t ", "Santa Catarina \t ", "São Paulo \t", "Sergipe \t ", "Tocantins" }));
         estadoCombo.addActionListener(new java.awt.event.ActionListener() {
@@ -195,7 +195,7 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
                 estadoComboActionPerformed(evt);
             }
         });
-        getContentPane().add(estadoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(243, 363, 136, 26));
+        getContentPane().add(estadoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 360, 136, 26));
 
         jLabel12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel12.setText("Cidade");

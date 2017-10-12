@@ -82,6 +82,7 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
         idTxt = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         idMonstrarTxt1 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -181,6 +182,9 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
         });
         getContentPane().add(idMonstrarTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 240, -1));
 
+        jButton1.setText("Buscar");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 130, -1, -1));
+
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 500));
 
@@ -255,6 +259,7 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
     private javax.swing.JTextField idMonstrarTxt;
     private javax.swing.JTextField idMonstrarTxt1;
     private javax.swing.JTextField idTxt;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
