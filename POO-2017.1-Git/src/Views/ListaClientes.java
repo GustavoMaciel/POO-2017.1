@@ -88,6 +88,20 @@ public class ListaClientes extends javax.swing.JInternalFrame {
         jLabel9 = new javax.swing.JLabel();
         generoCombo = new javax.swing.JComboBox<>();
         jToggleButton1 = new javax.swing.JToggleButton();
+        jLabel10 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        logradouroTxt = new javax.swing.JTextField();
+        bairroTxt = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        numeroEnderecoTxt = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        cepTxt = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        cidadeTxt = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        estadoCombo = new javax.swing.JComboBox<>();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -107,7 +121,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
                 emailBuscaTxtKeyPressed(evt);
             }
         });
-        getContentPane().add(emailBuscaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 331, -1));
+        getContentPane().add(emailBuscaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 331, -1));
 
         buscarButton.setText("Buscar");
         buscarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -115,10 +129,10 @@ public class ListaClientes extends javax.swing.JInternalFrame {
                 buscarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(buscarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, -1, -1));
+        getContentPane().add(buscarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, -1, -1));
 
         jLabel2.setText("Nome");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
 
         nomeTxt.setForeground(new java.awt.Color(0, 0, 0));
         nomeTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -126,10 +140,10 @@ public class ListaClientes extends javax.swing.JInternalFrame {
                 nomeTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 345, -1));
+        getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 345, -1));
 
         jLabel3.setText("Cpf");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 100, -1, -1));
 
         cpfTxt.setForeground(new java.awt.Color(0, 0, 0));
         cpfTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -137,10 +151,10 @@ public class ListaClientes extends javax.swing.JInternalFrame {
                 cpfTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(cpfTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 170, -1));
+        getContentPane().add(cpfTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 170, -1));
 
         jLabel4.setText("Email");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
 
         emailTxt.setForeground(new java.awt.Color(0, 0, 0));
         emailTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -148,10 +162,10 @@ public class ListaClientes extends javax.swing.JInternalFrame {
                 emailTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(emailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 345, -1));
+        getContentPane().add(emailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 345, -1));
 
         jLabel5.setText("RG");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, -1, -1));
 
         rgTxt.setForeground(new java.awt.Color(0, 0, 0));
         rgTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -159,10 +173,10 @@ public class ListaClientes extends javax.swing.JInternalFrame {
                 rgTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(rgTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 170, -1));
+        getContentPane().add(rgTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 170, -1));
 
         jLabel6.setText("DDD");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
 
         dddTxt.setForeground(new java.awt.Color(0, 0, 0));
         dddTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -170,7 +184,7 @@ public class ListaClientes extends javax.swing.JInternalFrame {
                 dddTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(dddTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 27, -1));
+        getContentPane().add(dddTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 27, -1));
 
         telefoneTxt.setForeground(new java.awt.Color(0, 0, 0));
         telefoneTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -178,13 +192,13 @@ public class ListaClientes extends javax.swing.JInternalFrame {
                 telefoneTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(telefoneTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 125, -1));
+        getContentPane().add(telefoneTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 125, -1));
 
         jLabel7.setText("Telefone");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, -1));
 
         jLabel8.setText("Data de nascimento");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, -1, -1));
 
         nascimentoTxt.setForeground(new java.awt.Color(0, 0, 0));
         nascimentoTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -192,25 +206,102 @@ public class ListaClientes extends javax.swing.JInternalFrame {
                 nascimentoTxtActionPerformed(evt);
             }
         });
-        getContentPane().add(nascimentoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, 150, -1));
+        getContentPane().add(nascimentoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 150, -1));
 
         jLabel9.setText("Genero");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, -1, -1));
 
         generoCombo.setEditable(true);
         generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino\t", "Feminino" }));
         generoCombo.setEnabled(false);
-        getContentPane().add(generoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, 162, 30));
+        getContentPane().add(generoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 170, 30));
 
         jToggleButton1.setBackground(new java.awt.Color(255, 51, 51));
         jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton1.setText("Alterar");
-        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 410, -1, -1));
+        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(501, 490, 100, -1));
+
+        jLabel10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel10.setText("Endereço");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 530, 11));
+
+        logradouroTxt.setForeground(new java.awt.Color(0, 0, 0));
+        logradouroTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logradouroTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(logradouroTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 340, -1));
+
+        bairroTxt.setForeground(new java.awt.Color(0, 0, 0));
+        bairroTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bairroTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bairroTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, 170, -1));
+
+        jLabel11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel11.setText("Logradouro");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, -1, -1));
+
+        numeroEnderecoTxt.setForeground(new java.awt.Color(0, 0, 0));
+        numeroEnderecoTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numeroEnderecoTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(numeroEnderecoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 410, 130, -1));
+
+        jLabel12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel12.setText("Numero");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 390, -1, -1));
+
+        cepTxt.setForeground(new java.awt.Color(0, 0, 0));
+        cepTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cepTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cepTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 136, -1));
+
+        jLabel13.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel13.setText("Cep");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, -1, -1));
+
+        cidadeTxt.setForeground(new java.awt.Color(0, 0, 0));
+        cidadeTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cidadeTxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cidadeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, 136, -1));
+
+        jLabel14.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel14.setText("Cidade");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 450, -1, -1));
+
+        estadoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre \t ", "Alagoas \t ", "Amapá \t ", "Amazonas \t\t ", "Bahia \t ", "Ceará \t ", "Distrito Federal  ", "Espírito Santo  ", "Goiás  ", "Maranhão \t", "Mato Grosso \t ", "Mato Grosso do Sul  ", "Minas Gerais \t ", "Pará \t ", "Paraíba \t ", "Paraná \t ", "Pernambuco ", "Piauí \t ", "Rio de Janeiro \t", "Rio Grande do Norte \t ", "Rio Grande do Sul \t", "Rondônia \t ", "Roraima \t ", "Santa Catarina \t ", "São Paulo \t", "Sergipe \t ", "Tocantins" }));
+        estadoCombo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                estadoComboActionPerformed(evt);
+            }
+        });
+        getContentPane().add(estadoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 410, 170, 26));
+
+        jLabel15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel15.setText("Estado");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, -1, -1));
+
+        jLabel16.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel16.setText("Bairro");
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 330, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 470));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 570));
 
-        setBounds(170, 100, 701, 492);
+        setBounds(170, 100, 701, 598);
     }// </editor-fold>//GEN-END:initComponents
 
     private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
@@ -270,15 +361,50 @@ public class ListaClientes extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nascimentoTxtActionPerformed
 
+    private void logradouroTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logradouroTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_logradouroTxtActionPerformed
+
+    private void bairroTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bairroTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bairroTxtActionPerformed
+
+    private void numeroEnderecoTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numeroEnderecoTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_numeroEnderecoTxtActionPerformed
+
+    private void cepTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cepTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cepTxtActionPerformed
+
+    private void cidadeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidadeTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cidadeTxtActionPerformed
+
+    private void estadoComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estadoComboActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_estadoComboActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField bairroTxt;
     private javax.swing.JButton buscarButton;
+    private javax.swing.JTextField cepTxt;
+    private javax.swing.JTextField cidadeTxt;
     private javax.swing.JTextField cpfTxt;
     private javax.swing.JTextField dddTxt;
     private javax.swing.JTextField emailBuscaTxt;
     private javax.swing.JTextField emailTxt;
+    private javax.swing.JComboBox<String> estadoCombo;
     private javax.swing.JComboBox<String> generoCombo;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -287,9 +413,12 @@ public class ListaClientes extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JTextField logradouroTxt;
     private javax.swing.JTextField nascimentoTxt;
     private javax.swing.JTextField nomeTxt;
+    private javax.swing.JTextField numeroEnderecoTxt;
     private javax.swing.JTextField rgTxt;
     private javax.swing.JTextField telefoneTxt;
     // End of variables declaration//GEN-END:variables

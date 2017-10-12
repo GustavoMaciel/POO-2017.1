@@ -161,7 +161,7 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
 
         generoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino", "All" }));
         getContentPane().add(generoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 171, 151, -1));
-        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 250, 682, 11));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 250, 610, 11));
 
         logradouroTxt.setForeground(new java.awt.Color(0, 0, 0));
         logradouroTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -217,7 +217,7 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
 
         jLabel11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel11.setText("Estado");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 350, -1, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 350, -1, -1));
 
         estadoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre \t ", "Alagoas \t ", "Amapá \t ", "Amazonas \t\t ", "Bahia \t ", "Ceará \t ", "Distrito Federal  ", "Espírito Santo  ", "Goiás  ", "Maranhão \t", "Mato Grosso \t ", "Mato Grosso do Sul  ", "Minas Gerais \t ", "Pará \t ", "Paraíba \t ", "Paraná \t ", "Pernambuco ", "Piauí \t ", "Rio de Janeiro \t", "Rio Grande do Norte \t ", "Rio Grande do Sul \t", "Rondônia \t ", "Roraima \t ", "Santa Catarina \t ", "São Paulo \t", "Sergipe \t ", "Tocantins" }));
         estadoCombo.addActionListener(new java.awt.event.ActionListener() {
@@ -225,7 +225,7 @@ public class CadastraCliente extends javax.swing.JInternalFrame {
                 estadoComboActionPerformed(evt);
             }
         });
-        getContentPane().add(estadoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 370, 136, 26));
+        getContentPane().add(estadoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 370, 136, 26));
 
         jLabel12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel12.setText("Cidade");

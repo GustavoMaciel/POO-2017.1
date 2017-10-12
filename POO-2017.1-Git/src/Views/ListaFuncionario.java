@@ -314,13 +314,15 @@ public class ListaFuncionario extends javax.swing.JInternalFrame {
         });
         getContentPane().add(emailTxt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 470, 170, -1));
 
+        jToggleButton1.setBackground(new java.awt.Color(236, 82, 72));
+        jToggleButton1.setForeground(new java.awt.Color(254, 254, 254));
         jToggleButton1.setText("Alterar");
-        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 510, -1, -1));
+        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 510, 100, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 550));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 570));
 
-        setBounds(170, 100, 694, 578);
+        setBounds(170, 100, 694, 599);
     }// </editor-fold>//GEN-END:initComponents
 
     private void idTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idTxtActionPerformed
