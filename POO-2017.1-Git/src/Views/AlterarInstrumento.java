@@ -48,12 +48,13 @@ import javax.swing.JOptionPane;
  *
  * @author junior
  */
-public class BuscarInstrumento extends javax.swing.JInternalFrame {
-    SistemaLojaMusical sys;
+public class AlterarInstrumento extends javax.swing.JInternalFrame {
+    private SistemaLojaMusical sys;
+    boolean liberado = false;
     /**
      * Creates new form BuscarInstrumento
      */
-    public BuscarInstrumento(SistemaLojaMusical sys) {
+    public AlterarInstrumento(SistemaLojaMusical sys) {
         this.sys = sys;
         initComponents();
     }
@@ -78,9 +79,9 @@ public class BuscarInstrumento extends javax.swing.JInternalFrame {
         buscarButton = new javax.swing.JButton();
         valorTxt = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        valorTxt1 = new javax.swing.JTextField();
+        qtdTxt = new javax.swing.JTextField();
         nomeTxt1 = new javax.swing.JTextField();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        alterarButton = new javax.swing.JToggleButton();
         jLabel4 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -99,7 +100,6 @@ public class BuscarInstrumento extends javax.swing.JInternalFrame {
         jLabel2.setText("Nome:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, -1, -1));
 
-        nomeTxt.setEditable(false);
         nomeTxt.setForeground(new java.awt.Color(0, 0, 0));
         nomeTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,7 +114,6 @@ public class BuscarInstrumento extends javax.swing.JInternalFrame {
         jLabel5.setText("Valor:");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 44, -1));
 
-        marcaTxt.setEditable(false);
         marcaTxt.setForeground(new java.awt.Color(0, 0, 0));
         marcaTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,28 +130,16 @@ public class BuscarInstrumento extends javax.swing.JInternalFrame {
         });
         getContentPane().add(buscarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 120, 30));
 
-        valorTxt.setEditable(false);
         valorTxt.setForeground(new java.awt.Color(0, 0, 0));
         valorTxt.setFocusable(false);
-        valorTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(valorTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 354, -1));
 
         jLabel6.setText("Quantidade:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 90, -1));
 
-        valorTxt1.setEditable(false);
-        valorTxt1.setForeground(new java.awt.Color(0, 0, 0));
-        valorTxt1.setFocusable(false);
-        valorTxt1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorTxt1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(valorTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 354, -1));
+        qtdTxt.setForeground(new java.awt.Color(0, 0, 0));
+        qtdTxt.setFocusable(false);
+        getContentPane().add(qtdTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 354, -1));
 
         nomeTxt1.setEditable(false);
         nomeTxt1.addActionListener(new java.awt.event.ActionListener() {
@@ -162,8 +149,13 @@ public class BuscarInstrumento extends javax.swing.JInternalFrame {
         });
         getContentPane().add(nomeTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 354, -1));
 
-        jToggleButton1.setText("Alterar");
-        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(441, 380, 90, -1));
+        alterarButton.setText("Alterar");
+        alterarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alterarButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(alterarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(441, 380, 90, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 440));
@@ -181,14 +173,18 @@ public class BuscarInstrumento extends javax.swing.JInternalFrame {
 
     private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
         try {
-            Instrumento i = sys.buscarInstrumento(this.codigoTxt.getText());
-            this.nomeTxt.setText(i.getNome());
-            this.marcaTxt.setText(i.getMarca());
-            valorTxt.setText(String.valueOf(i.getValor()));
+            Instrumento atual = sys.buscarInstrumento(this.codigoTxt.getText());
+            this.nomeTxt.setText(atual.getNome());
+            this.marcaTxt.setText(atual.getMarca());
+            valorTxt.setText(String.valueOf(atual.getValor()));
+            qtdTxt.setText(String.valueOf(atual.getQuantidade()));
+            liberado = true;
         } catch (InstrumentoInexistenteException ex) {
             this.nomeTxt.setText("");
             this.marcaTxt.setText("");
+            qtdTxt.setText("");
             valorTxt.setText("");
+            liberado = false;
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }//GEN-LAST:event_buscarButtonActionPerformed
@@ -197,16 +193,33 @@ public class BuscarInstrumento extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nomeTxt1ActionPerformed
 
-    private void valorTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_valorTxtActionPerformed
-
-    private void valorTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorTxt1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_valorTxt1ActionPerformed
+    private void alterarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarButtonActionPerformed
+        if(liberado){
+            try{
+                Instrumento atual = sys.buscarInstrumento(codigoTxt.getText());
+                atual.setMarca(marcaTxt.getText());
+                atual.setNome(nomeTxt.getText());
+                try{
+                    atual.setQuantidade(Integer.parseInt(qtdTxt.getText()));
+                }catch(NumberFormatException e){
+                    JOptionPane.showMessageDialog(this, "Não foi possível alterar a quantidade, não podem haver letras.");
+                }
+                try{
+                    atual.setValor(Integer.parseInt(valorTxt.getText()));
+                }catch(NumberFormatException e){
+                    JOptionPane.showMessageDialog(this, "Não foi possível alterar o valor, não podem haver letras.");
+                }
+            }catch (InstrumentoInexistenteException e){
+                JOptionPane.showMessageDialog(this, e.getMessage());
+            }
+        }else{
+            JOptionPane.showMessageDialog(this, "Não foi possível alterar.");
+        }
+    }//GEN-LAST:event_alterarButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton alterarButton;
     private javax.swing.JButton buscarButton;
     private javax.swing.JTextPane codigoTxt;
     private javax.swing.JLabel jLabel1;
@@ -216,11 +229,10 @@ public class BuscarInstrumento extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JTextField marcaTxt;
     private javax.swing.JTextField nomeTxt;
     private javax.swing.JTextField nomeTxt1;
+    private javax.swing.JTextField qtdTxt;
     private javax.swing.JTextField valorTxt;
-    private javax.swing.JTextField valorTxt1;
     // End of variables declaration//GEN-END:variables
 }

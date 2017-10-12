@@ -47,12 +47,12 @@ import javax.swing.JOptionPane;
  *
  * @author junior
  */
-public class ListaFuncionario extends javax.swing.JInternalFrame {
+public class AlterarFuncionario extends javax.swing.JInternalFrame {
     SistemaLojaMusical sys;
     /**
      * Creates new form ListaFuncionario
      */
-    public ListaFuncionario(SistemaLojaMusical sys) {
+    public AlterarFuncionario(SistemaLojaMusical sys) {
         this.sys = sys;
         initComponents();
     }

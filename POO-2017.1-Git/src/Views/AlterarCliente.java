@@ -48,13 +48,13 @@ import javax.swing.JOptionPane;
  *
  * @author junior
  */
-public class ListaClientes extends javax.swing.JInternalFrame {
+public class AlterarCliente extends javax.swing.JInternalFrame {
     public SistemaLojaMusical sys;
 
     /**
      * Creates new form ListaClientes
      */
-    public ListaClientes(SistemaLojaMusical sys) {
+    public AlterarCliente(SistemaLojaMusical sys) {
         this.sys = sys;
         initComponents();
        

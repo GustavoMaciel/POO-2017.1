@@ -102,7 +102,7 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/shop-cart-icon.png"))); // NOI18N
-        jMenuItem2.setText("Vender");
+        jMenuItem2.setText("Vender Instrumento");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
@@ -148,7 +148,7 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/checklist-icon.png"))); // NOI18N
-        jMenuItem8.setText("Lista de Clientes");
+        jMenuItem8.setText("Alterar Cliente");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem8ActionPerformed(evt);
@@ -183,7 +183,7 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jMenuItem11.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.ALT_MASK));
         jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/checklist-icon.png"))); // NOI18N
-        jMenuItem11.setText("Lista de Funcionarios");
+        jMenuItem11.setText("Alterar Funcionario");
         jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem11ActionPerformed(evt);
@@ -199,7 +199,7 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Zoom-icon.png"))); // NOI18N
-        jMenuItem5.setText("Buscar Instrumento");
+        jMenuItem5.setText("Alterar Instrumento");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem5ActionPerformed(evt);
@@ -285,7 +285,7 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        Comprar obj = new Comprar(this.sys);
+        VenderInstrumento obj = new VenderInstrumento(this.sys);
         jDesktopPanePrincipal.add(obj);
         obj.setVisible(true);
         // TODO add your handling code here:
@@ -298,7 +298,7 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        ListaClientes obj = new ListaClientes(this.sys);
+        AlterarCliente obj = new AlterarCliente(this.sys);
         jDesktopPanePrincipal.add(obj);
         obj.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8ActionPerformed
@@ -316,13 +316,13 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-        ListaFuncionario obj = new ListaFuncionario(sys);
+        AlterarFuncionario obj = new AlterarFuncionario(sys);
         jDesktopPanePrincipal.add(obj);
         obj.setVisible(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        BuscarInstrumento obj = new BuscarInstrumento(sys);
+        AlterarInstrumento obj = new AlterarInstrumento(sys);
         jDesktopPanePrincipal.add(obj);
         obj.setVisible(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem5ActionPerformed

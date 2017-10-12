@@ -49,14 +49,14 @@ import javax.swing.JOptionPane;
  *
  * @author junior
  */
-public class Comprar extends javax.swing.JInternalFrame {
+public class VenderInstrumento extends javax.swing.JInternalFrame {
     boolean liberado = false;
     SistemaLojaMusical sys;
 
     /**
      * Creates new form Comprar
      */
-    public Comprar(SistemaLojaMusical sys) {
+    public VenderInstrumento(SistemaLojaMusical sys) {
         this.sys = sys;
         initComponents();
     }
@@ -174,6 +174,11 @@ public class Comprar extends javax.swing.JInternalFrame {
         getContentPane().add(venderButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(519, 412, 143, -1));
 
         buscarButton.setText("Buscar");
+        buscarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buscarButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(buscarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 130, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
@@ -228,8 +233,8 @@ public class Comprar extends javax.swing.JInternalFrame {
             try {
                 Instrumento ins = sys.buscarInstrumento(this.identificadorTxt.getText());
                 sys.realizarVenda(ins.getIdentificador());
-                JOptionPane.showMessageDialog(this, "Instrumento vendido com sucesso!");
                 this.qtdTxt.setText(String.valueOf(ins.getQuantidade()));
+                JOptionPane.showMessageDialog(this, "Instrumento vendido com sucesso!");
             } catch (InstrumentoInexistenteException | QuantiaInvalidaException ex) {
                 JOptionPane.showMessageDialog(this, ex.getMessage());
             }
@@ -237,6 +242,25 @@ public class Comprar extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, "Insira o código e aperte enter.");
         }
     }//GEN-LAST:event_venderButtonActionPerformed
+
+    private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
+        try {
+                Instrumento atual = sys.buscarInstrumento(this.identificadorTxt.getText());
+                this.nomeInsTxt.setText(atual.getNome());
+                this.marcaTxt.setText(atual.getMarca());
+                this.valorTxt.setText(String.valueOf(atual.getValor()));
+                this.qtdTxt.setText(String.valueOf(atual.getQuantidade()));
+                liberado = true;
+            }
+            catch(InstrumentoInexistenteException e){
+                this.nomeInsTxt.setText("");
+                this.marcaTxt.setText("");
+                this.valorTxt.setText("");
+                this.qtdTxt.setText("");
+                JOptionPane.showMessageDialog(this, e.getMessage());
+                liberado = false;
+            }
+    }//GEN-LAST:event_buscarButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
