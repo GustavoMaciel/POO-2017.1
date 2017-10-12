@@ -285,33 +285,7 @@ public class RemoveCliente extends javax.swing.JInternalFrame {
 
     private void emailBuscaTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailBuscaTxtKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            try {
-                this.clien = sys.buscarCliente(this.emailBuscaTxt.getText());
-                this.nomeTxt.setText(clien.getNome());
-                this.cpfTxt.setText(clien.getCpf());
-                this.emailtxt.setText(clien.getEmail());
-                this.rgTxt.setText(clien.getRg());
-                this.dddTxt.setText(clien.getTelefone().getDdd());
-                this.telefoneTxt.setText(clien.getTelefone().getNumero());
-                this.nascimentoTxt.setText(clien.getDataNascimento());
-                if (clien.getGenero().startsWith("M")) {
-                    this.generoCombo.setSelectedIndex(0);
-                } else {
-                    this.generoCombo.setSelectedIndex(1);
-                }
-                liberado = true;
-            } catch (ClienteInexistenteException e) {
-                liberado = false;
-                this.nomeTxt.setText("");
-                this.cpfTxt.setText("");
-                this.rgTxt.setText("");
-                this.emailtxt.setText("");
-                this.dddTxt.setText("");
-                this.telefoneTxt.setText("");
-                this.nascimentoTxt.setText("");
-                this.generoCombo.setSelectedIndex(0);     
-                JOptionPane.showMessageDialog(this, e.getMessage());
-            }
+           this.buscarButton.doClick();
         }
     }//GEN-LAST:event_emailBuscaTxtKeyPressed
 

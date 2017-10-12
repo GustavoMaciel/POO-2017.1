@@ -42,6 +42,7 @@ package Views;
 import Classes.*;
 import Exceptions.*;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -108,16 +109,11 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
-        setTitle("Listar Clientes");
+        setTitle("Alterar Cliente");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         emailBuscaTxt.setForeground(new java.awt.Color(0, 0, 0));
         emailBuscaTxt.setToolTipText("Insira o e-mail");
-        emailBuscaTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailBuscaTxtActionPerformed(evt);
-            }
-        });
         emailBuscaTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 emailBuscaTxtKeyPressed(evt);
@@ -138,11 +134,6 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
 
         nomeTxt.setForeground(new java.awt.Color(0, 0, 0));
-        nomeTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 345, -1));
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -150,11 +141,6 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 100, -1, -1));
 
         cpfTxt.setForeground(new java.awt.Color(0, 0, 0));
-        cpfTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cpfTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(cpfTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 170, -1));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -162,11 +148,6 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
 
         emailTxt.setForeground(new java.awt.Color(0, 0, 0));
-        emailTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(emailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 345, -1));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -174,11 +155,6 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, -1, -1));
 
         rgTxt.setForeground(new java.awt.Color(0, 0, 0));
-        rgTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rgTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(rgTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 170, -1));
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -186,19 +162,9 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
 
         dddTxt.setForeground(new java.awt.Color(0, 0, 0));
-        dddTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dddTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(dddTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 27, -1));
 
         telefoneTxt.setForeground(new java.awt.Color(0, 0, 0));
-        telefoneTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                telefoneTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(telefoneTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 125, -1));
 
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -210,11 +176,6 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, -1, -1));
 
         nascimentoTxt.setForeground(new java.awt.Color(0, 0, 0));
-        nascimentoTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nascimentoTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(nascimentoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 150, -1));
 
         jLabel9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -230,19 +191,9 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 530, 11));
 
         logradouroTxt.setForeground(new java.awt.Color(0, 0, 0));
-        logradouroTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                logradouroTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(logradouroTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 340, -1));
 
         bairroTxt.setForeground(new java.awt.Color(0, 0, 0));
-        bairroTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bairroTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(bairroTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, 170, -1));
 
         jLabel11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -250,11 +201,6 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, -1, -1));
 
         numeroEnderecoTxt.setForeground(new java.awt.Color(0, 0, 0));
-        numeroEnderecoTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numeroEnderecoTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(numeroEnderecoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 410, 130, -1));
 
         jLabel12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -262,11 +208,6 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 390, -1, -1));
 
         cepTxt.setForeground(new java.awt.Color(0, 0, 0));
-        cepTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cepTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(cepTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 136, -1));
 
         jLabel13.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -274,11 +215,6 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, -1, -1));
 
         cidadeTxt.setForeground(new java.awt.Color(0, 0, 0));
-        cidadeTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cidadeTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(cidadeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, 136, -1));
 
         jLabel14.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -286,11 +222,6 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 450, -1, -1));
 
         estadoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins" }));
-        estadoCombo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                estadoComboActionPerformed(evt);
-            }
-        });
         getContentPane().add(estadoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 410, 170, 26));
 
         jLabel15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -368,72 +299,16 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_emailBuscaTxtKeyPressed
 
-    private void emailBuscaTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailBuscaTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailBuscaTxtActionPerformed
-
-    private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTxtActionPerformed
-
-    private void cpfTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cpfTxtActionPerformed
-
-    private void emailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailTxtActionPerformed
-
-    private void rgTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rgTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rgTxtActionPerformed
-
-    private void dddTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dddTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dddTxtActionPerformed
-
-    private void telefoneTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefoneTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_telefoneTxtActionPerformed
-
-    private void nascimentoTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nascimentoTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nascimentoTxtActionPerformed
-
-    private void logradouroTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logradouroTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_logradouroTxtActionPerformed
-
-    private void bairroTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bairroTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bairroTxtActionPerformed
-
-    private void numeroEnderecoTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numeroEnderecoTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_numeroEnderecoTxtActionPerformed
-
-    private void cepTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cepTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cepTxtActionPerformed
-
-    private void cidadeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cidadeTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cidadeTxtActionPerformed
-
-    private void estadoComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estadoComboActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_estadoComboActionPerformed
-
     private void alterarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarButtonActionPerformed
         if(liberado){
             try{
+                ArrayList<String> campos = new ArrayList<>();
+                
                 Cliente atual = sys.buscarCliente(emailBuscaTxt.getText());
-                atual.setCpf(cpfTxt.getText());
                 atual.setDataNascimento(nascimentoTxt.getText());
                 atual.setEmail(emailTxt.getText());
                 atual.setGenero(generoCombo.getItemAt(generoCombo.getSelectedIndex()));
                 atual.setNome(nomeTxt.getText());
-                atual.setRg(rgTxt.getText());
                 Telefone tel = new Telefone();
                 tel.setDdd(dddTxt.getText());
                 tel.setNumero(telefoneTxt.getText());
@@ -445,18 +320,36 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
                 end.setLogradouro(logradouroTxt.getText());
                 end.setNumero(numeroEnderecoTxt.getText());
                 end.setEstado(estadoCombo.getItemAt(estadoCombo.getSelectedIndex()));
-                boolean passar = true;
+                
+                boolean naoPassou = false;
+                try{
+                    Long.parseLong(cpfTxt.getText());
+                    atual.setCpf(cpfTxt.getText());
+                }catch (NumberFormatException e){
+                    naoPassou = true;
+                    campos.add("CPF");
+                }
+                try{
+                    Long.parseLong(rgTxt.getText());
+                    atual.setRg(rgTxt.getText());
+                }catch(NumberFormatException e){
+                    naoPassou = true;
+                    campos.add("RG");
+                }
                 if(!atual.getEmail().equals(emailBuscaTxt.getText())){
                     try{
                         sys.cadastrarCliente(atual);
                         sys.removerCliente(emailBuscaTxt.getText());
                     }catch(ClienteInexistenteException | ClienteJaExistenteException e){
                         JOptionPane.showMessageDialog(this, e.getMessage());
-                        passar = false;
+                        campos.add("E-mail");
+                        naoPassou = true;
                     }
                 }
-                if(passar){
+                if(!naoPassou){
                     JOptionPane.showMessageDialog(this, "Cliente alterado com sucesso!");
+                }else{
+                    JOptionPane.showMessageDialog(this, "Não foi possível alterar os seguintes campos: \n" + campos.toString());
                 }
                 
             }catch (ClienteInexistenteException e){

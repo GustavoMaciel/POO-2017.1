@@ -41,6 +41,9 @@ package Views;
 
 import Classes.*;
 import Exceptions.FuncionarioInexistenteException;
+import Exceptions.FuncionarioJaExisteException;
+import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -49,6 +52,7 @@ import javax.swing.JOptionPane;
  */
 public class AlterarFuncionario extends javax.swing.JInternalFrame {
     SistemaLojaMusical sys;
+    boolean liberado = false;
     /**
      * Creates new form ListaFuncionario
      */
@@ -66,7 +70,7 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        idTxt = new javax.swing.JTextField();
+        idBuscaTxt = new javax.swing.JTextField();
         telefoneTxt = new javax.swing.JTextField();
         buscarButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -85,24 +89,25 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         dddTxt = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        nomeTxt1 = new javax.swing.JTextField();
-        cpfTxt1 = new javax.swing.JTextField();
+        logradouroTxt = new javax.swing.JTextField();
+        bairroTxt = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        emailTxt1 = new javax.swing.JTextField();
-        rgTxt1 = new javax.swing.JTextField();
-        nascimentoTxt1 = new javax.swing.JTextField();
+        cepTxt = new javax.swing.JTextField();
+        numeroEnderecoTxt = new javax.swing.JTextField();
+        cidadeTxt = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        generoCombo1 = new javax.swing.JComboBox<>();
+        estadoCombo = new javax.swing.JComboBox<>();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        emailTxt2 = new javax.swing.JTextField();
+        idTxt = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
-        emailTxt3 = new javax.swing.JTextField();
+        tipoTxt = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
-        emailTxt4 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        pagamentoTxt = new javax.swing.JTextField();
+        alterarButton = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -110,26 +115,16 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
         setTitle("Alterar Funcionário");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        idTxt.setForeground(new java.awt.Color(0, 0, 0));
-        idTxt.setToolTipText("Insira o ID");
-        idTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idTxtActionPerformed(evt);
-            }
-        });
-        idTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+        idBuscaTxt.setForeground(new java.awt.Color(0, 0, 0));
+        idBuscaTxt.setToolTipText("Insira o ID");
+        idBuscaTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                idTxtKeyPressed(evt);
+                idBuscaTxtKeyPressed(evt);
             }
         });
-        getContentPane().add(idTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 331, -1));
+        getContentPane().add(idBuscaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 331, -1));
 
         telefoneTxt.setForeground(new java.awt.Color(0, 0, 0));
-        telefoneTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                telefoneTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(telefoneTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 125, -1));
 
         buscarButton.setText("Buscar");
@@ -147,11 +142,6 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, -1, -1));
 
         nomeTxt.setForeground(new java.awt.Color(0, 0, 0));
-        nomeTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 345, -1));
 
         jLabel8.setText("Data de nascimento");
@@ -161,19 +151,9 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, -1, -1));
 
         nascimentoTxt.setForeground(new java.awt.Color(0, 0, 0));
-        nascimentoTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nascimentoTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(nascimentoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 150, -1));
 
         cpfTxt.setForeground(new java.awt.Color(0, 0, 0));
-        cpfTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cpfTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(cpfTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 170, -1));
 
         jLabel9.setText("Genero");
@@ -186,53 +166,28 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
         getContentPane().add(generoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 230, 162, 30));
 
         emailTxt.setForeground(new java.awt.Color(0, 0, 0));
-        emailTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(emailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 345, -1));
 
         jLabel5.setText("RG");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 150, -1, -1));
 
         rgTxt.setForeground(new java.awt.Color(0, 0, 0));
-        rgTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rgTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(rgTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, 170, -1));
 
         jLabel6.setText("DDD");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, -1, -1));
 
         dddTxt.setForeground(new java.awt.Color(0, 0, 0));
-        dddTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dddTxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(dddTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 27, -1));
 
         jLabel10.setText("Logradouro");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, -1, -1));
 
-        nomeTxt1.setForeground(new java.awt.Color(0, 0, 0));
-        nomeTxt1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTxt1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(nomeTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 345, -1));
+        logradouroTxt.setForeground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(logradouroTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 345, -1));
 
-        cpfTxt1.setForeground(new java.awt.Color(0, 0, 0));
-        cpfTxt1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cpfTxt1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(cpfTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, 170, -1));
+        bairroTxt.setForeground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(bairroTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, 170, -1));
 
         jLabel11.setText("Bairro");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, -1, -1));
@@ -240,40 +195,20 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
         jLabel12.setText("Numero");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, -1, -1));
 
-        emailTxt1.setForeground(new java.awt.Color(0, 0, 0));
-        emailTxt1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailTxt1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(emailTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 140, -1));
+        cepTxt.setForeground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(cepTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 140, -1));
 
-        rgTxt1.setForeground(new java.awt.Color(0, 0, 0));
-        rgTxt1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rgTxt1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(rgTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 170, -1));
+        numeroEnderecoTxt.setForeground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(numeroEnderecoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 170, -1));
 
-        nascimentoTxt1.setForeground(new java.awt.Color(0, 0, 0));
-        nascimentoTxt1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nascimentoTxt1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(nascimentoTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 140, -1));
+        cidadeTxt.setForeground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(cidadeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 140, -1));
 
         jLabel15.setText("Cidade");
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, -1, -1));
 
-        generoCombo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins" }));
-        generoCombo1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                generoCombo1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(generoCombo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, 170, 30));
+        estadoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins" }));
+        getContentPane().add(estadoCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, 170, 30));
 
         jLabel16.setText("Estado");
         getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 330, -1, -1));
@@ -284,40 +219,33 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
         jLabel18.setText("ID");
         getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 450, -1, -1));
 
-        emailTxt2.setForeground(new java.awt.Color(0, 0, 0));
-        emailTxt2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailTxt2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(emailTxt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 470, 180, -1));
+        idTxt.setForeground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(idTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 470, 180, -1));
 
         jLabel19.setText("Tipo");
         getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 450, -1, -1));
 
-        emailTxt3.setForeground(new java.awt.Color(0, 0, 0));
-        emailTxt3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailTxt3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(emailTxt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, 140, -1));
+        tipoTxt.setForeground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(tipoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, 140, -1));
 
         jLabel20.setText("Pagamento");
         getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 450, -1, -1));
 
-        emailTxt4.setForeground(new java.awt.Color(0, 0, 0));
-        emailTxt4.addActionListener(new java.awt.event.ActionListener() {
+        pagamentoTxt.setForeground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(pagamentoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 470, 170, -1));
+
+        alterarButton.setBackground(new java.awt.Color(255, 0, 51));
+        alterarButton.setForeground(new java.awt.Color(255, 255, 255));
+        alterarButton.setText("Alterar");
+        alterarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailTxt4ActionPerformed(evt);
+                alterarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(emailTxt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 470, 170, -1));
+        getContentPane().add(alterarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 520, 100, -1));
 
-        jButton1.setBackground(new java.awt.Color(255, 0, 51));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Alterar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 520, 100, -1));
+        jLabel13.setText("Informe o ID");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 100, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 570));
@@ -325,22 +253,15 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
         setBounds(170, 50, 694, 599);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void idTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_idTxtActionPerformed
-
-    private void idTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idTxtKeyPressed
-        
-    }//GEN-LAST:event_idTxtKeyPressed
-
-    private void telefoneTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefoneTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_telefoneTxtActionPerformed
+    private void idBuscaTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idBuscaTxtKeyPressed
+         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            this.buscarButton.doClick();
+         }
+    }//GEN-LAST:event_idBuscaTxtKeyPressed
 
     private void buscarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarButtonActionPerformed
         try{
-            Funcionario i = sys.buscarFuncionario(idTxt.getText());
-            
+            Funcionario i = sys.buscarFuncionario(idBuscaTxt.getText());
             nomeTxt.setText(i.getNome());
             cpfTxt.setText(i.getCpf());
             emailTxt.setText(i.getEmail());
@@ -348,13 +269,20 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
             dddTxt.setText(i.getTelefone().getDdd());
             telefoneTxt.setText(i.getTelefone().getNumero());
             nascimentoTxt.setText(i.getDataNascimento());
-            if(i.getGenero().startsWith("M")){
-                generoCombo.setSelectedIndex(0);
-            }else{
-                generoCombo.setSelectedIndex(1);
-            }
+            generoCombo.setSelectedItem(i.getGenero());
+            Endereco end = i.getEndereco();
+            logradouroTxt.setText(end.getLogradouro());
+            bairroTxt.setText(end.getBairro());
+            cepTxt.setText(end.getCep());
+            numeroEnderecoTxt.setText(end.getNumero());
+            estadoCombo.setSelectedItem(end.getEstado());
+            cidadeTxt.setText(end.getCidade());
+            tipoTxt.setText(i.getTipo());
+            idTxt.setText(i.getId());
+            pagamentoTxt.setText(String.valueOf(i.getPagamento()));
+            liberado = true;
+            
         }catch(FuncionarioInexistenteException e){
-            JOptionPane.showMessageDialog(this, e.getMessage());
             nomeTxt.setText("");
             cpfTxt.setText("");
             emailTxt.setText("");
@@ -363,88 +291,110 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
             telefoneTxt.setText("");
             nascimentoTxt.setText("");
             generoCombo.setSelectedIndex(0);
+            logradouroTxt.setText("");
+            bairroTxt.setText("");
+            cepTxt.setText("");
+            numeroEnderecoTxt.setText("");
+            estadoCombo.setSelectedIndex(0);
+            cidadeTxt.setText("");
+            tipoTxt.setText("");
+            idTxt.setText("");
+            pagamentoTxt.setText("");
+            JOptionPane.showMessageDialog(this, e.getMessage());
+            liberado = false;
         }
     }//GEN-LAST:event_buscarButtonActionPerformed
 
-    private void nomeTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTxtActionPerformed
-
-    private void nascimentoTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nascimentoTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nascimentoTxtActionPerformed
-
-    private void cpfTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cpfTxtActionPerformed
-
-    private void emailTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailTxtActionPerformed
-
-    private void rgTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rgTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rgTxtActionPerformed
-
-    private void dddTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dddTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dddTxtActionPerformed
-
-    private void nomeTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTxt1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTxt1ActionPerformed
-
-    private void cpfTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfTxt1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cpfTxt1ActionPerformed
-
-    private void emailTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxt1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailTxt1ActionPerformed
-
-    private void rgTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rgTxt1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rgTxt1ActionPerformed
-
-    private void nascimentoTxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nascimentoTxt1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nascimentoTxt1ActionPerformed
-
-    private void emailTxt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxt2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailTxt2ActionPerformed
-
-    private void emailTxt3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxt3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailTxt3ActionPerformed
-
-    private void emailTxt4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTxt4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailTxt4ActionPerformed
-
-    private void generoCombo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generoCombo1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_generoCombo1ActionPerformed
+    private void alterarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alterarButtonActionPerformed
+        if(liberado){
+            try{
+                ArrayList<String> campos = new ArrayList<>();
+                
+                Funcionario fun = sys.buscarFuncionario(idBuscaTxt.getText());
+                fun.setDataNascimento(nascimentoTxt.getText());
+                fun.setEmail(emailTxt.getText());
+                Endereco end = new Endereco();
+                end.setBairro(bairroTxt.getText());
+                end.setCep(cepTxt.getText());
+                end.setCidade(cidadeTxt.getText());
+                end.setEstado(estadoCombo.getItemAt(estadoCombo.getSelectedIndex()));
+                end.setLogradouro(logradouroTxt.getText());
+                end.setNumero(numeroEnderecoTxt.getText());
+                fun.setEndereco(end);
+                fun.setGenero(generoCombo.getItemAt(generoCombo.getSelectedIndex()));
+                fun.setNome(nomeTxt.getText());
+                fun.setTipo(tipoTxt.getText());
+                Telefone tel = new Telefone();
+                tel.setDdd(dddTxt.getText());
+                tel.setNumero(telefoneTxt.getText());
+                fun.setTelefone(tel);
+                boolean naoPassou = false;
+                try{
+                    Long.parseLong(cpfTxt.getText());
+                    fun.setCpf(cpfTxt.getText());
+                }catch (NumberFormatException e){
+                    naoPassou = true;
+                    campos.add("CPF");
+                }
+                try{
+                    Long.parseLong(rgTxt.getText());
+                    fun.setRg(rgTxt.getText());
+                }catch(NumberFormatException e){
+                    naoPassou = true;
+                    campos.add("RG");
+                }
+                try{
+                    fun.setPagamento(Double.parseDouble(pagamentoTxt.getText()));
+                }catch(NumberFormatException e){
+                    naoPassou = true;
+                    campos.add("Pagamento");
+                }
+                
+                fun.setId(idTxt.getText());
+                
+                if(!fun.getId().equals(idBuscaTxt.getText())){
+                    try{
+                        sys.cadastrarFuncionario(fun);
+                        sys.removerFuncionario(idBuscaTxt.getText());
+                    }catch(FuncionarioInexistenteException | FuncionarioJaExisteException e){
+                        naoPassou = true;
+                        campos.add("ID");
+                        JOptionPane.showMessageDialog(this, e.getMessage());
+                    }
+                }
+                if(naoPassou){
+                    JOptionPane.showMessageDialog(this, "Não foi possível alterar os seguintes campos: \n" + campos.toString());
+                }else{
+                    JOptionPane.showMessageDialog(this, "Funcionário alterado com sucesso!");
+                }
+                
+            }catch(FuncionarioInexistenteException e){
+                JOptionPane.showMessageDialog(this, e.getMessage());
+            }
+        }else{
+            JOptionPane.showMessageDialog(this, "Não foi possível alterar.");
+        }
+    }//GEN-LAST:event_alterarButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton alterarButton;
+    private javax.swing.JTextField bairroTxt;
     private javax.swing.JButton buscarButton;
+    private javax.swing.JTextField cepTxt;
+    private javax.swing.JTextField cidadeTxt;
     private javax.swing.JTextField cpfTxt;
-    private javax.swing.JTextField cpfTxt1;
     private javax.swing.JTextField dddTxt;
     private javax.swing.JTextField emailTxt;
-    private javax.swing.JTextField emailTxt1;
-    private javax.swing.JTextField emailTxt2;
-    private javax.swing.JTextField emailTxt3;
-    private javax.swing.JTextField emailTxt4;
+    private javax.swing.JComboBox<String> estadoCombo;
     private javax.swing.JComboBox<String> generoCombo;
-    private javax.swing.JComboBox<String> generoCombo1;
+    private javax.swing.JTextField idBuscaTxt;
     private javax.swing.JTextField idTxt;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -459,12 +409,13 @@ public class AlterarFuncionario extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField logradouroTxt;
     private javax.swing.JTextField nascimentoTxt;
-    private javax.swing.JTextField nascimentoTxt1;
     private javax.swing.JTextField nomeTxt;
-    private javax.swing.JTextField nomeTxt1;
+    private javax.swing.JTextField numeroEnderecoTxt;
+    private javax.swing.JTextField pagamentoTxt;
     private javax.swing.JTextField rgTxt;
-    private javax.swing.JTextField rgTxt1;
     private javax.swing.JTextField telefoneTxt;
+    private javax.swing.JTextField tipoTxt;
     // End of variables declaration//GEN-END:variables
 }

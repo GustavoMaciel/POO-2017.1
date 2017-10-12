@@ -237,23 +237,7 @@ public class RemoveInstrumento extends javax.swing.JInternalFrame {
 
     private void idTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idTxtKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER){
-            try{
-                Instrumento ins = sys.buscarInstrumento(idTxt.getText());
-                nomeTxt.setText(ins.getNome());
-                marcaTxt.setText(ins.getMarca());
-                valorTxt.setText(String.valueOf(ins.getValor()));
-                idMonstrarTxt.setText(ins.getIdentificador());
-                qtdTxt.setText(String.valueOf(ins.getQuantidade()));
-                podeIr = true;
-            }catch (InstrumentoInexistenteException e){
-                nomeTxt.setText("");
-                marcaTxt.setText("");
-                valorTxt.setText("");
-                idMonstrarTxt.setText("");
-                qtdTxt.setText("");
-                JOptionPane.showMessageDialog(this, e.getMessage());
-                podeIr = false;
-            }
+            this.buscarButton.doClick();
         }
     }//GEN-LAST:event_idTxtKeyPressed
 

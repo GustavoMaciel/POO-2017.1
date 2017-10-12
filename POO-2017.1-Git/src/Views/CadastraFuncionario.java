@@ -503,14 +503,10 @@ public class CadastraFuncionario extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, "Funcionário cadastrado com sucesso!");
             this.dispose();
         } else {
-            String con = "";
-            for (String i : campos) {
-                con += i + "\n";
-            }
             if (campos.size() > 1) {
-                JOptionPane.showMessageDialog(this, "Você deixou os seguintes campos vazios:  \n" + con);
+                JOptionPane.showMessageDialog(this, "Você deixou os seguintes campos vazios:  \n" + campos.toString());
             } else {
-                JOptionPane.showMessageDialog(this, "Você deixou o seguinte campo vazio: \n" + con);
+                JOptionPane.showMessageDialog(this, "Você deixou o seguinte campo vazio: \n" + campos.toString());
             }
         }
     }

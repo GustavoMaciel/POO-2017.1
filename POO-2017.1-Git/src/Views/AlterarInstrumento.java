@@ -42,6 +42,7 @@ package Views;
 import Classes.Instrumento;
 import Classes.SistemaLojaMusical;
 import Exceptions.InstrumentoInexistenteException;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
 /**
@@ -86,13 +87,18 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
-        setTitle("Buscar Instrumentos");
+        setTitle("Alterar Instrumento");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Código:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, -1, -1));
+        jLabel1.setText("Informe o Identificador:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 60, -1, -1));
 
         codigoTxt.setForeground(new java.awt.Color(0, 0, 0));
+        codigoTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                codigoTxtKeyPressed(evt);
+            }
+        });
         jScrollPane1.setViewportView(codigoTxt);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 82, 152, -1));
@@ -234,6 +240,12 @@ public class AlterarInstrumento extends javax.swing.JInternalFrame {
                 JOptionPane.showMessageDialog(this, "Não foi possível alterar.");
             }
     }//GEN-LAST:event_alterarButtonActionPerformed
+
+    private void codigoTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_codigoTxtKeyPressed
+         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+           this.buscarButton.doClick();
+        }
+    }//GEN-LAST:event_codigoTxtKeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

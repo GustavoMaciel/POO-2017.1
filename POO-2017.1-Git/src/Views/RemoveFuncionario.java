@@ -41,6 +41,7 @@ package Views;
 
 import Classes.*;
 import Exceptions.FuncionarioInexistenteException;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
 /**
@@ -225,7 +226,9 @@ public class RemoveFuncionario extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void idTxtKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idTxtKeyPressed
-        
+         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+           this.buscarButton.doClick();
+        }
     }//GEN-LAST:event_idTxtKeyPressed
 
     private void removerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerButtonActionPerformed
