@@ -162,7 +162,7 @@ public class Comprar extends javax.swing.JInternalFrame {
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel5.setText("Quantidade em Estoque");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 180, 20));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 200, 20));
         getContentPane().add(iconLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(177, 175, 485, 219));
 
         comprarButton.setText("Vender");
