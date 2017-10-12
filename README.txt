@@ -4,25 +4,14 @@ Projeto para criação de um sistema com o intuito de gerenciar uma loja de mús
 
 Nosso sistema possui as seguintes características:
 
-    Cadastro de clientes, produtos, serviços, fornecedores e funcionários
-    Criação de orçamentos e ordens de serviços
+    Cadastro de clientes, produtos, e funcionários
     Registro para controle do caixa da empresa
-    Registro de pagamentos de clientes
-    //Registro de pagamentos a fornecedores
-    Registro de pagamento de comissões e salários aos funcionários
     Controle de estoque
-    Registro de compra e venda de produtos.
-    Relatórios de acompanhamento:
-        vendas;
-        custos;
-        estoque;
-        caderneta do cliente;
-        compra e pagamento para /*fornecedores e*/ funcionários entre outros
+    Venda de produtos
     Listas de:
         clientes;
         produtos;
-        serviços;
-        /*fornecedores e*/ funcionários cadastrados.
+        funcionários cadastrados.
 
 Responsáveis: Gustavo Maciel Nunes; Waldemar Junior Dias Coimbra
 
