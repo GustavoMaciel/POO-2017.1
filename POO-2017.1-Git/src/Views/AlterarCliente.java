@@ -112,7 +112,8 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         setTitle("Alterar Cliente");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        emailBuscaTxt.setForeground(new java.awt.Color(0, 0, 0));
+        emailBuscaTxt.setBackground(java.awt.Color.white);
+        emailBuscaTxt.setForeground(java.awt.Color.black);
         emailBuscaTxt.setToolTipText("Insira o e-mail");
         emailBuscaTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -133,38 +134,44 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         jLabel2.setText("Nome");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
 
-        nomeTxt.setForeground(new java.awt.Color(0, 0, 0));
+        nomeTxt.setBackground(java.awt.Color.white);
+        nomeTxt.setForeground(java.awt.Color.black);
         getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 345, -1));
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setText("CPF");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 100, -1, -1));
 
-        cpfTxt.setForeground(new java.awt.Color(0, 0, 0));
+        cpfTxt.setBackground(java.awt.Color.white);
+        cpfTxt.setForeground(java.awt.Color.black);
         getContentPane().add(cpfTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 170, -1));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel4.setText("Email");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
 
-        emailTxt.setForeground(new java.awt.Color(0, 0, 0));
+        emailTxt.setBackground(java.awt.Color.white);
+        emailTxt.setForeground(java.awt.Color.black);
         getContentPane().add(emailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 345, -1));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel5.setText("RG");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, -1, -1));
 
-        rgTxt.setForeground(new java.awt.Color(0, 0, 0));
+        rgTxt.setBackground(java.awt.Color.white);
+        rgTxt.setForeground(java.awt.Color.black);
         getContentPane().add(rgTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 170, -1));
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel6.setText("DDD");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
 
-        dddTxt.setForeground(new java.awt.Color(0, 0, 0));
+        dddTxt.setBackground(java.awt.Color.white);
+        dddTxt.setForeground(java.awt.Color.black);
         getContentPane().add(dddTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 27, -1));
 
-        telefoneTxt.setForeground(new java.awt.Color(0, 0, 0));
+        telefoneTxt.setBackground(java.awt.Color.white);
+        telefoneTxt.setForeground(java.awt.Color.black);
         getContentPane().add(telefoneTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 125, -1));
 
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -175,7 +182,8 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         jLabel8.setText("Data de nascimento");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, -1, -1));
 
-        nascimentoTxt.setForeground(new java.awt.Color(0, 0, 0));
+        nascimentoTxt.setBackground(java.awt.Color.white);
+        nascimentoTxt.setForeground(java.awt.Color.black);
         getContentPane().add(nascimentoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 150, -1));
 
         jLabel9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -190,31 +198,36 @@ public class AlterarCliente extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 530, 11));
 
-        logradouroTxt.setForeground(new java.awt.Color(0, 0, 0));
+        logradouroTxt.setBackground(java.awt.Color.white);
+        logradouroTxt.setForeground(java.awt.Color.black);
         getContentPane().add(logradouroTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, 340, -1));
 
-        bairroTxt.setForeground(new java.awt.Color(0, 0, 0));
+        bairroTxt.setBackground(java.awt.Color.white);
+        bairroTxt.setForeground(java.awt.Color.black);
         getContentPane().add(bairroTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, 170, -1));
 
         jLabel11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel11.setText("Logradouro");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, -1, -1));
 
-        numeroEnderecoTxt.setForeground(new java.awt.Color(0, 0, 0));
+        numeroEnderecoTxt.setBackground(java.awt.Color.white);
+        numeroEnderecoTxt.setForeground(java.awt.Color.black);
         getContentPane().add(numeroEnderecoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 410, 130, -1));
 
         jLabel12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel12.setText("Numero");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 390, -1, -1));
 
-        cepTxt.setForeground(new java.awt.Color(0, 0, 0));
+        cepTxt.setBackground(java.awt.Color.white);
+        cepTxt.setForeground(java.awt.Color.black);
         getContentPane().add(cepTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 136, -1));
 
         jLabel13.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel13.setText("CEP");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, -1, -1));
 
-        cidadeTxt.setForeground(new java.awt.Color(0, 0, 0));
+        cidadeTxt.setBackground(java.awt.Color.white);
+        cidadeTxt.setForeground(java.awt.Color.black);
         getContentPane().add(cidadeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, 136, -1));
 
         jLabel14.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
