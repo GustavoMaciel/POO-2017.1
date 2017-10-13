@@ -1,13 +1,19 @@
 package Views;
 
+import Classes.Funcionario;
 import Classes.SistemaLojaMusical;
+import Exceptions.FuncionarioInexistenteException;
+import Exceptions.PagamentoNaoAutorizadoException;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author gustavo
  */
 public class RealizarPagamento extends javax.swing.JInternalFrame {
+
     SistemaLojaMusical sys;
+
     /**
      * Creates new form RealizarPagamento
      */
@@ -27,9 +33,9 @@ public class RealizarPagamento extends javax.swing.JInternalFrame {
 
         idCombo = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        efetuarButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        pagamentoTxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -51,14 +57,19 @@ public class RealizarPagamento extends javax.swing.JInternalFrame {
         jLabel1.setText("ID:");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 88, -1));
 
-        jButton1.setText("Efetuar pagamento");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, -1, -1));
+        efetuarButton.setText("Efetuar Pagamento");
+        efetuarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                efetuarButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(efetuarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, -1, -1));
 
         jLabel2.setText("Valor:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
 
-        jTextField1.setEditable(false);
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 350, -1));
+        pagamentoTxt.setEditable(false);
+        getContentPane().add(pagamentoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 350, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 770, 500));
@@ -67,32 +78,35 @@ public class RealizarPagamento extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void idComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idComboActionPerformed
-        if(idCombo.getItemAt(idCombo.getSelectedIndex()).equals("Selecionar")){
-            nomeTxt.setText("");
-            rgTxt.setText("");
-            cpfTxt.setText("");
-            telefoneTxt.setText("");
-            salarioTxt.setText("");
-        }else{
-            try{
+        if (idCombo.getItemAt(idCombo.getSelectedIndex()).equals("Selecionar")) {
+            pagamentoTxt.setText("");
+        } else {
+            try {
                 Funcionario fun = sys.buscarFuncionario(idCombo.getItemAt(idCombo.getSelectedIndex()));
-                nomeTxt.setText(fun.getNome());
-                rgTxt.setText(fun.getRg());
-                cpfTxt.setText(fun.getCpf());
-                telefoneTxt.setText(fun.getTelefone().toString());
-                salarioTxt.setText(String.valueOf(fun.getPagamento()));
-            }catch (FuncionarioInexistenteException e){
+                pagamentoTxt.setText(String.valueOf(fun.getPagamento()));
+
+            } catch (FuncionarioInexistenteException e) {
             }
         }
     }//GEN-LAST:event_idComboActionPerformed
 
+    private void efetuarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_efetuarButtonActionPerformed
+        try {
+            Funcionario fun = sys.buscarFuncionario(idCombo.getItemAt(idCombo.getSelectedIndex()));
+            sys.efetuarPagamento(fun.getPagamento());
+            JOptionPane.showMessageDialog(this, "Pagamento realizado com sucesso!");
+        } catch (PagamentoNaoAutorizadoException | FuncionarioInexistenteException e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+    }//GEN-LAST:event_efetuarButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton efetuarButton;
     private javax.swing.JComboBox<String> idCombo;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField pagamentoTxt;
     // End of variables declaration//GEN-END:variables
 }
