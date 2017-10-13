@@ -65,6 +65,7 @@ public class TelaInicial extends javax.swing.JFrame {
         ListaInstrumentosItem = new javax.swing.JMenuItem();
         adminMenu = new javax.swing.JMenu();
         caixaItem = new javax.swing.JMenuItem();
+        pagamentoMenu = new javax.swing.JMenuItem();
         sobreMenu = new javax.swing.JMenu();
         infoItem = new javax.swing.JMenuItem();
 
@@ -271,6 +272,14 @@ public class TelaInicial extends javax.swing.JFrame {
         });
         adminMenu.add(caixaItem);
 
+        pagamentoMenu.setText("Realizar Pagamento");
+        pagamentoMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pagamentoMenuActionPerformed(evt);
+            }
+        });
+        adminMenu.add(pagamentoMenu);
+
         jMenuBar1.add(adminMenu);
 
         sobreMenu.setText("Sobre");
@@ -421,6 +430,12 @@ public class TelaInicial extends javax.swing.JFrame {
          obj.setVisible(true);
     }//GEN-LAST:event_listaFuncionarioMenuActionPerformed
 
+    private void pagamentoMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pagamentoMenuActionPerformed
+        RealizarPagamento obj = new RealizarPagamento(sys);
+         jDesktopPanePrincipal.add(obj);
+         obj.setVisible(true);
+    }//GEN-LAST:event_pagamentoMenuActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -481,6 +496,7 @@ public class TelaInicial extends javax.swing.JFrame {
     private javax.swing.JMenuItem listaClienteMenu;
     private javax.swing.JMenuItem listaFuncionarioMenu;
     private javax.swing.JMenu lojaMenu;
+    private javax.swing.JMenuItem pagamentoMenu;
     private javax.swing.JMenu pessoaMenu;
     private javax.swing.JMenuItem removClienteItem;
     private javax.swing.JMenuItem removeInstrumentoItem;
