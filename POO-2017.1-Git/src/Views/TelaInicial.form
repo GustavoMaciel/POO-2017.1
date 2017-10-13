@@ -116,6 +116,9 @@
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="listaClienteMenu">
                   <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/img/Zoom-icon.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Lista de Clientes"/>
                   </Properties>
                   <Events>
@@ -176,6 +179,9 @@
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="listaFuncionarioMenu">
                   <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/img/Zoom-icon.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Lista de Funcion&#xe1;rios"/>
                   </Properties>
                   <Events>
@@ -197,7 +203,7 @@
                   <KeyStroke key="Shift+Ctrl+B"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/img/Zoom-icon.png"/>
+                  <Image iconType="3" name="/img/checklist-icon.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Alterar Instrumento"/>
               </Properties>
@@ -235,6 +241,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="ListaInstrumentosItem">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/img/Zoom-icon.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Lista de Instrumentos"/>
               </Properties>
               <Events>
@@ -292,7 +301,7 @@
     <Property name="defaultCloseOperation" type="int" value="0"/>
     <Property name="title" type="java.lang.String" value="Folk&apos;s WAY"/>
     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-      <Color id="Default Cursor"/>
+      <Color id="Cursor Padr&#xe3;o"/>
     </Property>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[800, 600]"/>

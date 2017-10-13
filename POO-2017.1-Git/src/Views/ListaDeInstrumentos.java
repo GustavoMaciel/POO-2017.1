@@ -37,29 +37,41 @@ public class ListaDeInstrumentos extends javax.swing.JInternalFrame {
         nomeTxt = new javax.swing.JTextField();
         idCombo = new javax.swing.JComboBox<>();
         idLabel = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
+        setTitle("Lista de Instrumentos");
+        setName("Lista de Instrumentos"); // NOI18N
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         nomeLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         nomeLabel.setText("Nome:");
+        getContentPane().add(nomeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, -1, -1));
 
         marcaLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         marcaLabel.setText("Marca:");
+        getContentPane().add(marcaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, -1, -1));
 
         valorLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         valorLabel.setText("Valor:");
+        getContentPane().add(valorLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, -1, -1));
 
         qtdLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         qtdLabel.setText("Quantidade:");
+        getContentPane().add(qtdLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, -1, -1));
 
         qtdTxt.setEditable(false);
+        getContentPane().add(qtdTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, 320, -1));
 
         valorTxt.setEditable(false);
+        getContentPane().add(valorTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 320, -1));
 
         marcaTxt.setEditable(false);
+        getContentPane().add(marcaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 320, -1));
 
         nomeTxt.setEditable(false);
+        getContentPane().add(nomeTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 320, -1));
 
         idCombo.addItem("Selecionar");
 
@@ -71,65 +83,16 @@ public class ListaDeInstrumentos extends javax.swing.JInternalFrame {
                 idComboActionPerformed(evt);
             }
         });
+        getContentPane().add(idCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, 320, -1));
 
         idLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         idLabel.setText("ID:");
+        getContentPane().add(idLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(103, 103, 103)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(marcaLabel)
-                            .addComponent(valorLabel)
-                            .addComponent(qtdLabel))
-                        .addGap(22, 22, 22)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(qtdTxt)
-                            .addComponent(valorTxt)
-                            .addComponent(marcaTxt)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nomeLabel)
-                            .addComponent(idLabel))
-                        .addGap(61, 61, 61)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(idCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nomeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(88, 88, 88))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(80, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(idLabel)
-                    .addComponent(idCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nomeLabel)
-                    .addComponent(nomeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(marcaLabel)
-                    .addComponent(marcaTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(valorLabel)
-                    .addComponent(valorTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(qtdLabel)
-                    .addComponent(qtdTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(104, 104, 104))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background-triangulos-livrit.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 710, 480));
 
-        pack();
+        setBounds(170, 80, 701, 510);
     }// </editor-fold>//GEN-END:initComponents
 
     private void idComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idComboActionPerformed
@@ -154,6 +117,7 @@ public class ListaDeInstrumentos extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> idCombo;
     private javax.swing.JLabel idLabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel marcaLabel;
     private javax.swing.JTextField marcaTxt;
     private javax.swing.JLabel nomeLabel;

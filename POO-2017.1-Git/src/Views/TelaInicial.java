@@ -159,6 +159,7 @@ public class TelaInicial extends javax.swing.JFrame {
         });
         clientesSubMenu.add(alteraClienteItem);
 
+        listaClienteMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Zoom-icon.png"))); // NOI18N
         listaClienteMenu.setText("Lista de Clientes");
         listaClienteMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,6 +203,7 @@ public class TelaInicial extends javax.swing.JFrame {
         });
         funcionariosSubMenu.add(AlteraFuncionarioItem);
 
+        listaFuncionarioMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Zoom-icon.png"))); // NOI18N
         listaFuncionarioMenu.setText("Lista de Funcionários");
         listaFuncionarioMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -217,7 +219,7 @@ public class TelaInicial extends javax.swing.JFrame {
         estoqueMenu.setText("Estoque");
 
         alteraInstrumentoItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        alteraInstrumentoItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Zoom-icon.png"))); // NOI18N
+        alteraInstrumentoItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/checklist-icon.png"))); // NOI18N
         alteraInstrumentoItem.setText("Alterar Instrumento");
         alteraInstrumentoItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -246,6 +248,7 @@ public class TelaInicial extends javax.swing.JFrame {
         });
         estoqueMenu.add(removeInstrumentoItem);
 
+        ListaInstrumentosItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Zoom-icon.png"))); // NOI18N
         ListaInstrumentosItem.setText("Lista de Instrumentos");
         ListaInstrumentosItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
