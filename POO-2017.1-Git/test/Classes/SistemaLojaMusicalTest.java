@@ -43,7 +43,7 @@ public class SistemaLojaMusicalTest {
             sys.cadastrarFuncionario(ana);
             fail("Repetiu cadastramento");
         } catch (Exception e) {
-
+            // Exceção esperada.
         }
 
         try {
@@ -62,9 +62,9 @@ public class SistemaLojaMusicalTest {
             sys.efetuarPagamento(-200);
             fail("Pagamento de número inválido");
         } catch (QuantiaInvalidaException e) {
-
+            //Exceção esperada
         } catch (PagamentoNaoAutorizadoException e) {
-
+            // Exceção esperada
         }
         try {
             sys.efetuarPagamento(15000);
